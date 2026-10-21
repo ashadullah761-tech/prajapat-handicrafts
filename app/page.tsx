@@ -237,7 +237,7 @@ export default function HomePage() {
 
   const handleOrderWhatsApp = (product: (typeof featuredProducts)[0]) => {
     const text = encodeURIComponent(
-      `Hi Prajapat Handicrafts,\nI would like to order "${product.name}" (${product.priceDisplay}).\nPlease share the availability and payment/delivery details.`
+      `Hi Prajapat Handicrafts,\nI would like to order "${product.name}".\nPlease share the price, availability, and delivery details.`
     );
     window.open(`https://api.whatsapp.com/send?phone=${brandConfig.whatsappNumber}&text=${text}`, "_blank");
     showToast(`Opening WhatsApp order for ${product.name}`, "info");
@@ -663,15 +663,11 @@ export default function HomePage() {
                     {language === "hi" ? product.hindiDesc : product.desc}
                   </p>
 
-                  {/* Product Bottom (Price Pill + Order Now Button) */}
-                  <div className="flex items-center justify-between gap-3 pt-2 border-t border-gray-100">
-                    <span className="bg-[#f0f0f0] text-[#37472a] px-4 py-2 rounded-full text-sm font-bold tracking-tight">
-                      {product.priceDisplay}
-                    </span>
-
+                  {/* Product Bottom (Order Now Button - Rate removed as requested) */}
+                  <div className="pt-3 border-t border-gray-100 mt-auto">
                     <button
                       onClick={() => handleOrderWhatsApp(product)}
-                      className="bg-[#37472a] hover:bg-[#25301d] text-white px-4 py-2 rounded-full text-xs font-semibold flex items-center gap-2 transition-transform hover:-translate-y-0.5 shadow-md cursor-pointer"
+                      className="w-full bg-[#37472a] hover:bg-[#25301d] text-white px-4 py-2.5 rounded-full text-xs md:text-sm font-semibold flex items-center justify-center gap-2 transition-transform hover:-translate-y-0.5 shadow-md cursor-pointer"
                       title={language === "hi" ? "व्हाट्सएप पर ऑर्डर करें" : "Order on WhatsApp"}
                     >
                       <span>{language === "hi" ? "ऑर्डर करें" : "Order Now"}</span>
