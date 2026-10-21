@@ -1,0 +1,1372 @@
+export interface ProductSpecification {
+  material: string;
+  dimensions: string;
+  weight: string;
+  origin: string;
+  finish: string;
+  care: string;
+}
+
+export interface ProductVariant {
+  name: string;
+  options: string[];
+}
+
+export interface Product {
+  id: string;
+  slug: string;
+  name: string;
+  hindiName: string;
+  categoryId: string;
+  categoryName: string;
+  price: number;
+  originalPrice: number;
+  discountPercent: number;
+  rating: number;
+  reviewCount: number;
+  inStock: boolean;
+  stockCount: number;
+  isBestSeller?: boolean;
+  isNewArrival?: boolean;
+  isFeatured?: boolean;
+  images: {
+    url: string;
+    alt: string;
+  }[];
+  shortDescription: string;
+  hindiShortDescription: string;
+  fullDescription: string;
+  hindiFullDescription: string;
+  highlights: string[];
+  artisan: {
+    name: string;
+    village: string;
+    craft: string;
+  };
+  specifications: ProductSpecification;
+  tags: string[];
+  variants?: ProductVariant[];
+}
+
+export const products: Product[] = [
+  // 1. Blue Pottery Wall Plate
+  {
+    id: "prod-1",
+    slug: "royal-jaipur-blue-pottery-wall-plate",
+    name: "Royal Jaipur Blue Pottery Decorative Wall Plate (10-Inch)",
+    hindiName: "शाही जयपुर ब्लू पॉटरी सजावटी दीवार प्लेट (10 इंच)",
+    categoryId: "pottery-terracotta",
+    categoryName: "Pottery & Terracotta",
+    price: 1850,
+    originalPrice: 2450,
+    discountPercent: 24,
+    rating: 4.9,
+    reviewCount: 48,
+    inStock: true,
+    stockCount: 14,
+    isBestSeller: true,
+    isFeatured: true,
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=1000&q=80",
+        alt: "Royal Jaipur Blue Pottery 10-Inch Wall Plate with Cobalt Floral Motifs",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=1000&q=80",
+        alt: "Artisan hand painting blue pottery plate edge with squirrel hair brush",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1000&q=80",
+        alt: "Blue pottery plate styled on a warm textured wall with brass lamp",
+      },
+    ],
+    shortDescription: "GI-tagged Jaipur blue pottery plate handmade from crushed quartz stone powder, Fuller's earth, and natural gum, hand-painted in traditional cobalt and turquoise floral arabesques.",
+    hindiShortDescription: "शुद्ध क्वार्ट्ज पत्थर पाउडर और प्राकृतिक रंगों से बनी जीआई-टैग प्राप्त जयपुर ब्लू पॉटरी की दीवार प्लेट।",
+    fullDescription: "Bring royal Rajasthani grandeur into your living space with this authentic 10-inch Jaipur Blue Pottery wall plate. Crafted by master craftsman Ramswaroop Prajapat and his guild in Kot Jewar, this plate does not use conventional clay. Instead, it utilizes an Egyptian-origin recipe introduced to Jaipur in the 19th century by Maharaja Sawai Ram Singh II—combining quartz stone powder, powdered glass, Fuller's earth (multani mitti), and gum arabic. Each floral swirl is hand-drawn using natural cobalt oxide and copper sulphate pigments before being fired in a wood-fired kiln at gentle heat. Includes a concealed brass hanging hook on the reverse side.",
+    hindiFullDescription: "जयपुर के पारंपरिक शिल्प की पहचान यह 10 इंच की ब्लू पॉटरी प्लेट आपके घर की दीवारों को राजसी भव्यता प्रदान करती है। इसमें पारंपरिक मिट्टी की जगह क्वार्ट्ज और कांच के पाउडर का विशेष मिश्रण प्रयुक्त होता है।",
+    highlights: [
+      "100% GI-tagged authentic Jaipur craft",
+      "Lead-free, non-toxic traditional quartz composition",
+      "Hand-painted with cobalt oxide & copper minerals",
+      "Ready to hang with sturdy pre-attached hook",
+    ],
+    artisan: {
+      name: "Master Ramswaroop Prajapat",
+      village: "Kot Jewar, Jaipur",
+      craft: "Blue Pottery Heritage Artisan",
+    },
+    specifications: {
+      material: "Quartz stone powder, glass, gum arabic & natural mineral glazes",
+      dimensions: "Diameter: 10 inches (25.4 cm) | Depth: 1.2 inches",
+      weight: "680 grams",
+      origin: "Jaipur, Rajasthan",
+      finish: "High-gloss semi-translucent traditional glaze",
+      care: "Wipe gently with a soft dry or slightly damp cloth. Not dishwasher safe.",
+    },
+    tags: ["Blue Pottery", "Wall Decor", "Jaipur Craft", "Bestseller", "Festive Gift"],
+    variants: [
+      {
+        name: "Diameter Size",
+        options: ["8-Inch", "10-Inch", "12-Inch"],
+      },
+    ],
+  },
+
+  // 2. Peacock Hanging Brass Diya
+  {
+    id: "prod-2",
+    slug: "heritage-peacock-brass-hanging-diya",
+    name: "Heritage Mayur (Peacock) Brass Hanging Diya with Bells",
+    hindiName: "विरासत मयूर पीतल लटकता दीया घंटियों सहित",
+    categoryId: "brass-metal-art",
+    categoryName: "Brass & Metal Art",
+    price: 2690,
+    originalPrice: 3500,
+    discountPercent: 23,
+    rating: 4.95,
+    reviewCount: 62,
+    inStock: true,
+    stockCount: 9,
+    isBestSeller: true,
+    isFeatured: true,
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1605371924599-2d0365da1ae0?auto=format&fit=crop&w=1000&q=80",
+        alt: "Solid brass peacock hanging diya illuminated with sesame oil wick",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1545231027-637d2f6210f8?auto=format&fit=crop&w=1000&q=80",
+        alt: "Detail of hand-chiseled peacock plumage and hanging temple bells",
+      },
+    ],
+    shortDescription: "Heavy solid virgin brass hanging oil lamp featuring a crowned peacock perched majestically atop a deep 5-wick oil reservoir, flanked by musical cast bells.",
+    hindiShortDescription: "भारी शुद्ध पीतल से बना मयूर हैंगिंग दीया, 5 बत्तियों का तेल कुंड और बजती पीतल की घंटियां।",
+    fullDescription: "Cast using sand-casting and refined with manual hand-chiseling in Moradabad—India's renowned 'Brass City'—this Mayur hanging diya embodies auspicious radiance. The crowned peacock symbolizes grace and divine vigilance, while the heavy brass chain holds melodic ghungroos that chime softly in ambient breeze. Finished with an antique golden lacquer that prevents rapid tarnishing.",
+    hindiFullDescription: "मुरादाबाद के कारीगरों द्वारा शुद्ध पीतल से ढाला गया यह भव्य मयूर दीया घर के प्रवेश द्वार या पूजा स्थल के लिए परम शुभ माना जाता है।",
+    highlights: [
+      "Solid heavy virgin brass (1.45 kg)",
+      "Traditional 5-wick deep oil reservoir",
+      "Includes 18-inch heavy link chain with hook",
+      "Antique protective lacquer coat",
+    ],
+    artisan: {
+      name: "Suresh Sahu & Guild",
+      village: "Moradabad Craft Corridor",
+      craft: "Brass Metalcasting & Engraving",
+    },
+    specifications: {
+      material: "Pure Virgin Cast Brass",
+      dimensions: "Lamp Height: 9.5 inches | Chain Length: 18 inches | Width: 6 inches",
+      weight: "1.45 kg",
+      origin: "Moradabad, Uttar Pradesh",
+      finish: "Antique Golden Patina with Protective Lacquer",
+      care: "Clean with soft cloth. For deep shine, use Pitambari brass powder or lemon juice and wipe dry immediately.",
+    },
+    tags: ["Brass Diya", "Pooja Decor", "Peacock", "Festive Lighting", "Moradabad Brass"],
+  },
+
+  // 3. Sheesham Hand-Carved Jewelry Box
+  {
+    id: "prod-3",
+    slug: "saharanpur-hand-carved-sheesham-brass-box",
+    name: "Saharanpur Hand-Carved Sheesham Keepsake Box with Brass Inlay",
+    hindiName: "सहारनपुर शीशम काष्ठ नक्काशीदार बॉक्स पीतल तारकशी सहित",
+    categoryId: "wooden-carvings",
+    categoryName: "Wooden Carvings & Crafts",
+    price: 1450,
+    originalPrice: 1950,
+    discountPercent: 25,
+    rating: 4.85,
+    reviewCount: 39,
+    inStock: true,
+    stockCount: 18,
+    isBestSeller: true,
+    isFeatured: true,
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1000&q=80",
+        alt: "Carved sheesham wood jewelry box with delicate brass wire floral inlays",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1000&q=80",
+        alt: "Artisan chiseling brass wire into seasoned wood groove",
+      },
+    ],
+    shortDescription: "Seasoned Indian rosewood (sheesham) keepsake chest, meticulously carved with floral jaali arabesques and inlaid with hand-beaten brass wire (Tarkashi).",
+    hindiShortDescription: "सहारनपुर की प्रसिद्ध शीशम की लकड़ी पर की गई बारीक नक्काशी और पीतल की तारकशी वाला सुंदर संदूक।",
+    fullDescription: "Made in Saharanpur, the wood-carving capital of Northern India, from ethically harvested and seasoned sheesham hardwood. Each lid is chiseled millimeter by millimeter with floral vines, followed by the insertion of wafer-thin brass wires hammered flush with the surface. The interior is lined with rich royal maroon velvet to cradle precious jewelry, heirlooms, or watches.",
+    hindiFullDescription: "शीशम की पक्की लकड़ी पर पारंपरिक फूलों-पत्तियों की नक्काशी और अंदर मुलायम मखमली अस्तर, गहने और जरूरी सामान सहेजने के लिए उत्तम।",
+    highlights: [
+      "100% solid seasoned Sheesham (Indian Rosewood)",
+      "Traditional brass Tarkashi wire inlay work",
+      "Soft velvet-lined interior with brass latch",
+      "Natural beeswax polished grain",
+    ],
+    artisan: {
+      name: "Chirag Mistry",
+      village: "Saharanpur",
+      craft: "Master Wood Inlay Craftsman",
+    },
+    specifications: {
+      material: "Seasoned Sheesham Wood, Solid Brass Inlay, Maroon Velvet",
+      dimensions: "8 x 5 x 3 inches (20.3 x 12.7 x 7.6 cm)",
+      weight: "520 grams",
+      origin: "Saharanpur, Uttar Pradesh",
+      finish: "Natural walnut-amber beeswax polish",
+      care: "Keep away from direct water. Polish occasionally with beeswax to keep wood grain hydrated.",
+    },
+    tags: ["Wooden Crafts", "Jewelry Box", "Tarkashi", "Gifting", "Sheesham"],
+  },
+
+  // 4. Jaipur Block Printed Mulmul Dohar Quilt
+  {
+    id: "prod-4",
+    slug: "jaipur-hand-block-printed-mulmul-dohar-quilt",
+    name: "Jaipur Hand Block Printed Pure Mulmul Cotton AC Dohar / Quilt",
+    hindiName: "जयपुर हस्त ब्लॉक प्रिंटेड मलमल सूती दोहर / रजाई",
+    categoryId: "handloom-textiles",
+    categoryName: "Handloom & Textiles",
+    price: 2490,
+    originalPrice: 3200,
+    discountPercent: 22,
+    rating: 4.92,
+    reviewCount: 54,
+    inStock: true,
+    stockCount: 16,
+    isBestSeller: true,
+    isFeatured: true,
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=1000&q=80",
+        alt: "Jaipur hand block printed mulmul cotton quilt with delicate botanical patterns",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1000&q=80",
+        alt: "Folded cotton quilt showcasing softness and natural dye block prints",
+      },
+    ],
+    shortDescription: "Ultra-breathable 3-layered pure mulmul cotton dohar, hand-stamped with teakwood blocks in Sanganer using non-toxic azo-free natural dyes.",
+    hindiShortDescription: "तीन परतों वाली शुद्ध मलमल कॉटन दोहर, सांगानेरी लकड़ी के छापों से प्राकृतिक रंगों में हाथ से रंगी हुई।",
+    fullDescription: "Experience cloud-like softness with this traditional Jaipuri dohar. Crafted with two outer layers of gossamer-fine 100-count mulmul cotton enclosing a middle flannel layer for featherlight warmth. Perfect for year-round AC sleeping and mild winters. Stamped by hand by 4th-generation Sanganer printers using carved wooden blocks in timeless Mughal Mughal buta motifs.",
+    hindiFullDescription: "सांगानेर की विश्वप्रसिद्ध मलमल दोहर, जो गर्मियों में एसी के लिए और हल्की ठंड में शरीर को अद्भुत गर्माहट और कोमलता प्रदान करती है।",
+    highlights: [
+      "100% fine thread-count pure combed mulmul cotton",
+      "Stitched with traditional 3-layer warmth system",
+      "Azo-free skin-friendly vegetable & mineral dyes",
+      "Gets softer with every gentle home wash",
+    ],
+    artisan: {
+      name: "Kamla Devi Chhipa",
+      village: "Sanganer, Jaipur",
+      craft: "Hand Block Printing Master",
+    },
+    specifications: {
+      material: "100% Pure Mulmul Cotton with middle flannel sheet",
+      dimensions: "Double Bed: 90 x 108 inches (228 x 274 cm)",
+      weight: "920 grams",
+      origin: "Sanganer, Jaipur, Rajasthan",
+      finish: "Soft-washed heritage cotton finish",
+      care: "Gentle machine wash cold with mild liquid detergent. Dry in shade.",
+    },
+    tags: ["Mulmul Cotton", "Dohar", "Jaipuri Razai", "Hand Block Print", "Bedding"],
+    variants: [
+      {
+        name: "Size",
+        options: ["Single Bed (60x90 in)", "Double Bed (90x108 in)"],
+      },
+    ],
+  },
+
+  // 5. Hand-Hammered Antique Brass Urli Bowl
+  {
+    id: "prod-5",
+    slug: "hand-hammered-antique-brass-urli-bowl",
+    name: "Hand-Hammered Antique Brass Urli Bowl for Floating Flowers (12-Inch)",
+    hindiName: "हस्त-निर्मित प्राचीन पीतल उरुली पात्र (12 इंच)",
+    categoryId: "brass-metal-art",
+    categoryName: "Brass & Metal Art",
+    price: 2190,
+    originalPrice: 2890,
+    discountPercent: 24,
+    rating: 4.88,
+    reviewCount: 41,
+    inStock: true,
+    stockCount: 11,
+    isBestSeller: true,
+    isFeatured: true,
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1545231027-637d2f6210f8?auto=format&fit=crop&w=1000&q=80",
+        alt: "Antique brass urli bowl filled with water, fresh marigolds, and floating brass diyas",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1605371924599-2d0365da1ae0?auto=format&fit=crop&w=1000&q=80",
+        alt: "Close-up of hand-hammered dimpled brass surface catching ambient light",
+      },
+    ],
+    shortDescription: "Hand-beaten solid brass traditional urli vessel with rolled rim and carved handles, designed for floating fresh rose petals, marigolds, and tealight candles.",
+    hindiShortDescription: "पानी, ताजे फूलों और दीयों के लिए हाथ से पीटा गया शुद्ध पीतल का पारंपरिक उरुली बर्तन।",
+    fullDescription: "Rooted in ancient Vastu and Kerala temple traditions, the urli invites peace, prosperity, and positive prana into your home foyer or living room. Hand-hammered with thousands of rhythmic strikes by brass coppersmiths, giving the bowl its distinctive dimpled texture that shimmers magically under candle flame. Solid and rust-proof.",
+    hindiFullDescription: "वास्तु शास्त्र के अनुसार घर के ईशान कोण में फूलों और पानी से भरा पीतल का उरुली पात्र रखना सुख-समृद्धि और शांति का प्रतीक है।",
+    highlights: [
+      "Traditional hand-beaten texture with rolled rim",
+      "Heavy gauge virgin brass sheet",
+      "Sturdy cast brass side handles",
+      "Vastu-compliant entryway statement centerpiece",
+    ],
+    artisan: {
+      name: "Radhe Shyam Soni",
+      village: "Moradabad",
+      craft: "Beaten Sheet Metal Artisan",
+    },
+    specifications: {
+      material: "Pure Heavy-Gauge Brass",
+      dimensions: "Diameter: 12 inches (30.5 cm) | Height: 3.5 inches",
+      weight: "1.15 kg",
+      origin: "Moradabad, Uttar Pradesh",
+      finish: "Hammered Antique Gold with Clear Protective Coating",
+      care: "Rinse with clean water and wipe dry after floral arrangements.",
+    },
+    tags: ["Brass Urli", "Floating Flowers", "Vastu Decor", "Diwali Centerpiece"],
+  },
+
+  // 6. Sonali Bengal Golden Jute Storage Basket
+  {
+    id: "prod-6",
+    slug: "sonali-bengal-hand-braided-golden-jute-basket",
+    name: "Sonali Bengal Hand-Braided Golden Jute Storage Basket with Handles",
+    hindiName: "सोनाली बंगाल हस्त-निर्मित गोल्डन जूट बास्केट",
+    categoryId: "jute-cane-crafts",
+    categoryName: "Jute & Cane Crafts",
+    price: 1190,
+    originalPrice: 1600,
+    discountPercent: 25,
+    rating: 4.82,
+    reviewCount: 33,
+    inStock: true,
+    stockCount: 22,
+    isBestSeller: false,
+    isNewArrival: true,
+    isFeatured: true,
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1590736969955-71cc94801759?auto=format&fit=crop&w=1000&q=80",
+        alt: "Hand-braided natural golden jute storage basket with cotton trim handles",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1000&q=80",
+        alt: "Jute basket styled in modern earthy living room with indoor snake plant",
+      },
+    ],
+    shortDescription: "100% natural, biodegradable golden jute fibers braided and coiled by hand by women artisans in rural Bengal. Sturdy, textured, and deeply functional.",
+    hindiShortDescription: "पश्चिम बंगाल के ग्रामीण शिल्पियों द्वारा प्राकृतिक सुनहरे जूट से बुनी गई मजबूत बास्केट।",
+    fullDescription: "Crafted from raw golden jute fibers sustainably cultivated in the fertile delta of Bengal. Hand-braided into thick ropes and stitched in coiled concentric circles with reinforced natural cotton thread. Ideal for organizing throws, cushions, children's toys, or concealing potted indoor fiddle-leaf figs and monsteras.",
+    hindiFullDescription: "प्राकृतिक सुनहरे जूट से तैयार यह बास्केट घर के सामान को सहेजने और इनडोर पौधों के गमले रखने के लिए एकदम उपयुक्त है।",
+    highlights: [
+      "100% natural biodegradable golden jute fiber",
+      "Reinforced vegan-friendly cotton twill handles",
+      "Collapsible and highly durable construction",
+      "Supports Bengal women artisan collectives",
+    ],
+    artisan: {
+      name: "Monimala Das",
+      village: "Murshidabad",
+      craft: "Golden Jute Weaving Collective",
+    },
+    specifications: {
+      material: "Premium Golden Jute & Organic Cotton Thread",
+      dimensions: "Diameter: 12 inches | Height: 12 inches (30 x 30 cm)",
+      weight: "650 grams",
+      origin: "Murshidabad, West Bengal",
+      finish: "Natural unbleached golden fiber",
+      care: "Spot clean with damp cloth and dry in sunlight. Do not submerge in water.",
+    },
+    tags: ["Jute Basket", "Eco Living", "Planter Basket", "Storage", "Handwoven"],
+  },
+
+  // 7. Madhubani 'Tree of Life' Framed Art
+  {
+    id: "prod-7",
+    slug: "original-madhubani-tree-of-life-framed-art",
+    name: "Original Madhubani 'Tree of Life' Framed Art on Handmade Paper (14x18)",
+    hindiName: "मूल मधुबनी 'जीवन का वृक्ष' फ्रेम कला हस्तनिर्मित कागज पर",
+    categoryId: "wall-art",
+    categoryName: "Wall Art & Folk Paintings",
+    price: 3450,
+    originalPrice: 4500,
+    discountPercent: 23,
+    rating: 4.96,
+    reviewCount: 29,
+    inStock: true,
+    stockCount: 8,
+    isBestSeller: false,
+    isNewArrival: true,
+    isFeatured: true,
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1000&q=80",
+        alt: "Original Madhubani Tree of Life folk painting framed in solid teakwood",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1549887552-cb1071d3e5ca?auto=format&fit=crop&w=1000&q=80",
+        alt: "Close-up of fine nib nibwork depicting birds, leaves, and sacred sun",
+      },
+    ],
+    shortDescription: "Authentic Mithila folk painting painted with bamboo nibs and natural plant pigments on sun-dried handmade cow-dung-treated paper. Includes certificate of authenticity.",
+    hindiShortDescription: "बिहार के मिथिलांचल की प्रसिद्ध हस्तनिर्मित पेंटिंग, बांस की कलम और प्राकृतिक रंगों से उकेरी गई।",
+    fullDescription: "In the Mithila region of Bihar, women have passed down the sacred art of Madhubani for centuries. This masterpiece represents the 'Kalpavriksha' (Tree of Life), symbolic of boundless fertility, spiritual interconnectedness, and universal blessing. Fine geometric borders and filled hatched lines (Kachni style) are rendered with bamboo twigs and nibs. Framed in a minimalist solid wood frame with acrylic glass protection.",
+    hindiFullDescription: "मिथिलांचल की पवित्र परंपरा का प्रतीक 'जीवन वृक्ष' (कल्पवृक्ष)। यह मूल कलाकृति हस्तनिर्मित कागज पर प्राकृतिक रंगों से बनाई गई है।",
+    highlights: [
+      "Original hand-painted work (not a digital print)",
+      "GI-tagged Mithila / Madhubani art tradition",
+      "Handmade rag paper with natural deckled edges",
+      "Comes framed with mounting hardware included",
+    ],
+    artisan: {
+      name: "Smt. Shanti Devi Jha",
+      village: "Jitwarpur, Madhubani",
+      craft: "Mithila Folk Painting Master",
+    },
+    specifications: {
+      material: "Natural pigments on 100% cotton rag handmade paper, solid wood frame",
+      dimensions: "Frame Outer: 14 x 18 inches (35.5 x 45.7 cm)",
+      weight: "1.2 kg",
+      origin: "Madhubani, Bihar",
+      finish: "Matte natural mineral pigment with UV-protective acrylic glazing",
+      care: "Dust frame with microfiber cloth. Keep away from direct harsh moisture.",
+    },
+    tags: ["Madhubani", "Folk Art", "Tree of Life", "Framed Art", "Mithila Painting"],
+  },
+
+  // 8. Dokra Lost-Wax Cast Nataraja Idol
+  {
+    id: "prod-8",
+    slug: "dokra-lost-wax-cast-nataraja-idol",
+    name: "Dokra Lost-Wax Cast Nataraja Idol (12-Inch Antique Bronze)",
+    hindiName: "ढोकरा ढलाई नटराज कांस्य मूर्ति (12 इंच)",
+    categoryId: "brass-metal-art",
+    categoryName: "Brass & Metal Art",
+    price: 3890,
+    originalPrice: 4990,
+    discountPercent: 22,
+    rating: 4.93,
+    reviewCount: 37,
+    inStock: true,
+    stockCount: 6,
+    isBestSeller: false,
+    isNewArrival: true,
+    isFeatured: true,
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=1000&q=80",
+        alt: "Dokra lost-wax bronze metal cast Nataraja cosmic dancer idol",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1605371924599-2d0365da1ae0?auto=format&fit=crop&w=1000&q=80",
+        alt: "Detail of coiled brass wires forming the fiery halo of Nataraja",
+      },
+    ],
+    shortDescription: "Primitive tribal bell-metal sculpture cast through the 4000-year-old lost-wax process by tribal Dhokra metalsmiths of Bastar.",
+    hindiShortDescription: "बस्तर के जनजातीय कारीगरों द्वारा 4000 वर्ष पुरानी लॉस्ट-वैक्स पद्धति से निर्मित नटराज मूर्ति।",
+    fullDescription: "A singular tribute to Lord Shiva's cosmic dance of creation and dissolution. Unlike mass-manufactured molded idols, this Dhokra piece is modeled completely from thin coils of natural beeswax over a clay core, encased in river mud, and baked. The wax melts away (lost-wax) and molten bell metal is poured in. When the clay mold is cracked open, this unique sculpture emerges into the light. No two pieces are ever identical.",
+    hindiFullDescription: "प्रत्येक ढोकरा मूर्ति अद्वितीय होती है क्योंकि इसे बनाने के बाद मिट्टी का सांचा तोड़ दिया जाता है। शुद्ध कांस्य और पीतल का अद्भुत समन्वय।",
+    highlights: [
+      "4000-year-old Harappan lost-wax casting technique",
+      "One-of-a-kind collector's sculpture",
+      "Non-magnetic, heavy bell metal alloy",
+      "Deep antique rustic bronze patina",
+    ],
+    artisan: {
+      name: "Suresh Sahu",
+      village: "Kondagaon, Bastar",
+      craft: "Dhokra Bell Metal Castings",
+    },
+    specifications: {
+      material: "Bell Metal & Brass Bronze Alloy",
+      dimensions: "Height: 12 inches (30.5 cm) | Width: 9.5 inches",
+      weight: "1.85 kg",
+      origin: "Bastar, Chhattisgarh",
+      finish: "Rustic Antique Patina",
+      care: "Wipe with dry cotton cloth. Do not use chemical cleaners.",
+    },
+    tags: ["Dokra", "Nataraja", "Tribal Art", "Bronze Idol", "Collector Piece"],
+  },
+
+  // 9. Handcrafted Jodhpur Royal Wooden Elephant
+  {
+    id: "prod-9",
+    slug: "handcrafted-jodhpur-royal-wooden-elephant",
+    name: "Handcrafted Jodhpur Royal Wooden Elephant with Howdah (Antique Finish)",
+    hindiName: "जोधपुरी शाही काष्ठ हाथी हौदा सहित (प्राचीन नक्काशी)",
+    categoryId: "wooden-carvings",
+    categoryName: "Wooden Carvings & Crafts",
+    price: 1990,
+    originalPrice: 2600,
+    discountPercent: 23,
+    rating: 4.87,
+    reviewCount: 45,
+    inStock: true,
+    stockCount: 12,
+    isBestSeller: true,
+    isFeatured: true,
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1584727638096-042c45049ebe?auto=format&fit=crop&w=1000&q=80",
+        alt: "Carved wooden elephant figurine with distressed antique finish and ornate howdah",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1000&q=80",
+        alt: "Detail of hand-painted floral blanket and trunk raised in royal salutation",
+      },
+    ],
+    shortDescription: "Solid mango wood elephant sculpted by Rajasthani master carvers, featuring an auspicious raised trunk and distressed antique lacquer.",
+    hindiShortDescription: "उठी हुई सूंड वाला लकड़ी का नक्काशीदार हाथी, सुख-सौभाग्य और शक्ति का प्रतीक।",
+    fullDescription: "In Indian ethos, the elephant with an upright trunk represents wisdom, strength, and unwavering fortune. Hand-carved from seasoned wood in the artisan quarters of Jodhpur, this majestic figurine is hand-painted in muted cinnabar red, gold, and verdigris tones before receiving an antique distressing process that gives it the dignity of a royal palace artifact.",
+    hindiFullDescription: "जोधपुर के कारीगरों द्वारा आम और शीशम की लकड़ी से तराशा गया शाही हाथी, जो घर के मुख्य द्वार या लिविंग रूम की शोभा बढ़ाता है।",
+    highlights: [
+      "Sculpted from sustainable seasoned hardwood",
+      "Auspicious upward-trunk posture",
+      "Hand-painted with rich antique distress patina",
+      "Stable flat base with felt scratch-guards",
+    ],
+    artisan: {
+      name: "Mangilal Kumawat",
+      village: "Jodhpur Craft Hub",
+      craft: "Rajasthani Wooden Sculpting",
+    },
+    specifications: {
+      material: "Seasoned Solid Hardwood & Natural Lacquers",
+      dimensions: "Height: 8 inches | Length: 9.5 inches | Width: 4 inches",
+      weight: "890 grams",
+      origin: "Jodhpur, Rajasthan",
+      finish: "Distressed antique hand-painted lacquer",
+      care: "Dust with dry paintbrush or soft microfiber cloth.",
+    },
+    tags: ["Wooden Elephant", "Jodhpur Carving", "Home Decor", "Good Luck", "Handcrafted"],
+  },
+
+  // 10. Kutch Rabari Mirror Work Cushion Cover (Set of 2)
+  {
+    id: "prod-10",
+    slug: "kutch-rabari-mirror-work-cushion-cover-pair",
+    name: "Kutch Rabari Hand-Embroidered Mirror Work Cushion Covers (Set of 2)",
+    hindiName: "कच्छ रबारी हस्त-कशीदाकारी दर्पण कुशन कवर्स (2 का सेट)",
+    categoryId: "handloom-textiles",
+    categoryName: "Handloom & Textiles",
+    price: 1650,
+    originalPrice: 2200,
+    discountPercent: 25,
+    rating: 4.89,
+    reviewCount: 51,
+    inStock: true,
+    stockCount: 15,
+    isBestSeller: true,
+    isFeatured: false,
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1000&q=80",
+        alt: "Vibrant Kutch Rabari embroidery cushion covers with authentic reflective mirrors",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=1000&q=80",
+        alt: "Close-up of chain stitch embroidery and real circular mirror work",
+      },
+    ],
+    shortDescription: "Hand-stitched in the Thar desert of Kutch by nomadic Rabari craftswomen, featuring authentic tiny reflective glass mirrors (abhla) and rich chain-stitch geometry.",
+    hindiShortDescription: "कच्छ की रबारी महिलाओं द्वारा सुई-धागे से हाथ से काढ़ा गया शीशा वर्क कुशन कवर जोड़ा।",
+    fullDescription: "Celebrate the dazzling nomadic spirit of Gujarat's Kutch region. Each mirror is encased with tightly looped buttonhole stitches using vibrant silk-cotton threads on heavy ivory slub canvas. The reverse side features a concealed YKK zipper for easy cushion insertion.",
+    hindiFullDescription: "गुजरात के कच्छ क्षेत्र की प्रसिद्ध रबारी कशीदाकारी, जिसमें छोटे शीशों और रंग-बिरंगे धागों का बारीक काम किया गया है।",
+    highlights: [
+      "100% authentic hand-embroidered by Kutch craftswomen",
+      "Real reflective mirrors firmly locked in needlework",
+      "Durable 350 GSM premium cotton canvas backing",
+      "Concealed zipper enclosure for a seamless aesthetic",
+    ],
+    artisan: {
+      name: "Pabiben Rabari & Collective",
+      village: "Bhadroi, Kutch",
+      craft: "Rabari Mirror Embroidery",
+    },
+    specifications: {
+      material: "Pure Cotton Canvas, Silk-Cotton Threads, Hand-cut Mirrors",
+      dimensions: "16 x 16 inches (40.6 x 40.6 cm)",
+      weight: "340 grams (set of 2)",
+      origin: "Kutch, Gujarat",
+      finish: "Hand-embroidered textured front with plain canvas back",
+      care: "Dry clean recommended to protect delicate mirror work.",
+    },
+    tags: ["Kutch Embroidery", "Mirror Work", "Cushion Covers", "Ethnic Textiles"],
+  },
+
+  // 11. Traditional Rajasthani Royal Kathputli Pair
+  {
+    id: "prod-11",
+    slug: "traditional-rajasthani-royal-kathputli-pair",
+    name: "Traditional Rajasthani Royal Raja-Rani Kathputli String Puppets (Pair)",
+    hindiName: "पारंपरिक राजस्थानी राजा-रानी कठपुतली जोड़ा",
+    categoryId: "wooden-carvings",
+    categoryName: "Wooden Carvings & Crafts",
+    price: 890,
+    originalPrice: 1250,
+    discountPercent: 28,
+    rating: 4.81,
+    reviewCount: 38,
+    inStock: true,
+    stockCount: 20,
+    isBestSeller: false,
+    isNewArrival: false,
+    isFeatured: true,
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1000&q=80",
+        alt: "Rajasthani handcrafted string puppet pair dressed in bandhani and gotta patti silk",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1000&q=80",
+        alt: "Detail of hand-painted mango wood facial expressions and turbans",
+      },
+    ],
+    shortDescription: "Authentic hand-carved wooden marionettes crafted by hereditary Bhat puppeteers of Rajasthan, adorned in vibrant Bandhani textiles and shimmering gota patti.",
+    hindiShortDescription: "राजस्थान के भाट समुदाय द्वारा लकड़ी और बांधनी वस्त्रों से निर्मित राजा-रानी कठपुतली।",
+    fullDescription: "Bring centuries of folk folklore and desert puppetry into your home. The faces are carved from seasoned mango wood and hand-painted with expressive kohl-lined eyes and mustaches. The puppets are dressed in traditional flared Lehengas and royal Achkans stitched from vintage bandhej fabrics and accented with golden gota lace.",
+    hindiFullDescription: "राजस्थान के सांस्कृतिक मेले और लोककथाओं की आत्मा, यह कठपुतली जोड़ा घर की बैठक या बालकनी को जीवंत बना देता है।",
+    highlights: [
+      "Hand-chiseled mango wood facial sculptures",
+      "Traditional Rajasthani bandhani and gota dress",
+      "Functional finger-loop strings for gentle movement",
+      "Heritage cultural art item",
+    ],
+    artisan: {
+      name: "Bhanwar Lal Bhat",
+      village: "Puppet Colony, Jaipur",
+      craft: "Hereditary Kathputli Craftsman",
+    },
+    specifications: {
+      material: "Carved Wood, Cotton Bandhani, Gota Patti, Wool Fibers",
+      dimensions: "Height: 18 inches each (45.7 cm)",
+      weight: "380 grams (pair)",
+      origin: "Jaipur, Rajasthan",
+      finish: "Hand-painted wood & hand-stitched traditional attire",
+      care: "Hang indoors away from moisture. Dust gently with dry cloth.",
+    },
+    tags: ["Kathputli", "Puppets", "Rajasthani Decor", "Cultural Craft", "Wall Hanging"],
+  },
+
+  // 12. Mitti Rustic Terracotta Fluted Amphora Vase
+  {
+    id: "prod-12",
+    slug: "mitti-rustic-terracotta-fluted-amphora-vase",
+    name: "Mitti Rustic Terracotta Fluted Amphora Vase (11-Inch)",
+    hindiName: "मिट्टी रस्टिक टेराकोटा नक्काशीदार सुराही फूलदान",
+    categoryId: "pottery-terracotta",
+    categoryName: "Pottery & Terracotta",
+    price: 1390,
+    originalPrice: 1850,
+    discountPercent: 24,
+    rating: 4.86,
+    reviewCount: 32,
+    inStock: true,
+    stockCount: 14,
+    isBestSeller: false,
+    isNewArrival: true,
+    isFeatured: true,
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=1000&q=80",
+        alt: "Rustic terracotta fluted earthen vase styled with dried pampas grass",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1000&q=80",
+        alt: "Artisan wheel-throwing wet red terracotta clay vessel on spinning wheel",
+      },
+    ],
+    shortDescription: "Wheel-thrown earthenware amphora vase shaped from all-natural red riverbed clay and sun-fired, adorned with hand-carved fluted ridges and raw matte texture.",
+    hindiShortDescription: "शुद्ध लाल मिट्टी से चाक पर गढ़ा गया रस्टिक टेराकोटा फूलदान, सूखे फूलों के लिए आदर्श।",
+    fullDescription: "Earthy, grounding, and unapologetically organic. Sourced from the alluvial riverbanks of Rajasthan and hand-thrown on a traditional foot-spun wooden potter's wheel. The fluted vertical ridges are carved while the clay is still leather-hard, creating shadows and tactile depth that complement minimalist and Japandi-Boho interior themes.",
+    hindiFullDescription: "प्राकृतिक मिट्टी की सौंधी खुशबू और मिट्टी के मूल रंग को संजोए यह फूलदान सूखे पम्पास ग्रास और आधुनिक सजावट के लिए बेहतरीन है।",
+    highlights: [
+      "100% natural organic river clay without synthetic additives",
+      "Wheel-thrown by master potters with hand-sculpted flutes",
+      "Porous earthenware breathes naturally",
+      "Warm earthy terracotta color palette",
+    ],
+    artisan: {
+      name: "Om Prakash Prajapat",
+      village: "Molela Terracotta Village",
+      craft: "Master Terracotta Potter",
+    },
+    specifications: {
+      material: "Pure Alluvial River Clay (Terracotta)",
+      dimensions: "Height: 11 inches (28 cm) | Belly Diameter: 6.5 inches",
+      weight: "1.1 kg",
+      origin: "Molela, Rajasthan",
+      finish: "Raw matte unglazed terracotta with natural kiln blushing",
+      care: "Ideal for dry florals or pampas. If using fresh water, place an internal glass insert.",
+    },
+    tags: ["Terracotta", "Pottery Vase", "Earthy Home", "Wabi Sabi", "Boho Decor"],
+  },
+
+  // 13. Banjarin Tribal Oxidized Silver Statement Hasli
+  {
+    id: "prod-13",
+    slug: "banjarin-tribal-oxidized-silver-statement-hasli",
+    name: "Banjarin Tribal Oxidized Silver Statement Hasli Neckpiece",
+    hindiName: "बंजारन जनजातीय ऑक्सीडाइज्ड चांदी हंसली हार",
+    categoryId: "traditional-jewelry",
+    categoryName: "Traditional Handmade Jewelry",
+    price: 1590,
+    originalPrice: 2200,
+    discountPercent: 27,
+    rating: 4.88,
+    reviewCount: 44,
+    inStock: true,
+    stockCount: 16,
+    isBestSeller: false,
+    isNewArrival: true,
+    isFeatured: true,
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1000&q=80",
+        alt: "Artisan oxidized silver tribal choker hasli with embossed sunburst medallions and tiny ghungroos",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1000&q=80",
+        alt: "Detail of hand-embossed silver motifs and adjustable hand-twisted black dori cord",
+      },
+    ],
+    shortDescription: "Bold nomadic collar necklace handcrafted in brass with antique oxidized silver plating, featuring etched gypsy amulets and chiming miniature bells.",
+    hindiShortDescription: "राजस्थानी बंजारा शैली में बना भारी लुक वाला ऑक्सीडाइज्ड हंसली चोकर हार।",
+    fullDescription: "Inspired by the vintage jewelry worn by the nomadic Banjara tribe across Rajasthan and Gujarat. This rigid collar (Hasli) rests comfortably along the collarbone and secures with an adjustable soft cotton braided tassel cord. Lead-free, nickel-free, and skin-safe.",
+    hindiFullDescription: "साड़ी, कुर्ते या वेस्टर्न फ्यूजन परिधानों के साथ एक अनूठा रॉयल और एथनिक लुक देने वाला पारंपरिक बंजारा हंसली हार।",
+    highlights: [
+      "Vintage nomadic Banjara coin and medallion aesthetic",
+      "Non-allergic, skin-safe antique silver finish",
+      "Adjustable braided thread dori fits all neck sizes",
+      "Pairs beautifully with sarees, kurtas, and western jackets",
+    ],
+    artisan: {
+      name: "Gauri Shankar Verma",
+      village: "Johari Bazaar, Jaipur",
+      craft: "Silver & Brass Filigree Artistry",
+    },
+    specifications: {
+      material: "High-grade Brass with Oxidized Antique Silver Electroplating",
+      dimensions: "Inner Circumference: 14 inches + 8 inch adjustable dori cord",
+      weight: "145 grams",
+      origin: "Jaipur, Rajasthan",
+      finish: "Antique matte oxidized silver",
+      care: "Store in an airtight ziplock pouch. Keep away from perfumes and moisture.",
+    },
+    tags: ["Oxidized Jewelry", "Hasli", "Tribal Choker", "Boho Jewelry", "Jaipur Silver"],
+  },
+
+  // 14. Royal Jaipur Meenakari & Pearl Jhumka Drops
+  {
+    id: "prod-14",
+    slug: "royal-jaipur-meenakari-pearl-jhumka-drops",
+    name: "Royal Jaipur Meenakari & Fresh Pearl Chandbali Jhumka Drops",
+    hindiName: "शाही जयपुर मीनाकारी व मोती झुमका कर्णफूल",
+    categoryId: "traditional-jewelry",
+    categoryName: "Traditional Handmade Jewelry",
+    price: 1290,
+    originalPrice: 1750,
+    discountPercent: 26,
+    rating: 4.91,
+    reviewCount: 36,
+    inStock: true,
+    stockCount: 19,
+    isBestSeller: true,
+    isFeatured: false,
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1000&q=80",
+        alt: "Hand-enamelled Meenakari peacock jhumkas adorned with rice pearls and Kundan glass stones",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1611591475877-268e3678ebc6?auto=format&fit=crop&w=1000&q=80",
+        alt: "Back detail of intricate red and green enamel painting on gold foil",
+      },
+    ],
+    shortDescription: "Double-tiered traditional jhumka earrings hand-enamelled in emerald green and ruby red Meenakari, finished with natural freshwater rice pearl bunches.",
+    hindiShortDescription: "जयपुर के प्रसिद्ध मीनाकारी और कुंदन कार्य से सजे पारंपरिक झुमके, असली मोतियों के गुच्छों सहित।",
+    fullDescription: "Meenakari was brought to Jaipur in the 16th century by Raja Man Singh I from Lahore. These earrings are hand-engraved with floral patterns on metal and filled with crushed colored mineral glass enamels before being fired in small jewelers' kilns. The lower bell (jhumka) is fringed with dozens of genuine cultured seed pearls.",
+    hindiFullDescription: "पारंपरिक शादी-ब्याह और त्योहारों पर पहनने के लिए जयपुर की शाही धरोहर को दर्शाता अनमोल मीनाकारी झुमका।",
+    highlights: [
+      "Traditional fired mineral glass Meenakari enamel",
+      "Hand-strung genuine rice pearl drops",
+      "Comfortable push-back closure with wide support washers",
+      "Featherlight on earlobes despite elaborate design",
+    ],
+    artisan: {
+      name: "Mohan Lal Meenakar",
+      village: "Chhoti Chaupar, Jaipur",
+      craft: "Meenakari Enamel Master",
+    },
+    specifications: {
+      material: "Copper-Brass Alloy, 18K Gold Micron Plating, Mineral Enamels, Seed Pearls",
+      dimensions: "Length: 3 inches (7.6 cm) | Width: 1.4 inches",
+      weight: "38 grams (pair)",
+      origin: "Jaipur, Rajasthan",
+      finish: "Lustrous gold plating with vibrant fired enamel",
+      care: "Avoid direct contact with water, sweat, and hairspray. Wipe with soft cotton.",
+    },
+    tags: ["Meenakari", "Jhumka", "Kundan", "Festive Jewelry", "Wedding Gifting"],
+  },
+
+  // 15. Shubh Utsav Heritage Brass & Soy Candle Hamper
+  {
+    id: "prod-15",
+    slug: "shubh-utsav-heritage-brass-candle-hamper",
+    name: "Shubh Utsav Heritage Brass Diya & Hand-Poured Soy Candle Gift Hamper",
+    hindiName: "शुभ उत्सव हेरिटेज पीतल दीया व सुगंधित मोमबत्ती उपहार हैंपर",
+    categoryId: "gift-hampers",
+    categoryName: "Artisanal Gift Hampers",
+    price: 2990,
+    originalPrice: 3950,
+    discountPercent: 24,
+    rating: 4.97,
+    reviewCount: 58,
+    inStock: true,
+    stockCount: 17,
+    isBestSeller: true,
+    isFeatured: true,
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1605371924599-2d0365da1ae0?auto=format&fit=crop&w=1000&q=80",
+        alt: "Luxury festive gift hamper box containing brass diya, natural soy wax candle, and organic incense",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1000&q=80",
+        alt: "Crafted keepsake pinewood box with embossed golden seal and silk ribbon",
+      },
+    ],
+    shortDescription: "A curated festive keepsake chest containing a solid brass Kamal (Lotus) Diya, two rose & mogra soy wax candles in brass tins, hand-rolled temple incense, and raw forest honey.",
+    hindiShortDescription: "ठोस पीतल का कमल दीया, प्राकृतिक मोगरा सुगंधित मोमबत्ती और शुद्ध वन शहद से युक्त शाही उपहार बॉक्स।",
+    fullDescription: "Designed for housewarmings, Diwali blessings, wedding favors, and corporate expressions of gratitude. Packaged inside a reusable hand-carved pine wooden keepsake chest with satin ribbon and a personalized handwritten message card penned on marigold-infused seed paper.",
+    hindiFullDescription: "किसी खास को उपहार देने के लिए तैयार किया गया यह विशेष हैंपर भारतीय संस्कृति की पवित्रता और सुगंध से परिपूर्ण है।",
+    highlights: [
+      "Includes solid cast-brass lotus diya (4-inch)",
+      "2x 100% natural soy wax candles (burning time 35+ hours each)",
+      "Chemical-free charcoal-less hand-rolled incense sticks",
+      "Reusable carved pine gift chest with brass clasp",
+    ],
+    artisan: {
+      name: "Kalakriti Jaipur Studio Guild",
+      village: "Jaipur Heritage Corridor",
+      craft: "Curated Craft Curation & Gifting",
+    },
+    specifications: {
+      material: "Solid Brass, Natural Soy Wax, Pure Essential Oils, Pinewood Chest",
+      dimensions: "Chest: 11 x 9 x 4.5 inches (28 x 23 x 11.5 cm)",
+      weight: "1.9 kg complete box",
+      origin: "Jaipur, Rajasthan",
+      finish: "Natural wood polish with gold-foil seal",
+      care: "Store candles in cool dark place away from heat.",
+    },
+    tags: ["Gift Hamper", "Festive Gift", "Brass Diya", "Luxury Gifting", "Wedding Favors"],
+  },
+
+  // 16. Bagru Mud-Resist (Dabu) Indigo Table Runner
+  {
+    id: "prod-16",
+    slug: "bagru-mud-resist-dabu-table-runner",
+    name: "Bagru Mud-Resist (Dabu) Indigo Hand Block Printed Cotton Table Runner",
+    hindiName: "बगरू दाबू मिट्टी प्रिंट शुद्ध सूती डाइनिंग टेबल रनर",
+    categoryId: "handloom-textiles",
+    categoryName: "Handloom & Textiles",
+    price: 1150,
+    originalPrice: 1550,
+    discountPercent: 25,
+    rating: 4.84,
+    reviewCount: 27,
+    inStock: true,
+    stockCount: 21,
+    isBestSeller: false,
+    isNewArrival: true,
+    isFeatured: false,
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1000&q=80",
+        alt: "Indigo and ivory mud-resist hand block printed cotton table runner on wooden dining table",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=1000&q=80",
+        alt: "Detail of rustic crackled mud resist pattern and hand-knotted corner tassels",
+      },
+    ],
+    shortDescription: "Artisan-stamped in Bagru village using fermented mud paste (dabu) and fermented natural indigo leaf dye vats on heavyweight textured cotton canvas.",
+    hindiShortDescription: "बगरू की प्राचीन दाबू तकनीक और प्राकृतिक नील के रंगों से रंगा शुद्ध सूती टेबल रनर।",
+    fullDescription: "Dabu is a centuries-old mud resist hand-printing technique unique to Bagru, Rajasthan. Clay, lime, and gum are applied with hand-carved wooden blocks to prevent dye absorption before the fabric is immersed into natural indigo vats. As the mud dries under the desert sun, it creates subtle, organic crackles that give each runner an unmistakable handmade character.",
+    hindiFullDescription: "प्राकृतिक नील और लकड़ी की मेज का यह तालमेल आपके डाइनिंग स्पेस को एक शांत और सुरुचिपूर्ण माहौल प्रदान करता है।",
+    highlights: [
+      "100% natural vegetable indigo dye",
+      "Authentic mud-resist craft with organic dye crackles",
+      "Heavyweight 280 GSM cotton canvas resists curling",
+      "Hand-knotted jute-cotton corner tassels",
+    ],
+    artisan: {
+      name: "Kamla Devi Chhipa",
+      village: "Bagru",
+      craft: "Dabu Indigo Master",
+    },
+    specifications: {
+      material: "100% Cotton Canvas with natural indigo dye",
+      dimensions: "14 x 72 inches (35.5 x 182.8 cm) - Fits 6-8 seater table",
+      weight: "310 grams",
+      origin: "Bagru, Rajasthan",
+      finish: "Textured natural handloom weave",
+      care: "Hand wash cold separately using mild liquid detergent. Dry in shade.",
+    },
+    tags: ["Table Runner", "Dabu Print", "Indigo", "Home Dining", "Cotton Handloom"],
+  },
+
+  // 17. Moradabad Filigree Jaali Brass Dhuna Dhoop Burner
+  {
+    id: "prod-17",
+    slug: "moradabad-filigree-jaali-brass-dhuna-burner",
+    name: "Moradabad Filigree Jaali Brass Dhuna Dhoop Burner with Wooden Handle",
+    hindiName: "मुरादाबाद पीतल नक्काशी धूपदानी लकड़ी के हत्थे सहित",
+    categoryId: "brass-metal-art",
+    categoryName: "Brass & Metal Art",
+    price: 1350,
+    originalPrice: 1790,
+    discountPercent: 24,
+    rating: 4.86,
+    reviewCount: 35,
+    inStock: true,
+    stockCount: 13,
+    isBestSeller: false,
+    isNewArrival: false,
+    isFeatured: true,
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1603555501671-8f96b3fce8e4?auto=format&fit=crop&w=1000&q=80",
+        alt: "Solid brass dhoop daani incense burner with lattice lid letting plumes of fragrant smoke drift",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1605371924599-2d0365da1ae0?auto=format&fit=crop&w=1000&q=80",
+        alt: "Detail of hand-carved sheesham wooden grip handle protecting hands from heat",
+      },
+    ],
+    shortDescription: "Vintage-inspired brass dhuna loban burner with perforated Mughal lattice lid, hinged brass clasp, and heat-insulated sheesham wooden handle.",
+    hindiShortDescription: "प्राचीन भारतीय पद्धति से घर में धूप और लोबान की सुगंध फैलाने वाली शुद्ध पीतल की धूपदानी।",
+    fullDescription: "Used in traditional Indian evening rituals to purify living spaces and disperse natural resin incense like sambrani, loban, and guggul. The hand-pierced lattice dome allows fragrant smoke to billow gracefully while retaining hot charcoal embers safely inside. The turned sheesham wooden handle remains cool to touch as you walk from room to room.",
+    hindiFullDescription: "शाम की आरती और घर की नकारात्मक ऊर्जा को दूर करने के लिए लोबान व धूप जलाने हेतु पारंपरिक पीतल की धूपदानी।",
+    highlights: [
+      "Pure solid brass body with hand-punched jaali perforations",
+      "Ergonomic turned hardwood handle for safe carry",
+      "Hinged dome lid with secure latch closure",
+      "Elevated tripodal feet protect furniture surfaces",
+    ],
+    artisan: {
+      name: "Mohd. Aslam",
+      village: "Moradabad",
+      craft: "Brass Perforation & Engraving",
+    },
+    specifications: {
+      material: "Solid Brass & Sheesham Wood Handle",
+      dimensions: "Length with Handle: 10.5 inches | Height: 5.5 inches | Bowl Diameter: 4.5 inches",
+      weight: "580 grams",
+      origin: "Moradabad, Uttar Pradesh",
+      finish: "Antique Golden Finish",
+      care: "Allow to cool before cleaning out ash. Wipe outer brass with soft cloth.",
+    },
+    tags: ["Brass Burner", "Dhoop Daani", "Incense", "Puja Rituals", "Aromatherapy"],
+  },
+
+  // 18. Hand-Knotted Organic Cotton Driftwood Tapestry
+  {
+    id: "prod-18",
+    slug: "hand-knotted-organic-cotton-driftwood-tapestry",
+    name: "Hand-Knotted Organic Cotton Driftwood Macrame Tapestry (20x32)",
+    hindiName: "हस्त-निर्मित मैक्रैम दीवार हैंगिंग प्राकृतिक लकड़ी सहित",
+    categoryId: "jute-cane-crafts",
+    categoryName: "Jute & Cane Crafts",
+    price: 1750,
+    originalPrice: 2350,
+    discountPercent: 25,
+    rating: 4.83,
+    reviewCount: 22,
+    inStock: true,
+    stockCount: 10,
+    isBestSeller: false,
+    isNewArrival: true,
+    isFeatured: false,
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=1000&q=80",
+        alt: "Large bohemian macrame wall tapestry hand-knotted from unbleached cotton on river driftwood",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1590736969955-71cc94801759?auto=format&fit=crop&w=1000&q=80",
+        alt: "Detail of intricate geometric diamond knots, fringe, and natural wooden dowel",
+      },
+    ],
+    shortDescription: "Bohemian wall tapestry meticulously knotted from 4mm unbleached natural cotton cords suspended from a hand-finished natural branch.",
+    hindiShortDescription: "प्राकृतिक सूती धागों से हाथों द्वारा बुनी गई बोहो मैक्रैम वॉल हैंगिंग।",
+    fullDescription: "Transform blank walls into warm, textural havens. Knotted by hand with intricate square knots, larks-heads, and flowing fringe tassels. Every piece hangs from an ethically collected weathered river-driftwood branch, ensuring that no two pieces share identical wood curves.",
+    hindiFullDescription: "लिविंग रूम या बेडरूम की दीवार को मॉडर्न बोहो और आर्टिसनल लुक देने के लिए यह मैक्रैम हैंगिंग सबसे सुंदर विकल्प है।",
+    highlights: [
+      "100% unbleached eco-friendly cotton cord",
+      "Hand-knotted over 14 hours of patient craftsmanship",
+      "Mounted on genuine weathered driftwood branch",
+      "Pre-strung hanging cord for immediate mounting",
+    ],
+    artisan: {
+      name: "Sunita Roy",
+      village: "Kolkata Craft Guild",
+      craft: "Macrame Fiber Artist",
+    },
+    specifications: {
+      material: "100% Unbleached Cotton Cords & Natural Wood Branch",
+      dimensions: "Width of Branch: 20 inches | Tapestry Length: 32 inches (50 x 81 cm)",
+      weight: "750 grams",
+      origin: "West Bengal",
+      finish: "Natural untreated cotton with combed fringe",
+      care: "Gently shake or use a wide-tooth comb on the fringes after unboxing.",
+    },
+    tags: ["Macrame", "Wall Decor", "Boho Living", "Hand Knotted", "Fiber Art"],
+  },
+
+  // 19. Maharashtra Warli Harvest Canvas Wall Hanging
+  {
+    id: "prod-19",
+    slug: "maharashtra-warli-harvest-canvas-wall-hanging",
+    name: "Maharashtra Warli Harvest Canvas Wall Art (12x16 In Solid Frame)",
+    hindiName: "महाराष्ट्र वर्ली लोककला कैनवास फ्रेम (12x16 इंच)",
+    categoryId: "wall-art",
+    categoryName: "Wall Art & Folk Paintings",
+    price: 1890,
+    originalPrice: 2500,
+    discountPercent: 24,
+    rating: 4.88,
+    reviewCount: 31,
+    inStock: true,
+    stockCount: 12,
+    isBestSeller: false,
+    isNewArrival: false,
+    isFeatured: true,
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1549887552-cb1071d3e5ca?auto=format&fit=crop&w=1000&q=80",
+        alt: "Tribal Warli mud base painting showcasing tarpa circle dance and harvest celebration",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1000&q=80",
+        alt: "Close-up of geometric stick figures formed from triangles and circles",
+      },
+    ],
+    shortDescription: "Traditional Warli tribal mural painted with rice-flour paste on cow-dung and geru terracotta primed canvas, framed in dark walnut wood.",
+    hindiShortDescription: "महाराष्ट्र के पालघर जिले की प्राचीन वर्ली चित्रकला, चावल के लेप और गेरू मिट्टी से निर्मित।",
+    fullDescription: "Dating back to 2500 BCE, Warli art is one of India's oldest tribal idioms. Simple geometric shapes—triangles representing mountains and human torsos, circles representing the sun and moon—interlock to depict village unity during harvest festivals.",
+    hindiFullDescription: "वर्ली कला जीवन, प्रकृति और सामूहिकता का उत्सव है। यह फ्रेम दीवार पर एक सादगीपूर्ण और गहरा प्रभाव छोड़ता है।",
+    highlights: [
+      "Authentic tribal art from Palghar artisan family",
+      "Traditional rice paste pigments on earth-toned background",
+      "Stretched on solid pine stretcher bars in walnut frame",
+      "Hook pre-installed for effortless vertical or horizontal hanging",
+    ],
+    artisan: {
+      name: "Govind Vayeda",
+      village: "Dahanu, Maharashtra",
+      craft: "Warli Tribal Master Artist",
+    },
+    specifications: {
+      material: "Rice paste & mineral pigment on textured cotton canvas, solid wooden frame",
+      dimensions: "12 x 16 inches (30.5 x 40.6 cm)",
+      weight: "850 grams",
+      origin: "Dahanu, Maharashtra",
+      finish: "Matte protective archival coat",
+      care: "Dust with dry soft cloth.",
+    },
+    tags: ["Warli Art", "Tribal Painting", "Indian Heritage", "Folk Wall Decor"],
+  },
+
+  // 20. Mughal Jharokha Filigree Metal Wall Accent
+  {
+    id: "prod-20",
+    slug: "mughal-jharokha-filigree-metal-wall-accent",
+    name: "Mughal Jharokha Filigree Antique Brass Metal Wall Mirror / Accent (24-Inch)",
+    hindiName: "मुगलिया झरोखा पीतल धातु दीवार दर्पण (24 इंच)",
+    categoryId: "wall-art",
+    categoryName: "Wall Art & Folk Paintings",
+    price: 3690,
+    originalPrice: 4800,
+    discountPercent: 23,
+    rating: 4.94,
+    reviewCount: 39,
+    inStock: true,
+    stockCount: 7,
+    isBestSeller: true,
+    isFeatured: true,
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1000&q=80",
+        alt: "Grand Mughal arched jharokha window frame with filigree metal lattice and center mirror",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1605371924599-2d0365da1ae0?auto=format&fit=crop&w=1000&q=80",
+        alt: "Detail of hand-embossed brass repoussé floral arches and antique patina",
+      },
+    ],
+    shortDescription: "Architectural metal wall mirror inspired by the royal arched palace balconies (jharokhas) of Jaipur, hand-embossed in heavy brass with antique patina.",
+    hindiShortDescription: "जयपुर के राजमहलों के झरोखों से प्रेरित भव्य पीतल की नक्काशीदार दीवार दर्पण फ्रेम।",
+    fullDescription: "Recreate the opulent ambiance of Rajasthani palaces. This 24-inch architectural statement piece features high-relief repoussé embossing, delicate jaali openwork, and an integrated high-clarity mirror. It catches natural room light and reflects warm glows across living rooms and entry foyers.",
+    hindiFullDescription: "दीवार पर टंगते ही पूरे कमरे का आकर्षण बढ़ा देने वाला यह शाही झरोखा प्राचीन शिल्पकला का अद्वितीय नमूना है।",
+    highlights: [
+      "Heavy hand-embossed sheet brass over solid wood backing",
+      "Includes premium distortion-free 5mm mirror",
+      "Acanthus leaf crest and cusped Mughal arch design",
+      "Sturdy heavy-duty wall anchors pre-fitted",
+    ],
+    artisan: {
+      name: "Kanhaiya Lal Soni",
+      village: "Amer Heritage Artisan Colony",
+      craft: "Metal Repoussé & Jharokha Art",
+    },
+    specifications: {
+      material: "Hand-embossed Solid Brass Sheet, Seasoned Wood Core, Silvered Glass Mirror",
+      dimensions: "Height: 24 inches | Width: 16 inches | Depth: 1.5 inches",
+      weight: "2.8 kg",
+      origin: "Jaipur, Rajasthan",
+      finish: "Distressed Royal Antique Brass Patina",
+      care: "Clean mirror with glass cleaner on microfiber. Clean brass frame with dry cloth.",
+    },
+    tags: ["Jharokha", "Wall Mirror", "Royal Decor", "Brass Mirror", "Statement Wall"],
+  },
+
+  // 21. Sanganer Hand-Chiseled Teakwood Block Stamp Pair
+  {
+    id: "prod-21",
+    slug: "sanganer-hand-chiseled-teakwood-block-pair",
+    name: "Sanganer Hand-Chiseled Teakwood Textile Printing Blocks (Decorative Pair)",
+    hindiName: "सांगानेरी नक्काशीदार सागवान प्रिंटिंग ब्लॉक (सजावटी जोड़ा)",
+    categoryId: "wooden-carvings",
+    categoryName: "Wooden Carvings & Crafts",
+    price: 790,
+    originalPrice: 1100,
+    discountPercent: 28,
+    rating: 4.82,
+    reviewCount: 24,
+    inStock: true,
+    stockCount: 25,
+    isBestSeller: false,
+    isNewArrival: false,
+    isFeatured: false,
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1000&q=80",
+        alt: "Authentic teakwood hand carved printing blocks with paisley and peacock buta motif",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1000&q=80",
+        alt: "Close-up of micro-chiseled wooden relief used for stamping textiles and home paper",
+      },
+    ],
+    shortDescription: "Original seasoned teakwood hand-carved blocks used by textile printers, perfect as artisanal bookends, paperweights, or DIY fabric block stamping.",
+    hindiShortDescription: "सागवान की लकड़ी पर हाथ से तराशे गए असली प्रिंटिंग ब्लॉक, सजावट या ब्लॉक प्रिंटिंग हेतु।",
+    fullDescription: "Chiseled by hereditary block-makers (Bhati) of Rajasthan using tempered iron chisels and wooden mallets. Features an ergonomic grip handle on the reverse side. Soak in vegetable dyes to stamp greeting cards, textiles, or place them on your study desk as conversation-starting sculptures.",
+    hindiFullDescription: "कपड़े और कागज़ पर ब्लॉक छपाई के लिए प्रयुक्त असली सागवान का ब्लॉक, जिसे टेबल पर पेपरवेट के रूप में भी सजाया जा सकता है।",
+    highlights: [
+      "100% seasoned C.P. Teakwood resistant to termites",
+      "Micro-chiseled relief with deep ink-holding wells",
+      "Fully functional for fabric and craft printing",
+      "Ergonomic hand-carved finger grip",
+    ],
+    artisan: {
+      name: "Bhanwar Lal Tak",
+      village: "Sanganer, Jaipur",
+      craft: "Teakwood Block Carver",
+    },
+    specifications: {
+      material: "Seasoned Teakwood (Sagwan)",
+      dimensions: "Each block: 5 x 4 x 2 inches (12.7 x 10.1 x 5 cm)",
+      weight: "420 grams (pair)",
+      origin: "Sanganer, Rajasthan",
+      finish: "Natural mustard-oil conditioned raw wood",
+      care: "Wipe with soft cloth. If used with ink, wash immediately in warm water and dry thoroughly.",
+    },
+    tags: ["Wood Block", "Printing Block", "Paperweight", "DIY Craft", "Teakwood"],
+  },
+
+  // 22. Sandalwood Hand-Carved 108 Beads Japa Mala
+  {
+    id: "prod-22",
+    slug: "sandalwood-hand-carved-108-beads-japa-mala",
+    name: "Pure Natural Sandalwood (Chandan) Hand-Carved 108 Beads Japa Mala",
+    hindiName: "शुद्ध प्राकृतिक चंदन 108 दाने जप माला",
+    categoryId: "traditional-jewelry",
+    categoryName: "Traditional Handmade Jewelry",
+    price: 1190,
+    originalPrice: 1650,
+    discountPercent: 28,
+    rating: 4.95,
+    reviewCount: 46,
+    inStock: true,
+    stockCount: 18,
+    isBestSeller: true,
+    isFeatured: false,
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1000&q=80",
+        alt: "Fragrant natural white sandalwood carved beads prayer mala with red silk tassel",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1000&q=80",
+        alt: "Detail of hand-turned 8mm chandan beads strung on strong cotton thread with knots",
+      },
+    ],
+    shortDescription: "Authentic naturally fragrant sandalwood (Santalum album) 8mm beads, individually knotted by hand with Guru bead and sacred crimson tassel.",
+    hindiShortDescription: "प्राकृतिक सुवासित श्वेत चंदन की 108 दानों वाली प्रामाणिक जप एवं ध्यान माला।",
+    fullDescription: "Renowned for its calming aromatherapy properties and deep spiritual cooling energy. Hand-turned from sustainably sourced Indian sandalwood timber. The persistent, serene fragrance emanates from within the heartwood naturally without synthetic perfumes.",
+    hindiFullDescription: "शांत चित्त, ध्यान और दैनिक जप के लिए शुद्ध चंदन की सुगंधित माला, जिसे गले में भी धारण किया जा सकता है।",
+    highlights: [
+      "100% genuine aromatic white sandalwood",
+      "Traditional 108+1 Guru bead count",
+      "Hand-knotted between each bead for smooth counting",
+      "Natural subtle fragrance that lasts for years",
+    ],
+    artisan: {
+      name: "Pandit Ramchandra Sharma",
+      village: "Vrindavan Craft Lane",
+      craft: "Sacred Wood Turning & Mala Maker",
+    },
+    specifications: {
+      material: "Genuine White Sandalwood & Pure Silk Tassel",
+      dimensions: "Bead Size: 8mm | Mala Hanging Length: 18 inches",
+      weight: "48 grams",
+      origin: "Rajasthan / Karnataka Border Guilds",
+      finish: "Smooth unvarnished natural fragrant wood",
+      care: "Keep in a clean cotton bag when not in use. Do not expose to moisture or soap.",
+    },
+    tags: ["Chandan Mala", "Sandalwood", "Meditation", "Spiritual", "Prayer Beads"],
+  },
+
+  // 23. Desi Kulhad & Chai Kettle Set of 6
+  {
+    id: "prod-23",
+    slug: "desi-kulhad-earthen-chai-kettle-set",
+    name: "Desi Earthen Clay Kulhad & Kettle Set of 6 (Wood-Fired Glaze)",
+    hindiName: "देसी मिट्टी कुल्हड़ एवं चाय केतली सेट (6 कप सहित)",
+    categoryId: "pottery-terracotta",
+    categoryName: "Pottery & Terracotta",
+    price: 1490,
+    originalPrice: 1990,
+    discountPercent: 25,
+    rating: 4.87,
+    reviewCount: 34,
+    inStock: true,
+    stockCount: 16,
+    isBestSeller: false,
+    isNewArrival: true,
+    isFeatured: true,
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=1000&q=80",
+        alt: "Artisan earthenware tea kettle with 6 handcrafted kulhad cups finished with wood ash glaze",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=1000&q=80",
+        alt: "Steaming spiced masala chai pouring gracefully from terracotta kettle",
+      },
+    ],
+    shortDescription: "Wheel-thrown high-temperature fired clay teapot accompanied by 6 reusable earthen kulhads, glazed internally with lead-free food-safe natural glass.",
+    hindiShortDescription: "मिट्टी के असली स्वाद में कुल्हड़ चाय का आनंद लेने के लिए केतली और 6 कपों का पूरा सेट।",
+    fullDescription: "Nothing compares to the sweet, nostalgic petrichor aroma of tea sipped from clay. Unlike single-use roadside cups, these kulhads and teapot are fired at 1150°C for exceptional strength, making them completely food-safe, washable, and microwave friendly while preserving the authentic earthen touch.",
+    hindiFullDescription: "पारंपरिक चाक पर हाथ से तैयार किया गया यह कुल्हड़ सेट आधुनिक रसोई के लिए पूरी तरह फूड-सेफ और दोबारा उपयोग योग्य है।",
+    highlights: [
+      "Fired at 1150°C for high durability and chip resistance",
+      "100% lead-free, cadmium-free food-safe glaze interior",
+      "Microwave and dishwasher safe",
+      "Includes 1 teapot (750ml) + 6 matching kulhads (150ml each)",
+    ],
+    artisan: {
+      name: "Master Ramswaroop Prajapat",
+      village: "Kot Jewar, Jaipur",
+      craft: "High-Fire Ceramicist",
+    },
+    specifications: {
+      material: "Stoneware-Terracotta Clay Blend with Food-Grade Glaze",
+      dimensions: "Kettle: 7 x 5.5 inches (750 ml) | Each Kulhad: 3.2 x 2.8 inches (150 ml)",
+      weight: "1.4 kg (entire set)",
+      origin: "Jaipur, Rajasthan",
+      finish: "Matte raw clay exterior with glossy food-grade interior",
+      care: "Wash with warm water and mild dish liquid. Microwave safe.",
+    },
+    tags: ["Chai Set", "Kulhad", "Terracotta Cups", "Tea Lover", "Clay Kettle"],
+  },
+
+  // 24. Ananda Jaipur Blue Pottery Tea Tasting Gift Box
+  {
+    id: "prod-24",
+    slug: "ananda-jaipur-blue-pottery-tea-tasting-gift-box",
+    name: "Ananda Jaipur Blue Pottery Mug Set & Herbal Tisane Keepsake Hamper",
+    hindiName: "आनंद जयपुर ब्लू पॉटरी मग सेट व हर्बल चाय उपहार हैंपर",
+    categoryId: "gift-hampers",
+    categoryName: "Artisanal Gift Hampers",
+    price: 2490,
+    originalPrice: 3250,
+    discountPercent: 23,
+    rating: 4.93,
+    reviewCount: 42,
+    inStock: true,
+    stockCount: 15,
+    isBestSeller: true,
+    isFeatured: true,
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=1000&q=80",
+        alt: "Luxury pine gift box containing two hand-painted blue pottery mugs and organic herbal tea jar",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1000&q=80",
+        alt: "Artisan tea box opened showing two cobalt and turquoise blue pottery mugs and brass infuser",
+      },
+    ],
+    shortDescription: "A soulful morning ritual gift hamper featuring 2 handcrafted Jaipur Blue Pottery coffee/chai mugs (300ml), whole-leaf Kashmiri Kahwa, and a brass heart tea-infuser.",
+    hindiShortDescription: "हाथ से रंगे दो जयपुर ब्लू पॉटरी मग, कश्मीरी कहवा चाय और पीतल के इन्फ्यूज़र का शाही कॉम्बो।",
+    fullDescription: "Curated for cherished mornings. The mugs feature hand-painted Persian florals that bring serenity to every sip. Paired with whole-leaf saffron Kahwa and packaged in our signature artisan keepsake box with golden botanical debossing.",
+    hindiFullDescription: "कॉफी और चाय प्रेमियों के लिए एक बेहद सुंदर और आत्मीय उपहार, जो हर सुबह को खास बना देता है।",
+    highlights: [
+      "2x Hand-painted Jaipur Blue Pottery Mugs (300 ml capacity)",
+      "1x 100g Kashmiri Saffron & Almond Spiced Green Tea Kahwa",
+      "1x Hand-beaten solid brass tea strainer",
+      "Presented in luxury rigid craft gift box",
+    ],
+    artisan: {
+      name: "Ramswaroop Prajapat & Kalakriti Studio",
+      village: "Jaipur Heritage Cluster",
+      craft: "Pottery & Gifting",
+    },
+    specifications: {
+      material: "Quartz Pottery, Food-Grade Glaze, Solid Brass, Natural Wood Box",
+      dimensions: "Box: 12 x 8 x 4.5 inches (30.5 x 20.3 x 11.5 cm)",
+      weight: "1.6 kg",
+      origin: "Jaipur, Rajasthan",
+      finish: "Glossy glazed ceramics with unvarnished natural pine box",
+      care: "Wash mugs by hand with soft sponge. Do not place in oven.",
+    },
+    tags: ["Gift Hamper", "Blue Pottery Mugs", "Chai Hamper", "Festive", "Coffee Mugs"],
+  },
+];
+
+// Helper functions for data access
+export const getProductBySlug = (slug: string): Product | undefined => {
+  return products.find((p) => p.slug === slug);
+};
+
+export const getProductsByCategory = (categoryId: string): Product[] => {
+  return products.filter((p) => p.categoryId === categoryId);
+};
+
+export const getBestSellers = (): Product[] => {
+  return products.filter((p) => p.isBestSeller);
+};
+
+export const getNewArrivals = (): Product[] => {
+  return products.filter((p) => p.isNewArrival);
+};
+
+export const getFeaturedProducts = (): Product[] => {
+  return products.filter((p) => p.isFeatured);
+};

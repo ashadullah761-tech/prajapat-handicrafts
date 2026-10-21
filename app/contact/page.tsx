@@ -1,0 +1,17 @@
+import React from "react";
+import { Metadata } from "next";
+import { ContactSection } from "@/components/home/ContactSection";
+
+export const metadata: Metadata = {
+  title: "Contact Us & Studio Location | Kalakriti Handicrafts",
+  description:
+    "Get in touch with Kalakriti Handicrafts in Jaipur, Rajasthan. Direct WhatsApp support, phone assistance, custom order inquiries, and studio visit appointments.",
+};
+
+export default function ContactPage() {
+  return (
+    <div className="bg-ivory-100 min-h-screen py-10 sm:py-16">
+      <ContactSection />
+    </div>
+  );
+}

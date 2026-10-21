@@ -1,0 +1,339 @@
+export interface HandicraftImage {
+  id: string;
+  url: string;
+  alt: string;
+  title: string;
+  category: string;
+  aspectRatio?: "4:5" | "1:1" | "16:9" | "3:2";
+}
+
+export const handicraftImages: Record<string, HandicraftImage> = {
+  // Hero and Banners
+  heroBanner: {
+    id: "hero-1",
+    url: "/hero-banner.jpg",
+    alt: "Artisanal wooden dining space and handcrafted furniture in warm sunlight",
+    title: "Handcrafted Living & Artisanal Spaces",
+    category: "Hero",
+    aspectRatio: "16:9",
+  },
+  festiveBanner: {
+    id: "banner-festive",
+    url: "https://images.unsplash.com/photo-1605371924599-2d0365da1ae0?auto=format&fit=crop&w=1600&q=85",
+    alt: "Traditional Indian brass oil lamps and earthen terracotta diyas glowing warm light",
+    title: "Festive Splendor & Home Blessings",
+    category: "Banner",
+    aspectRatio: "16:9",
+  },
+  artisanHeritageBanner: {
+    id: "banner-heritage",
+    url: "https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=1600&q=85",
+    alt: "Rural Indian craftsman working on handloom with vibrant natural dyed yarns",
+    title: "Preserving Five Centuries of Handloom Heritage",
+    category: "Banner",
+    aspectRatio: "16:9",
+  },
+
+  // Pottery & Terracotta
+  potteryVaseTerracotta: {
+    id: "pot-1",
+    url: "https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=1000&q=80",
+    alt: "Handcrafted rustic terracotta vase with earthy glaze and etched tribal patterns",
+    title: "Mitti Rustic Terracotta Fluted Amphora",
+    category: "Pottery & Terracotta",
+    aspectRatio: "4:5",
+  },
+  potteryCeramicPlanter: {
+    id: "pot-2",
+    url: "https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1000&q=80",
+    alt: "Wheel thrown ceramic urn with warm ochre and terracotta minerals",
+    title: "Kumbhar Wheel-Thrown Ceramic Planter",
+    category: "Pottery & Terracotta",
+    aspectRatio: "4:5",
+  },
+  potteryBlueJaipur: {
+    id: "pot-3",
+    url: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=1000&q=80",
+    alt: "Hand-painted Jaipur blue pottery decorative plate with turquoise and cobalt floral motif",
+    title: "Royal Jaipur Blue Pottery Wall Plate (10-Inch)",
+    category: "Pottery & Terracotta",
+    aspectRatio: "4:5",
+  },
+  potteryEarthenTeaset: {
+    id: "pot-4",
+    url: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=1000&q=80",
+    alt: "Artisan clay tea kettle and kulhad cups set finished with natural wood ash glaze",
+    title: "Desi Kulhad & Chai Kettle Set of 6",
+    category: "Pottery & Terracotta",
+    aspectRatio: "4:5",
+  },
+
+  // Brass & Metal Art
+  brassDiyaPeacock: {
+    id: "brass-1",
+    url: "https://images.unsplash.com/photo-1605371924599-2d0365da1ae0?auto=format&fit=crop&w=1000&q=80",
+    alt: "Handcrafted solid brass Mayur peacock deepam oil lamp with intricate carvings",
+    title: "Heritage Peacock Brass Hanging Diya",
+    category: "Brass & Metal Art",
+    aspectRatio: "4:5",
+  },
+  brassNataraja: {
+    id: "brass-2",
+    url: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=1000&q=80",
+    alt: "Hand-cast lost wax bronze finish Nataraja cosmic dancer idol",
+    title: "Dokra Lost-Wax Cast Nataraja Idol (12-Inch)",
+    category: "Brass & Metal Art",
+    aspectRatio: "4:5",
+  },
+  brassUrliFloral: {
+    id: "brass-3",
+    url: "https://images.unsplash.com/photo-1545231027-637d2f6210f8?auto=format&fit=crop&w=1000&q=80",
+    alt: "Traditional Kerala hand-beaten brass urli bowl for floating flowers and t-lights",
+    title: "Hand-Hammered Antique Brass Urli Bowl",
+    category: "Brass & Metal Art",
+    aspectRatio: "4:5",
+  },
+  brassIncenseBurner: {
+    id: "brass-4",
+    url: "https://images.unsplash.com/photo-1603555501671-8f96b3fce8e4?auto=format&fit=crop&w=1000&q=80",
+    alt: "Intricate perforated brass dhoop daani incense burner with jaali lattice",
+    title: "Moradabad Filigree Jaali Brass Dhuna Dhoop Burner",
+    category: "Brass & Metal Art",
+    aspectRatio: "4:5",
+  },
+
+  // Wooden Carvings & Crafts
+  woodenCarvedBox: {
+    id: "wood-1",
+    url: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1000&q=80",
+    alt: "Hand-carved sheesham rosewood keepsake jewelry box with floral brass inlay",
+    title: "Saharanpur Hand-Carved Sheesham Brass Inlay Box",
+    category: "Wooden Carvings",
+    aspectRatio: "4:5",
+  },
+  woodenElephantAmbari: {
+    id: "wood-2",
+    url: "https://images.unsplash.com/photo-1584727638096-042c45049ebe?auto=format&fit=crop&w=1000&q=80",
+    alt: "Master carved wooden Royal Rajasthani elephant with howdah and antique patina",
+    title: "Handcrafted Jodhpur Royal Elephant (Antique Finish)",
+    category: "Wooden Carvings",
+    aspectRatio: "4:5",
+  },
+  woodenKathputliPuppets: {
+    id: "wood-3",
+    url: "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1000&q=80",
+    alt: "Authentic handmade Rajasthani kathputli string puppets wearing bandhani silk",
+    title: "Traditional Rajasthani Royal Kathputli Pair",
+    category: "Wooden Carvings",
+    aspectRatio: "4:5",
+  },
+  woodenBlocksPrinting: {
+    id: "wood-4",
+    url: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1000&q=80",
+    alt: "Teakwood hand carved textile printing blocks with paisley and buta motif",
+    title: "Sanganer Hand-Chiseled Teakwood Block Stamp Pair",
+    category: "Wooden Carvings",
+    aspectRatio: "4:5",
+  },
+
+  // Handloom & Textiles
+  textileBlockPrintQuilt: {
+    id: "text-1",
+    url: "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=1000&q=80",
+    alt: "Hand block printed pure mulmul cotton Jaipur Jaipuri Razai quilt with natural indigo dye",
+    title: "Jaipur Hand Block Printed Mulmul Dohar Quilt",
+    category: "Handloom & Textiles",
+    aspectRatio: "4:5",
+  },
+  textileCushionEmbroidered: {
+    id: "text-2",
+    url: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1000&q=80",
+    alt: "Kutch mirror work and Kantha hand embroidered velvet cushion covers",
+    title: "Kutch Rabari Mirror Work Cushion Cover (Set of 2)",
+    category: "Handloom & Textiles",
+    aspectRatio: "4:5",
+  },
+  textilePashminaShawl: {
+    id: "text-3",
+    url: "https://images.unsplash.com/photo-1607344645866-009c320c5ab8?auto=format&fit=crop&w=1000&q=80",
+    alt: "Handwoven fine wool stole with Sozni needlework border",
+    title: "Hand-Spun Fine Merino Wool Sozni Stole",
+    category: "Handloom & Textiles",
+    aspectRatio: "4:5",
+  },
+  textileTableRunner: {
+    id: "text-4",
+    url: "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1000&q=80",
+    alt: "Bagru vegetable dye hand block printed organic cotton dining table runner",
+    title: "Bagru Mud-Resist (Dabu) Indigo Table Runner",
+    category: "Handloom & Textiles",
+    aspectRatio: "4:5",
+  },
+
+  // Jute, Cane & Natural Fibers
+  juteBasketHandwoven: {
+    id: "jute-1",
+    url: "https://images.unsplash.com/photo-1590736969955-71cc94801759?auto=format&fit=crop&w=1000&q=80",
+    alt: "Natural golden jute hand-braided storage basket with cotton trim handles",
+    title: "Sonali Bengal Hand-Braided Golden Jute Storage Basket",
+    category: "Jute & Cane Crafts",
+    aspectRatio: "4:5",
+  },
+  canePlanterStand: {
+    id: "jute-2",
+    url: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1000&q=80",
+    alt: "Assam sustainable cane and bamboo woven indoor planter with tripod stand",
+    title: "Northeast Bamboo & Rattan Tripod Planter Basket",
+    category: "Jute & Cane Crafts",
+    aspectRatio: "4:5",
+  },
+  macrameWallHanging: {
+    id: "jute-3",
+    url: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=1000&q=80",
+    alt: "Bohemian hand-knotted natural cotton cord macrame tapestry with driftwood branch",
+    title: "Hand-Knotted Organic Cotton Driftwood Tapestry",
+    category: "Jute & Cane Crafts",
+    aspectRatio: "4:5",
+  },
+  juteToteBag: {
+    id: "jute-4",
+    url: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1000&q=80",
+    alt: "Eco-friendly natural woven jute tote with vegetable tanned leather handles",
+    title: "Shilp Golden Jute Weekend Market Tote",
+    category: "Jute & Cane Crafts",
+    aspectRatio: "4:5",
+  },
+
+  // Wall Art & Folk Paintings
+  artMadhubaniPainting: {
+    id: "art-1",
+    url: "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=1000&q=80",
+    alt: "Handmade Mithila Madhubani painting on handmade paper depicting Tree of Life",
+    title: "Original Madhubani 'Tree of Life' Framed Art (14x18)",
+    category: "Wall Art",
+    aspectRatio: "4:5",
+  },
+  artWarliCanvas: {
+    id: "art-2",
+    url: "https://images.unsplash.com/photo-1549887552-cb1071d3e5ca?auto=format&fit=crop&w=1000&q=80",
+    alt: "Tribal Warli mud base painting showcasing village harvest celebration and tarpa dance",
+    title: "Maharashtra Warli Harvest Canvas Wall Hanging",
+    category: "Wall Art",
+    aspectRatio: "4:5",
+  },
+  artPattachitraScroll: {
+    id: "art-3",
+    url: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1000&q=80",
+    alt: "Odisha Raghurajpur palm leaf etching Pattachitra scroll painting with mineral colors",
+    title: "Heritage Raghurajpur Palm Leaf Engraving (Tala Pattachitra)",
+    category: "Wall Art",
+    aspectRatio: "4:5",
+  },
+  artMetalWallJaali: {
+    id: "art-4",
+    url: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1000&q=80",
+    alt: "Geometric Mughal jharokha jaali wall panel cut in distressed antique brass",
+    title: "Mughal Jharokha Filigree Metal Wall Accent (24-Inch)",
+    category: "Wall Art",
+    aspectRatio: "4:5",
+  },
+
+  // Traditional Jewelry
+  jewelryOxidizedNecklace: {
+    id: "jewel-1",
+    url: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=1000&q=80",
+    alt: "Tribal silver oxidized choker necklace with ghungroo bells and floral embossing",
+    title: "Banjarin Tribal Oxidized Silver Statement Hasli",
+    category: "Traditional Jewelry",
+    aspectRatio: "4:5",
+  },
+  jewelryKundanJhumkas: {
+    id: "jewel-2",
+    url: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1000&q=80",
+    alt: "Jaipur Meenakari and hand-set Kundan polki jhumka earrings with fresh pearl drops",
+    title: "Royal Jaipur Meenakari & Pearl Jhumka Drops",
+    category: "Traditional Jewelry",
+    aspectRatio: "4:5",
+  },
+  jewelryTerracottaEarrings: {
+    id: "jewel-3",
+    url: "https://images.unsplash.com/photo-1611591475877-268e3678ebc6?auto=format&fit=crop&w=1000&q=80",
+    alt: "Handcrafted baked river clay terracotta earrings painted in temple red and turmeric gold",
+    title: "Hand-Painted Terracotta Mandala Jhumkas",
+    category: "Traditional Jewelry",
+    aspectRatio: "4:5",
+  },
+  jewelryWoodenBeads: {
+    id: "jewel-4",
+    url: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1000&q=80",
+    alt: "Fragrant chandan sandalwood carved beads meditation mala necklace",
+    title: "Sandalwood Hand-Carved 108 Beads Japa Mala",
+    category: "Traditional Jewelry",
+    aspectRatio: "4:5",
+  },
+
+  // Festive Hampers & Gift Sets
+  hamperDiwaliBrass: {
+    id: "hamper-1",
+    url: "https://images.unsplash.com/photo-1605371924599-2d0365da1ae0?auto=format&fit=crop&w=1000&q=80",
+    alt: "Curated festive gift hamper with solid brass diya, organic soy wax candles, and raw forest honey",
+    title: "Shubh Utsav Heritage Brass & Soy Candle Hamper",
+    category: "Gift Hampers",
+    aspectRatio: "4:5",
+  },
+  hamperBluePotteryBox: {
+    id: "hamper-2",
+    url: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=1000&q=80",
+    alt: "Handmade pine wood carved gift box featuring two blue pottery mugs and organic herbal tisane",
+    title: "Ananda Jaipur Blue Pottery Tea Tasting Gift Box",
+    category: "Gift Hampers",
+    aspectRatio: "4:5",
+  },
+  hamperCorporateArtisanal: {
+    id: "hamper-3",
+    url: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1000&q=80",
+    alt: "Luxury corporate keepsake box with handcrafted leather diary, brass bookmark, and natural incense",
+    title: "Dharohar Artisanal Workspace Keepsake Hamper",
+    category: "Gift Hampers",
+    aspectRatio: "4:5",
+  },
+
+  // Artisans at Work (Human Stories & Authenticity)
+  artisanPotterClay: {
+    id: "artisan-1",
+    url: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=800&q=80",
+    alt: "Master Potter Ramswaroop Prajapat smiling while detailing blue pottery floral glaze",
+    title: "Ramswaroop Prajapat • Master Blue Pottery Potter",
+    category: "Artisans",
+    aspectRatio: "1:1",
+  },
+  artisanWeaverLoom: {
+    id: "artisan-2",
+    url: "https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=800&q=80",
+    alt: "Kamla Devi hand-weaving natural dyed organic cotton yarn on pit loom in Bagru",
+    title: "Kamla Devi • 4th Gen Dabu Textile Weaver",
+    category: "Artisans",
+    aspectRatio: "1:1",
+  },
+  artisanWoodCarver: {
+    id: "artisan-3",
+    url: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80",
+    alt: "Chirag Mistry carving intricate jharokha lattice out of sheesham hardwood",
+    title: "Chirag Mistry • Master Wood Sculptor",
+    category: "Artisans",
+    aspectRatio: "1:1",
+  },
+  artisanBrassCaster: {
+    id: "artisan-4",
+    url: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?auto=format&fit=crop&w=800&q=80",
+    alt: "Suresh Sahu buffing lost-wax bell metal brass sculpture to mirror sheen",
+    title: "Suresh Sahu • Dhokra Brass Artisan",
+    category: "Artisans",
+    aspectRatio: "1:1",
+  },
+};
+
+// Helper getter
+export const getImage = (key: keyof typeof handicraftImages): string => {
+  return handicraftImages[key]?.url || "https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1000&q=80";
+};
