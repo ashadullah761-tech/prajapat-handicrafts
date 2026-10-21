@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Cinzel, Playfair_Display, Montserrat } from "next/font/google";
 import "./globals.css";
 import { brandConfig } from "@/config/brand";
@@ -161,6 +162,30 @@ export default function RootLayout({
             </CartProvider>
           </LanguageProvider>
         </ToastProvider>
+
+        {/* Google Translate Hidden Element & Script for 130+ World Languages */}
+        <div id="google_translate_element" style={{ display: "none" }} />
+        <Script
+          id="google-translate-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              function googleTranslateElementInit() {
+                if (window.google && window.google.translate) {
+                  new window.google.translate.TranslateElement({
+                    pageLanguage: 'en',
+                    autoDisplay: false
+                  }, 'google_translate_element');
+                }
+              }
+            `,
+          }}
+        />
+        <Script
+          id="google-translate-script"
+          strategy="afterInteractive"
+          src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+        />
       </body>
     </html>
   );

@@ -2,6 +2,8 @@
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from "react";
 
+import { WORLD_LANGUAGES, WorldLanguage } from "@/data/languages";
+
 export type Language = "en" | "hi";
 
 interface LanguageContextType {
@@ -9,6 +11,10 @@ interface LanguageContextType {
   setLanguage: (lang: Language) => void;
   toggleLanguage: () => void;
   t: (key: string) => string;
+  currentLangCode: string;
+  currentLangName: string;
+  currentNativeName: string;
+  setWorldLanguage: (code: string) => void;
 }
 
 const translations: Record<Language, Record<string, string>> = {
@@ -157,38 +163,101 @@ const translations: Record<Language, Record<string, string>> = {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [language, setLanguageState] = useState<Language>("en");
+  const [language, setLanguageState] = useState<Language>("hi");
+  const [currentLangCode, setCurrentLangCode] = useState<string>("hi");
 
   useEffect(() => {
     try {
-      const savedLang = localStorage.getItem("kalakriti_lang") as Language;
-      if (savedLang === "en" || savedLang === "hi") {
-        setLanguageState(savedLang);
+      const savedLang = localStorage.getItem("kalakriti_lang");
+      if (savedLang) {
+        setCurrentLangCode(savedLang);
+        if (savedLang === "hi") {
+          setLanguageState("hi");
+        } else {
+          setLanguageState("en");
+        }
+      } else {
+        // Check for Google Translate cookie if present
+        const match = document.cookie.match(/googtrans=\/en\/([a-zA-Z-]+)/);
+        if (match && match[1]) {
+          setCurrentLangCode(match[1]);
+          if (match[1] === "hi") setLanguageState("hi");
+          else setLanguageState("en");
+        }
       }
     } catch {
       // localStorage may not be accessible
     }
   }, []);
 
-  const setLanguage = (lang: Language) => {
-    setLanguageState(lang);
+  const setWorldLanguage = (code: string) => {
+    setCurrentLangCode(code);
+    if (code === "hi") {
+      setLanguageState("hi");
+    } else {
+      setLanguageState("en");
+    }
+
     try {
-      localStorage.setItem("kalakriti_lang", lang);
+      localStorage.setItem("kalakriti_lang", code);
+    } catch {
+      // ignore
+    }
+
+    try {
+      const hostname = window.location.hostname;
+      if (code === "en") {
+        document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; domain=${hostname}; path=/;`;
+        document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; domain=.${hostname}; path=/;`;
+      } else {
+        document.cookie = `googtrans=/en/${code}; path=/;`;
+        document.cookie = `googtrans=/en/${code}; domain=${hostname}; path=/;`;
+      }
+
+      const select = document.querySelector(".goog-te-combo") as HTMLSelectElement | null;
+      if (select) {
+        select.value = code;
+        select.dispatchEvent(new Event("change"));
+      } else if (code !== "hi" && code !== "en") {
+        // If google translate combo hasn't loaded yet, reload so the cookie triggers it
+        window.location.reload();
+      }
     } catch {
       // ignore
     }
   };
 
+  const setLanguage = (lang: Language) => {
+    setWorldLanguage(lang);
+  };
+
   const toggleLanguage = () => {
-    setLanguage(language === "en" ? "hi" : "en");
+    setWorldLanguage(currentLangCode === "hi" ? "en" : "hi");
   };
 
   const t = (key: string): string => {
     return translations[language]?.[key] || translations["en"]?.[key] || key;
   };
 
+  const currentLangObj =
+    WORLD_LANGUAGES.find((l) => l.code.toLowerCase() === currentLangCode.toLowerCase()) ||
+    WORLD_LANGUAGES.find((l) => l.code === "hi") ||
+    { code: "hi", name: "Hindi", nativeName: "हिन्दी" };
+
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, toggleLanguage, t }}>
+    <LanguageContext.Provider
+      value={{
+        language,
+        setLanguage,
+        toggleLanguage,
+        t,
+        currentLangCode,
+        currentLangName: currentLangObj.name,
+        currentNativeName: currentLangObj.nativeName,
+        setWorldLanguage,
+      }}
+    >
       {children}
     </LanguageContext.Provider>
   );

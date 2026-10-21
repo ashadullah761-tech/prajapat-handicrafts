@@ -9,6 +9,7 @@ import { products, Product } from "@/data/products";
 import { useCart } from "@/context/CartContext";
 import { useWishlist } from "@/context/WishlistContext";
 import { useLanguage } from "@/context/LanguageContext";
+import { LanguageSelector } from "@/components/common/LanguageSelector";
 import {
   Globe,
   Search,
@@ -375,15 +376,8 @@ export const Header: React.FC = () => {
               )}
             </div>
 
-            {/* Language Toggle Pill */}
-            <button
-              onClick={toggleLanguage}
-              className="inline-flex items-center gap-2 bg-[#f4f2e6] hover:bg-[#eae6d4] text-[#37472a] px-3.5 py-1.5 rounded-full border border-[#37472a]/20 text-xs font-semibold transition-all shadow-sm cursor-pointer"
-              title="Switch language"
-            >
-              <Globe className="w-3.5 h-3.5 text-[#7A6327]" />
-              <span>{language === "hi" ? "English" : "हिन्दी"}</span>
-            </button>
+            {/* Language Selector (All World Languages) */}
+            <LanguageSelector />
 
             {/* Direct WhatsApp Contact Button */}
             <a
@@ -432,15 +426,10 @@ export const Header: React.FC = () => {
           </div>
 
           <div className="pt-4 border-t border-sand-200 flex flex-col gap-3">
-            <button
-              onClick={toggleLanguage}
-              className="flex items-center justify-between w-full px-4 py-2.5 bg-sand-100 rounded-xl text-sm font-medium text-charcoal-800"
-            >
-              <span>{language === "en" ? "भाषा: English (Switch to हिंदी)" : "Language: हिंदी (English में बदलें)"}</span>
-              <span className="px-2 py-0.5 bg-terracotta text-white rounded text-xs font-bold">
-                {language === "en" ? "हिंदी" : "EN"}
-              </span>
-            </button>
+            <LanguageSelector
+              className="w-full"
+              buttonClassName="flex items-center justify-between w-full px-4 py-2.5 bg-sand-100 rounded-xl text-sm font-medium text-charcoal-800"
+            />
 
             <a
               href={`https://api.whatsapp.com/send?phone=${brandConfig.whatsappNumber}`}

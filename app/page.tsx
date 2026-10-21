@@ -5,6 +5,7 @@ import Link from "next/link";
 import { brandConfig } from "@/config/brand";
 import { useLanguage } from "@/context/LanguageContext";
 import { useToast } from "@/context/ToastContext";
+import { LanguageSelector } from "@/components/common/LanguageSelector";
 import {
   Globe,
   Sparkles,
@@ -335,15 +336,8 @@ export default function HomePage() {
 
           {/* Right Action Icons: Language Toggle & Mobile Hamburger (Cart removed as requested) */}
           <div className="flex items-center gap-3 md:gap-4">
-            {/* Language Toggle Pill */}
-            <button
-              onClick={toggleLanguage}
-              className="inline-flex items-center gap-2 bg-[#f4f2e6]/90 hover:bg-[#f4f2e6] backdrop-blur-md text-[#37472a] px-3.5 py-1.5 md:px-4 md:py-2 rounded-full border border-[#37472a]/30 text-xs md:text-sm font-semibold transition-all shadow-sm cursor-pointer"
-              title="Switch language"
-            >
-              <Globe className="w-3.5 h-3.5 md:w-4 md:h-4 text-[#7A6327]" />
-              <span>{language === "hi" ? "English" : "हिन्दी"}</span>
-            </button>
+            {/* Language Selector (All World Languages) */}
+            <LanguageSelector />
 
             {/* Mobile Hamburger Button */}
             <button
