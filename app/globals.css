@@ -201,3 +201,29 @@ body {
 .goog-te-balloon-frame {
   display: none !important;
 }
+
+/* ========================================================
+   Hide Netlify Badge / Drawer ("Powered by Netlify")
+   ======================================================== */
+netlify-drawer,
+#netlify-drawer,
+iframe#netlify-drawer,
+iframe[src*="netlify"],
+[data-netlify-deploy-id],
+div[class*="netlify-drawer"],
+div[class*="NetlifyBadge"],
+div[class*="feedback-badge"],
+a[href*="netlify.com"][class*="badge"],
+[id*="netlify-drawer"],
+#netlify-banner,
+.netlify-badge {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  z-index: -9999 !important;
+  width: 0 !important;
+  height: 0 !important;
+  clip: rect(0, 0, 0, 0) !important;
+}

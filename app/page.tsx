@@ -224,6 +224,27 @@ export default function HomePage() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Remove Netlify Drawer / "Powered by Netlify" badge
+  useEffect(() => {
+    const hideNetlify = () => {
+      document.querySelectorAll("netlify-drawer, iframe[src*='netlify'], div#netlify-drawer").forEach((el) => {
+        el.remove();
+      });
+      document.querySelectorAll("div, a, button").forEach((el) => {
+        if (
+          el.textContent?.trim().toLowerCase().includes("powered by netlify") ||
+          el.getAttribute("aria-label")?.toLowerCase().includes("netlify")
+        ) {
+          (el as HTMLElement).style.setProperty("display", "none", "important");
+          (el as HTMLElement).style.setProperty("visibility", "hidden", "important");
+        }
+      });
+    };
+    hideNetlify();
+    const interval = setInterval(hideNetlify, 800);
+    return () => clearInterval(interval);
+  }, []);
+
   const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
     const element = document.getElementById(id);
