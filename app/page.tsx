@@ -426,17 +426,17 @@ export default function HomePage() {
           </a>
         </div>
 
-        {/* Hero Content Area with Frosted Glass Box (Matching Maash Henna - Compact) */}
-        <div className="flex-1 flex items-center px-6 md:px-12 py-8 md:py-10 z-10">
-          <div className="max-w-[450px] bg-[#f4f2e6]/70 backdrop-blur-md p-6 md:p-8 rounded-[20px] shadow-2xl border border-white/40 animate-fade-in">
+        {/* Hero Content Area with Frosted Glass Box (Compact on Mobile & Positioned at Side) */}
+        <div className="flex-1 flex items-end sm:items-center px-4 sm:px-8 md:px-12 pb-14 sm:py-8 md:py-10 z-10">
+          <div className="max-w-[280px] sm:max-w-[390px] md:max-w-[450px] bg-[#f4f2e6]/80 sm:bg-[#f4f2e6]/70 backdrop-blur-md p-3.5 sm:p-6 md:p-8 rounded-[16px] sm:rounded-[20px] shadow-2xl border border-white/50 animate-fade-in mb-2 sm:mb-0">
             {/* Small uppercase tag */}
-            <p className="uppercase tracking-[2px] text-[#7A6327] text-[10px] md:text-xs font-bold mb-2.5 flex items-center gap-1.5">
-              <Sparkles className="w-3.5 h-3.5 text-[#b39b5b]" />
-              {language === "hi" ? "प्रीमियम भारतीय हस्तशिल्प और कला" : "PREMIUM INDIAN HANDICRAFTS & ARTISTRY"}
+            <p className="uppercase tracking-[1.5px] sm:tracking-[2px] text-[#7A6327] text-[8px] sm:text-[10px] md:text-xs font-bold mb-1 sm:mb-2.5 flex items-center gap-1 sm:gap-1.5">
+              <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#b39b5b]" />
+              {language === "hi" ? "प्रीमियम भारतीय हस्तशिल्प" : "PREMIUM INDIAN HANDICRAFTS"}
             </p>
 
             {/* Main Headline */}
-            <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl font-normal leading-[1.1] text-[#37472a] mb-3">
+            <h1 className="font-serif text-lg sm:text-3xl md:text-5xl font-normal leading-tight text-[#37472a] mb-1 sm:mb-3">
               {language === "hi" ? (
                 <>
                   प्राकृतिक सुंदरता
@@ -452,15 +452,15 @@ export default function HomePage() {
               )}
             </h1>
 
-            {/* Subtitle */}
-            <p className="text-xs sm:text-[13px] md:text-sm text-[#37472a]/90 font-medium leading-relaxed mb-5 max-w-[390px]">
+            {/* Subtitle - Hidden on small mobile to keep background image completely visible */}
+            <p className="hidden sm:block text-xs sm:text-[13px] md:text-sm text-[#37472a]/90 font-medium leading-relaxed mb-5 max-w-[390px]">
               {language === "hi"
                 ? "शुद्ध हस्तनिर्मित टेराकोटा, जयपुर ब्लू पॉटरी से लेकर नक्काशीदार काष्ठशिल्प व ढोकरा पीतल तक, प्रजापत हैंडीक्राफ्ट्स हर घर में भारतीय विरासत और अनूठी कला लेकर आता है।"
                 : "From pure hand-turned terracotta and royal Jaipur blue pottery to master wood carvings and lost-wax brass, Prajapat Handicrafts brings authentic heritage, natural materials, and timeless artistry into every home."}
             </p>
 
-            {/* 3 Rounded Square Action Cards (WhatsApp, Instagram, Call Us - Compact) */}
-            <div className="flex items-center gap-2 sm:gap-2.5">
+            {/* 3 Compact Rounded Action Cards (WhatsApp, Instagram, Call Us) */}
+            <div className="flex items-center gap-1.5 sm:gap-2.5 mt-2 sm:mt-0">
               {/* WhatsApp Button */}
               <a
                 href={`https://api.whatsapp.com/send?phone=${brandConfig.whatsappNumber}&text=${encodeURIComponent(
@@ -468,10 +468,10 @@ export default function HomePage() {
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-[#fdfcf7] rounded-xl flex flex-col items-center justify-center p-1 text-center text-[8px] sm:text-[9px] md:text-[10px] font-bold text-[#37472a] gap-1 shadow-sm border border-[#b39b5b]/30 hover:-translate-y-0.5 hover:shadow-md transition-all group cursor-pointer"
+                className="w-13 h-13 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-[#fdfcf7] rounded-lg sm:rounded-xl flex flex-col items-center justify-center p-1 text-center text-[7px] sm:text-[9px] md:text-[10px] font-bold text-[#37472a] gap-0.5 sm:gap-1 shadow-sm border border-[#b39b5b]/30 hover:-translate-y-0.5 hover:shadow-md transition-all group cursor-pointer"
               >
-                <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-md bg-[#25D366] text-white flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
-                  <MessageCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current text-white" />
+                <div className="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-md bg-[#25D366] text-white flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
+                  <MessageCircle className="w-3 h-3 sm:w-4 sm:h-4 fill-current text-white" />
                 </div>
                 <span>{language === "hi" ? "व्हाट्सएप" : "WHATSAPP"}</span>
               </a>
@@ -481,10 +481,10 @@ export default function HomePage() {
                 href={brandConfig.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-[#fdfcf7] rounded-xl flex flex-col items-center justify-center p-1 text-center text-[8px] sm:text-[9px] md:text-[10px] font-bold text-[#37472a] gap-1 shadow-sm border border-[#b39b5b]/30 hover:-translate-y-0.5 hover:shadow-md transition-all group cursor-pointer"
+                className="w-13 h-13 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-[#fdfcf7] rounded-lg sm:rounded-xl flex flex-col items-center justify-center p-1 text-center text-[7px] sm:text-[9px] md:text-[10px] font-bold text-[#37472a] gap-0.5 sm:gap-1 shadow-sm border border-[#b39b5b]/30 hover:-translate-y-0.5 hover:shadow-md transition-all group cursor-pointer"
               >
-                <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-md bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
-                  <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24">
+                <div className="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-md bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
+                  <svg className="w-3 h-3 sm:w-4 sm:h-4 fill-current" viewBox="0 0 24 24">
                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                   </svg>
                 </div>
@@ -494,10 +494,10 @@ export default function HomePage() {
               {/* Call Us Button */}
               <a
                 href={`tel:${brandConfig.phone}`}
-                className="w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-[#fdfcf7] rounded-xl flex flex-col items-center justify-center p-1 text-center text-[8px] sm:text-[9px] md:text-[10px] font-bold text-[#37472a] gap-1 shadow-sm border border-[#b39b5b]/30 hover:-translate-y-0.5 hover:shadow-md transition-all group cursor-pointer"
+                className="w-13 h-13 sm:w-18 sm:h-18 md:w-20 md:h-20 bg-[#fdfcf7] rounded-lg sm:rounded-xl flex flex-col items-center justify-center p-1 text-center text-[7px] sm:text-[9px] md:text-[10px] font-bold text-[#37472a] gap-0.5 sm:gap-1 shadow-sm border border-[#b39b5b]/30 hover:-translate-y-0.5 hover:shadow-md transition-all group cursor-pointer"
               >
-                <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-md bg-[#37472a] text-white flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
-                  <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
+                <div className="w-5 h-5 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-md bg-[#37472a] text-white flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
+                  <Phone className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                 </div>
                 <span>{language === "hi" ? "कॉल करें" : "CALL US"}</span>
               </a>
