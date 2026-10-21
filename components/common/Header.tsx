@@ -10,6 +10,7 @@ import { useCart } from "@/context/CartContext";
 import { useWishlist } from "@/context/WishlistContext";
 import { useLanguage } from "@/context/LanguageContext";
 import {
+  Globe,
   Search,
   ShoppingBag,
   Heart,
@@ -125,28 +126,21 @@ export const Header: React.FC = () => {
 
           {/* Brand Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl bg-terracotta text-white flex items-center justify-center shadow-md shadow-terracotta/20 group-hover:scale-105 transition-transform duration-300">
-              {/* Traditional diya / craft pot SVG icon */}
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="w-6 h-6 text-saffron-300"
-              >
-                <path d="M12 2c0 2.5-2 4.5-2 7 0 1.5 1 3 2 3s2-1.5 2-3c0-2.5-2-4.5-2-7z" fill="currentColor" opacity="0.8" />
-                <path d="M4 14c0 4 3.5 7 8 7s8-3 8-7H4z" />
-                <path d="M6 14v1a6 6 0 0 0 12 0v-1" />
-              </svg>
+            <div className="w-11 h-11 rounded-full bg-[#f4f2e6] border border-[#b39b5b]/50 flex items-center justify-center shadow-md group-hover:scale-105 transition-transform overflow-hidden p-0.5">
+              <img
+                src="/logo.png"
+                alt="Prajapat Handicrafts Logo"
+                className="w-full h-full object-contain"
+                width={44}
+                height={44}
+              />
             </div>
             <div className="flex flex-col">
-              <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-charcoal-900 group-hover:text-terracotta transition-colors leading-none">
-                {language === "hi" ? brandConfig.hindiName : brandConfig.name}
+              <span className="font-serif text-lg sm:text-xl font-bold tracking-wider text-[#37472a] group-hover:text-[#7A6327] transition-colors leading-none">
+                PRAJAPAT
               </span>
-              <span className="text-[10px] sm:text-[11px] font-sans tracking-widest uppercase text-terracotta-600 font-semibold mt-1">
-                {language === "hi" ? "जयपुर • हस्तशिल्प" : "Jaipur • Heritage Crafts"}
+              <span className="text-[10px] font-sans tracking-[0.2em] uppercase text-[#7A6327] font-semibold mt-1">
+                HANDICRAFTS • JAIPUR
               </span>
             </div>
           </Link>
@@ -381,32 +375,27 @@ export const Header: React.FC = () => {
               )}
             </div>
 
-            {/* Wishlist Link */}
-            <Link
-              href="/wishlist"
-              className="relative p-2.5 rounded-full text-charcoal-700 hover:text-terracotta hover:bg-sand-100 transition-colors"
-              aria-label="View Wishlist"
-            >
-              <Heart className="w-5 h-5" />
-              {wishlistCount > 0 && (
-                <span className="absolute top-1 right-1 w-4 h-4 rounded-full bg-saffron-500 text-white text-[10px] font-bold flex items-center justify-center animate-pulse-subtle">
-                  {wishlistCount}
-                </span>
-              )}
-            </Link>
-
-            {/* Cart Trigger */}
+            {/* Language Toggle Pill */}
             <button
-              onClick={toggleCart}
-              className="relative flex items-center gap-2 px-3 py-2 rounded-full bg-terracotta text-white hover:bg-terracotta-600 shadow-sm shadow-terracotta/20 transition-all active:scale-95"
-              aria-label="View Cart"
+              onClick={toggleLanguage}
+              className="inline-flex items-center gap-2 bg-[#f4f2e6] hover:bg-[#eae6d4] text-[#37472a] px-3.5 py-1.5 rounded-full border border-[#37472a]/20 text-xs font-semibold transition-all shadow-sm cursor-pointer"
+              title="Switch language"
             >
-              <ShoppingBag className="w-4 h-4" />
-              <span className="text-xs font-semibold hidden sm:inline">{t("cart")}</span>
-              <span className="w-5 h-5 rounded-full bg-white text-terracotta text-xs font-bold flex items-center justify-center">
-                {itemCount}
-              </span>
+              <Globe className="w-3.5 h-3.5 text-[#7A6327]" />
+              <span>{language === "hi" ? "English" : "हिन्दी"}</span>
             </button>
+
+            {/* Direct WhatsApp Contact Button */}
+            <a
+              href={`https://api.whatsapp.com/send?phone=${brandConfig.whatsappNumber}&text=${encodeURIComponent(
+                "Namaste Prajapat Handicrafts! I would like to inquire about your handcrafted collections."
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:inline-flex items-center gap-1.5 bg-[#25D366] hover:bg-[#20ba59] text-white px-3.5 py-1.5 rounded-full text-xs font-semibold shadow-sm transition-transform hover:-translate-y-0.5"
+            >
+              <span>WhatsApp</span>
+            </a>
           </div>
         </div>
       </div>

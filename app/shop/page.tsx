@@ -2,7 +2,8 @@
 
 import React, { useState, useMemo, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
-import { products, Product } from "@/data/products";
+import Link from "next/link";
+import { products } from "@/data/products";
 import { categories } from "@/data/categories";
 import { ProductCard } from "@/components/product/ProductCard";
 import { useLanguage } from "@/context/LanguageContext";
@@ -11,8 +12,6 @@ import {
   X,
   Search,
   Sparkles,
-  ArrowUpDown,
-  Check,
 } from "lucide-react";
 
 function ShopContent() {
@@ -21,7 +20,7 @@ function ShopContent() {
   const initialSearch = searchParams.get("search") || "";
   const initialSort = searchParams.get("sort") || "popular";
 
-  const { language, t } = useLanguage();
+  const { language } = useLanguage();
 
   const [selectedCategory, setSelectedCategory] = useState<string>(initialCategory);
   const [searchQuery, setSearchQuery] = useState<string>(initialSearch);
@@ -72,22 +71,32 @@ function ShopContent() {
   };
 
   return (
-    <div className="bg-ivory-100 min-h-screen py-10 sm:py-16">
+    <div className="bg-[#f4f2e6] text-[#37472a] min-h-screen py-10 sm:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb & Header */}
         <div className="mb-8 space-y-2">
-          <div className="text-xs text-charcoal-500 flex items-center gap-2">
-            <span>Home</span>
+          <div className="text-xs text-[#7A6327] flex items-center gap-2">
+            <Link href="/" className="hover:underline">
+              {language === "hi" ? "होम" : "Home"}
+            </Link>
             <span>/</span>
-            <span className="text-terracotta font-semibold">Shop Handicrafts</span>
+            <span className="font-semibold">
+              {language === "hi" ? "हस्तशिल्प संग्रह" : "Handicraft Collection"}
+            </span>
           </div>
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div>
-              <h1 className="font-serif text-3xl sm:text-4xl font-bold text-charcoal-900 tracking-tight">
+              <p className="text-[11px] font-bold tracking-[2px] uppercase text-[#7A6327] mb-1 flex items-center gap-1.5">
+                <Sparkles className="w-3.5 h-3.5" />
+                {language === "hi" ? "जयपुर विरासत शिल्प" : "AUTHENTIC JAIPUR CRAFTS"}
+              </p>
+              <h1 className="font-cinzel text-3xl sm:text-4xl font-bold text-[#37472a] tracking-tight">
                 {language === "hi" ? "समस्त प्रामाणिक हस्तशिल्प" : "All Handcrafted Collections"}
               </h1>
-              <p className="text-xs sm:text-sm text-charcoal-600 mt-1">
-                Showing {filteredProducts.length} curated artisan treasures
+              <p className="text-xs sm:text-sm text-[#6e7663] mt-1">
+                {language === "hi"
+                  ? `${filteredProducts.length} विशिष्ट भारतीय हस्तनिर्मित उत्पाद उपलब्ध`
+                  : `Showing ${filteredProducts.length} curated artisan treasures`}
               </p>
             </div>
 
@@ -95,10 +104,10 @@ function ShopContent() {
             <div className="flex lg:hidden items-center gap-3">
               <button
                 onClick={() => setIsMobileFilterOpen(true)}
-                className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-sand-300 text-xs font-semibold text-charcoal-800 shadow-sm"
+                className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#fdfcf7] border border-[#37472a]/20 text-xs font-semibold text-[#37472a] shadow-sm cursor-pointer"
               >
-                <SlidersHorizontal className="w-4 h-4 text-terracotta" />
-                <span>Filters</span>
+                <SlidersHorizontal className="w-4 h-4 text-[#7A6327]" />
+                <span>{language === "hi" ? "फ़िल्टर" : "Filters"}</span>
               </button>
             </div>
           </div>
@@ -107,62 +116,62 @@ function ShopContent() {
         {/* Layout: Sidebar Filters + Main Product Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
           {/* Desktop Filter Sidebar */}
-          <aside className="hidden lg:block bg-white p-6 rounded-3xl border border-sand-200 shadow-card space-y-6 sticky top-28">
-            <div className="flex items-center justify-between pb-4 border-b border-sand-100">
-              <div className="flex items-center gap-2 font-serif font-bold text-charcoal-900 text-base">
-                <SlidersHorizontal className="w-4 h-4 text-terracotta" />
-                <span>Refine Craft</span>
+          <aside className="hidden lg:block bg-[#fdfcf7] p-6 rounded-3xl border border-[#37472a]/10 shadow-sm space-y-6 sticky top-28">
+            <div className="flex items-center justify-between pb-4 border-b border-[#37472a]/10">
+              <div className="flex items-center gap-2 font-serif font-bold text-[#37472a] text-base">
+                <SlidersHorizontal className="w-4 h-4 text-[#7A6327]" />
+                <span>{language === "hi" ? "शिल्प फ़िल्टर" : "Refine Craft"}</span>
               </div>
               <button
                 onClick={resetFilters}
-                className="text-xs text-terracotta hover:underline font-semibold"
+                className="text-xs text-[#7A6327] hover:underline font-semibold cursor-pointer"
               >
-                Reset All
+                {language === "hi" ? "रीसेट करें" : "Reset All"}
               </button>
             </div>
 
             {/* Search Input */}
             <div className="space-y-2">
-              <label className="text-xs font-bold text-charcoal-700 uppercase tracking-wider block">
-                Search
+              <label className="text-xs font-bold text-[#37472a] uppercase tracking-wider block">
+                {language === "hi" ? "खोजें" : "Search"}
               </label>
               <div className="relative">
                 <input
                   type="text"
-                  placeholder="e.g. Diya, Pottery, Dohar..."
+                  placeholder={language === "hi" ? "जैसे पॉटरी, दिया, कुर्सी..." : "e.g. Diya, Pottery, Chair..."}
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-8 pr-3 py-2 text-xs rounded-xl bg-sand-50 border border-sand-300 focus:outline-none focus:ring-2 focus:ring-terracotta"
+                  className="w-full pl-8 pr-3 py-2 text-xs rounded-full bg-[#f4f2e6] border border-[#37472a]/20 text-[#37472a] focus:outline-none focus:ring-2 focus:ring-[#37472a]"
                 />
-                <Search className="w-3.5 h-3.5 text-charcoal-400 absolute left-2.5 top-1/2 -translate-y-1/2" />
+                <Search className="w-3.5 h-3.5 text-[#6e7663] absolute left-2.5 top-1/2 -translate-y-1/2" />
               </div>
             </div>
 
             {/* Category Filter */}
             <div className="space-y-2">
-              <label className="text-xs font-bold text-charcoal-700 uppercase tracking-wider block">
-                Craft Tradition
+              <label className="text-xs font-bold text-[#37472a] uppercase tracking-wider block">
+                {language === "hi" ? "शिल्प विधा" : "Craft Tradition"}
               </label>
               <div className="space-y-1 max-h-56 overflow-y-auto pr-1">
                 <button
                   onClick={() => setSelectedCategory("all")}
-                  className={`w-full text-left px-3 py-1.5 rounded-lg text-xs font-medium transition-colors flex items-center justify-between ${
+                  className={`w-full text-left px-3 py-1.5 rounded-full text-xs font-medium transition-colors flex items-center justify-between cursor-pointer ${
                     selectedCategory === "all"
-                      ? "bg-terracotta text-white font-bold"
-                      : "text-charcoal-700 hover:bg-sand-100"
+                      ? "bg-[#37472a] text-white font-bold"
+                      : "text-[#37472a] hover:bg-[#f4f2e6]"
                   }`}
                 >
-                  <span>All Traditions</span>
+                  <span>{language === "hi" ? "सभी विधाएं" : "All Traditions"}</span>
                   <span className="font-mono text-[10px]">{products.length}</span>
                 </button>
                 {categories.map((cat) => (
                   <button
                     key={cat.id}
                     onClick={() => setSelectedCategory(cat.id)}
-                    className={`w-full text-left px-3 py-1.5 rounded-lg text-xs font-medium transition-colors flex items-center justify-between ${
+                    className={`w-full text-left px-3 py-1.5 rounded-full text-xs font-medium transition-colors flex items-center justify-between cursor-pointer ${
                       selectedCategory === cat.id
-                        ? "bg-terracotta text-white font-bold"
-                        : "text-charcoal-700 hover:bg-sand-100"
+                        ? "bg-[#37472a] text-white font-bold"
+                        : "text-[#37472a] hover:bg-[#f4f2e6]"
                     }`}
                   >
                     <span className="truncate">{language === "hi" ? cat.hindiName : cat.name}</span>
@@ -173,10 +182,10 @@ function ShopContent() {
             </div>
 
             {/* Price Range Slider */}
-            <div className="space-y-2 pt-2 border-t border-sand-100">
-              <div className="flex justify-between items-center text-xs font-bold text-charcoal-700">
-                <span className="uppercase tracking-wider">Max Price</span>
-                <span className="text-terracotta font-mono">₹{priceRange.toLocaleString("en-IN")}</span>
+            <div className="space-y-2 pt-2 border-t border-[#37472a]/10">
+              <div className="flex justify-between items-center text-xs font-bold text-[#37472a]">
+                <span className="uppercase tracking-wider">{language === "hi" ? "अधिकतम कीमत" : "Max Price"}</span>
+                <span className="text-[#7A6327] font-mono">₹{priceRange.toLocaleString("en-IN")}</span>
               </div>
               <input
                 type="range"
@@ -185,24 +194,24 @@ function ShopContent() {
                 step="100"
                 value={priceRange}
                 onChange={(e) => setPriceRange(Number(e.target.value))}
-                className="w-full accent-terracotta cursor-pointer"
+                className="w-full accent-[#37472a] cursor-pointer"
               />
-              <div className="flex justify-between text-[10px] text-charcoal-400 font-mono">
+              <div className="flex justify-between text-[10px] text-[#888] font-mono">
                 <span>₹500</span>
                 <span>₹5,000</span>
               </div>
             </div>
 
             {/* In-Stock Toggle */}
-            <div className="pt-2 border-t border-sand-100">
-              <label className="flex items-center gap-2 cursor-pointer text-xs font-medium text-charcoal-700">
+            <div className="pt-2 border-t border-[#37472a]/10">
+              <label className="flex items-center gap-2 cursor-pointer text-xs font-medium text-[#37472a]">
                 <input
                   type="checkbox"
                   checked={inStockOnly}
                   onChange={(e) => setInStockOnly(e.target.checked)}
-                  className="rounded text-terracotta focus:ring-terracotta w-4 h-4"
+                  className="rounded text-[#37472a] focus:ring-[#37472a] w-4 h-4 cursor-pointer"
                 />
-                <span>Ready to Ship (In Stock Only)</span>
+                <span>{language === "hi" ? "स्टॉक में उपलब्ध (तुरंत शिपिंग)" : "Ready to Ship (In Stock Only)"}</span>
               </label>
             </div>
           </aside>
@@ -210,32 +219,32 @@ function ShopContent() {
           {/* Main Product Area */}
           <main className="lg:col-span-3 space-y-6">
             {/* Top Toolbar: Sorting & Active Filters */}
-            <div className="bg-white p-4 rounded-2xl border border-sand-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div className="bg-[#fdfcf7] p-4 rounded-2xl border border-[#37472a]/10 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3">
               {/* Active Filter Chips */}
               <div className="flex flex-wrap items-center gap-2 w-full sm:w-auto">
                 {selectedCategory !== "all" && (
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sand-200 text-charcoal-800 text-xs font-medium">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#f4f2e6] text-[#37472a] text-xs font-medium border border-[#37472a]/20">
                     <span>
                       {categories.find((c) => c.id === selectedCategory)?.name}
                     </span>
-                    <button onClick={() => setSelectedCategory("all")}>
-                      <X className="w-3.5 h-3.5 text-charcoal-500 hover:text-terracotta" />
+                    <button onClick={() => setSelectedCategory("all")} className="cursor-pointer">
+                      <X className="w-3.5 h-3.5 text-[#37472a] hover:text-[#7A6327]" />
                     </button>
                   </span>
                 )}
                 {searchQuery && (
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sand-200 text-charcoal-800 text-xs font-medium">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#f4f2e6] text-[#37472a] text-xs font-medium border border-[#37472a]/20">
                     <span>Search: {searchQuery}</span>
-                    <button onClick={() => setSearchQuery("")}>
-                      <X className="w-3.5 h-3.5 text-charcoal-500 hover:text-terracotta" />
+                    <button onClick={() => setSearchQuery("")} className="cursor-pointer">
+                      <X className="w-3.5 h-3.5 text-[#37472a] hover:text-[#7A6327]" />
                     </button>
                   </span>
                 )}
                 {inStockOnly && (
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sand-200 text-charcoal-800 text-xs font-medium">
-                    <span>In Stock Only</span>
-                    <button onClick={() => setInStockOnly(false)}>
-                      <X className="w-3.5 h-3.5 text-charcoal-500 hover:text-terracotta" />
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#f4f2e6] text-[#37472a] text-xs font-medium border border-[#37472a]/20">
+                    <span>{language === "hi" ? "केवल इन-स्टॉक" : "In Stock Only"}</span>
+                    <button onClick={() => setInStockOnly(false)} className="cursor-pointer">
+                      <X className="w-3.5 h-3.5 text-[#37472a] hover:text-[#7A6327]" />
                     </button>
                   </span>
                 )}
@@ -243,19 +252,19 @@ function ShopContent() {
 
               {/* Sort By Select */}
               <div className="flex items-center gap-2 self-end sm:self-auto">
-                <span className="text-xs text-charcoal-500 font-medium whitespace-nowrap">
-                  Sort By:
+                <span className="text-xs text-[#6e7663] font-medium whitespace-nowrap">
+                  {language === "hi" ? "क्रम:" : "Sort By:"}
                 </span>
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="px-3 py-1.5 rounded-xl bg-sand-100 border border-sand-300 text-xs font-medium text-charcoal-800 focus:outline-none focus:ring-2 focus:ring-terracotta"
+                  className="px-3 py-1.5 rounded-full bg-[#f4f2e6] border border-[#37472a]/20 text-xs font-medium text-[#37472a] focus:outline-none focus:ring-2 focus:ring-[#37472a] cursor-pointer"
                 >
-                  <option value="popular">Most Loved (Bestsellers)</option>
-                  <option value="newest">Fresh from Kiln (Newest)</option>
-                  <option value="rating">Highest Rated</option>
-                  <option value="price-low">Price: Low to High</option>
-                  <option value="price-high">Price: High to Low</option>
+                  <option value="popular">{language === "hi" ? "सर्वाधिक लोकप्रिय" : "Most Loved (Bestsellers)"}</option>
+                  <option value="newest">{language === "hi" ? "नवीनतम शिल्प" : "Fresh from Kiln (Newest)"}</option>
+                  <option value="rating">{language === "hi" ? "सर्वोच्च रेटिंग" : "Highest Rated"}</option>
+                  <option value="price-low">{language === "hi" ? "कीमत: कम से अधिक" : "Price: Low to High"}</option>
+                  <option value="price-high">{language === "hi" ? "कीमत: अधिक से कम" : "Price: High to Low"}</option>
                 </select>
               </div>
             </div>
@@ -268,21 +277,23 @@ function ShopContent() {
                 ))}
               </div>
             ) : (
-              <div className="p-12 text-center bg-white rounded-3xl border border-sand-200 space-y-4">
-                <div className="w-16 h-16 mx-auto rounded-full bg-sand-100 text-terracotta flex items-center justify-center">
+              <div className="p-12 text-center bg-[#fdfcf7] rounded-3xl border border-[#37472a]/10 space-y-4">
+                <div className="w-16 h-16 mx-auto rounded-full bg-[#f4f2e6] text-[#7A6327] flex items-center justify-center">
                   <Search className="w-8 h-8 opacity-60" />
                 </div>
-                <h3 className="font-serif text-xl font-bold text-charcoal-900">
-                  No handicrafts matched your exact criteria
+                <h3 className="font-serif text-xl font-bold text-[#37472a]">
+                  {language === "hi" ? "कोई हस्तशिल्प नहीं मिला" : "No handicrafts matched your exact criteria"}
                 </h3>
-                <p className="text-xs text-charcoal-600 max-w-sm mx-auto">
-                  Try broadening your price range or clearing the active search keyword.
+                <p className="text-xs text-[#6e7663] max-w-sm mx-auto">
+                  {language === "hi"
+                    ? "कृपया कीमत सीमा बढ़ाएँ या खोज फ़िल्टर रीसेट करें।"
+                    : "Try broadening your price range or clearing the active search keyword."}
                 </p>
                 <button
                   onClick={resetFilters}
-                  className="px-6 py-2.5 bg-terracotta text-white rounded-full text-xs font-semibold hover:bg-terracotta-600 shadow-sm"
+                  className="px-6 py-2.5 bg-[#37472a] text-white rounded-full text-xs font-semibold hover:bg-[#25301d] shadow-sm cursor-pointer"
                 >
-                  Reset All Filters
+                  {language === "hi" ? "सभी फ़िल्टर रीसेट करें" : "Reset All Filters"}
                 </button>
               </div>
             )}
@@ -292,37 +303,41 @@ function ShopContent() {
 
       {/* Mobile Filters Modal */}
       {isMobileFilterOpen && (
-        <div className="fixed inset-0 z-50 bg-charcoal-900/60 backdrop-blur-sm flex justify-end animate-fade-in lg:hidden">
-          <div className="w-full max-w-xs bg-white h-full p-6 space-y-6 overflow-y-auto animate-slide-up flex flex-col justify-between">
+        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex justify-end animate-fade-in lg:hidden">
+          <div className="w-full max-w-xs bg-[#fdfcf7] h-full p-6 space-y-6 overflow-y-auto animate-slide-up flex flex-col justify-between">
             <div className="space-y-6">
-              <div className="flex items-center justify-between pb-4 border-b border-sand-200">
-                <span className="font-serif font-bold text-lg text-charcoal-900">Filter Crafts</span>
-                <button onClick={() => setIsMobileFilterOpen(false)} aria-label="Close filters">
-                  <X className="w-5 h-5 text-charcoal-600" />
+              <div className="flex items-center justify-between pb-4 border-b border-[#37472a]/10">
+                <span className="font-serif font-bold text-lg text-[#37472a]">
+                  {language === "hi" ? "शिल्प फ़िल्टर" : "Filter Crafts"}
+                </span>
+                <button onClick={() => setIsMobileFilterOpen(false)} aria-label="Close filters" className="cursor-pointer">
+                  <X className="w-5 h-5 text-[#37472a]" />
                 </button>
               </div>
 
               {/* Category */}
               <div className="space-y-2">
-                <label className="text-xs font-bold text-charcoal-700 uppercase">Tradition</label>
+                <label className="text-xs font-bold text-[#37472a] uppercase">
+                  {language === "hi" ? "शिल्प विधा" : "Tradition"}
+                </label>
                 <div className="space-y-1">
                   <button
                     onClick={() => setSelectedCategory("all")}
-                    className={`w-full text-left px-3 py-2 rounded-lg text-xs font-medium ${
-                      selectedCategory === "all" ? "bg-terracotta text-white font-bold" : "bg-sand-100"
+                    className={`w-full text-left px-3 py-2 rounded-full text-xs font-medium cursor-pointer ${
+                      selectedCategory === "all" ? "bg-[#37472a] text-white font-bold" : "bg-[#f4f2e6] text-[#37472a]"
                     }`}
                   >
-                    All Traditions
+                    {language === "hi" ? "सभी विधाएं" : "All Traditions"}
                   </button>
                   {categories.map((c) => (
                     <button
                       key={c.id}
                       onClick={() => setSelectedCategory(c.id)}
-                      className={`w-full text-left px-3 py-2 rounded-lg text-xs font-medium ${
-                        selectedCategory === c.id ? "bg-terracotta text-white font-bold" : "bg-sand-100"
+                      className={`w-full text-left px-3 py-2 rounded-full text-xs font-medium cursor-pointer ${
+                        selectedCategory === c.id ? "bg-[#37472a] text-white font-bold" : "bg-[#f4f2e6] text-[#37472a]"
                       }`}
                     >
-                      {c.name}
+                      {language === "hi" ? c.hindiName : c.name}
                     </button>
                   ))}
                 </div>
@@ -330,9 +345,9 @@ function ShopContent() {
 
               {/* Price */}
               <div className="space-y-2">
-                <div className="flex justify-between text-xs font-bold">
-                  <span>Max Price</span>
-                  <span className="text-terracotta">₹{priceRange}</span>
+                <div className="flex justify-between text-xs font-bold text-[#37472a]">
+                  <span>{language === "hi" ? "अधिकतम कीमत" : "Max Price"}</span>
+                  <span className="text-[#7A6327]">₹{priceRange}</span>
                 </div>
                 <input
                   type="range"
@@ -341,16 +356,18 @@ function ShopContent() {
                   step="100"
                   value={priceRange}
                   onChange={(e) => setPriceRange(Number(e.target.value))}
-                  className="w-full accent-terracotta"
+                  className="w-full accent-[#37472a] cursor-pointer"
                 />
               </div>
             </div>
 
             <button
               onClick={() => setIsMobileFilterOpen(false)}
-              className="w-full py-3 bg-terracotta text-white rounded-xl text-xs font-semibold shadow-md"
+              className="w-full py-3 bg-[#37472a] text-white rounded-full text-xs font-semibold shadow-md cursor-pointer"
             >
-              Apply Filters ({filteredProducts.length} Results)
+              {language === "hi"
+                ? `फ़िल्टर लागू करें (${filteredProducts.length} परिणाम)`
+                : `Apply Filters (${filteredProducts.length} Results)`}
             </button>
           </div>
         </div>
@@ -361,7 +378,7 @@ function ShopContent() {
 
 export default function ShopPage() {
   return (
-    <Suspense fallback={<div className="min-h-screen py-20 text-center">Loading artisan store...</div>}>
+    <Suspense fallback={<div className="min-h-screen py-20 text-center text-[#37472a]">Loading artisan store...</div>}>
       <ShopContent />
     </Suspense>
   );

@@ -324,12 +324,13 @@ export default function HomePage() {
             >
               {language === "hi" ? "संपर्क" : "CONTACT"}
             </a>
-            <Link
-              href="/shop"
-              className="hover:text-[#b39b5b] transition-colors py-1 text-[#e0cf9b] font-bold"
+            <a
+              href="#products"
+              onClick={(e) => handleScrollTo(e, "products")}
+              className="hover:text-[#b39b5b] transition-colors py-1 text-[#e0cf9b] font-bold cursor-pointer"
             >
               {language === "hi" ? "सभी उत्पाद →" : "SHOP ALL →"}
-            </Link>
+            </a>
           </nav>
 
           {/* Right Action Icons: Language Toggle & Mobile Hamburger (Cart removed as requested) */}
@@ -422,13 +423,13 @@ export default function HomePage() {
           >
             {language === "hi" ? "संपर्क" : "CONTACT"}
           </a>
-          <Link
-            href="/shop"
-            onClick={() => setMobileMenuOpen(false)}
-            className="text-sm font-bold tracking-widest text-[#37472a] bg-[#e0cf9b] px-6 py-2 rounded-full shadow-sm"
+          <a
+            href="#products"
+            onClick={(e) => handleScrollTo(e, "products")}
+            className="text-sm font-bold tracking-widest text-[#37472a] bg-[#e0cf9b] px-6 py-2 rounded-full shadow-sm cursor-pointer"
           >
             {language === "hi" ? "सभी उत्पाद देखें →" : "BROWSE SHOP →"}
-          </Link>
+          </a>
         </div>
 
         {/* Hero Content Area with Frosted Glass Box (Matching Maash Henna - Compact) */}
