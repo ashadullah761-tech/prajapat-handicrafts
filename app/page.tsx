@@ -271,11 +271,11 @@ export default function HomePage() {
       ======================================================== */}
       <section
         id="hero"
-        className="relative w-full min-h-screen flex flex-col bg-cover bg-center md:bg-[center_right] bg-no-repeat overflow-hidden"
+        className="relative w-full min-h-[96svh] sm:min-h-screen flex flex-col bg-cover bg-[center_top] sm:bg-center md:bg-[center_right] bg-no-repeat overflow-hidden"
         style={{
-          backgroundImage: `linear-gradient(rgba(20, 26, 15, 0.22), rgba(20, 26, 15, 0.38)), url('/hero-banner.jpg?v=hd2')`,
+          backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0) 14%, rgba(0, 0, 0, 0) 84%, rgba(20, 26, 15, 0.12) 100%), url('/hero-banner.jpg')`,
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "center top",
           backgroundRepeat: "no-repeat",
         }}
       >
@@ -447,27 +447,27 @@ export default function HomePage() {
           </a>
         </div>
 
-        {/* Hero Content Area with Frosted Glass Box (Compact on Mobile & Positioned at Side) */}
-        <div className="flex-1 flex items-end sm:items-center px-4 sm:px-8 md:px-12 pb-14 sm:py-8 md:py-10 z-10">
-          <div className="max-w-[280px] sm:max-w-[390px] md:max-w-[450px] bg-[#f4f2e6]/80 sm:bg-[#f4f2e6]/70 backdrop-blur-md p-3.5 sm:p-6 md:p-8 rounded-[16px] sm:rounded-[20px] shadow-2xl border border-white/50 animate-fade-in mb-2 sm:mb-0">
+        {/* Hero Content Area with Frosted Glass Box (Placed in Empty Wall Space on Mobile, Left on Desktop) */}
+        <div className="flex-1 flex flex-col justify-start sm:justify-center items-center sm:items-start px-4 sm:px-8 md:px-12 pt-3 sm:pt-0 z-10">
+          <div className="max-w-[270px] sm:max-w-[390px] md:max-w-[450px] bg-[#f4f2e6]/75 sm:bg-[#f4f2e6]/70 backdrop-blur-md p-3 sm:p-6 md:p-8 rounded-[16px] sm:rounded-[20px] shadow-xl border border-white/50 animate-fade-in mt-1 sm:mt-0">
             {/* Small uppercase tag */}
-            <p className="uppercase tracking-[1.5px] sm:tracking-[2px] text-[#7A6327] text-[8px] sm:text-[10px] md:text-xs font-bold mb-1 sm:mb-2.5 flex items-center gap-1 sm:gap-1.5">
+            <p className="uppercase tracking-[1.5px] sm:tracking-[2px] text-[#7A6327] text-[8px] sm:text-[10px] md:text-xs font-bold mb-1 sm:mb-2.5 flex items-center justify-center sm:justify-start gap-1 sm:gap-1.5">
               <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#b39b5b]" />
               {language === "hi" ? "प्रीमियम भारतीय हस्तशिल्प" : "PREMIUM INDIAN HANDICRAFTS"}
             </p>
 
             {/* Main Headline */}
-            <h1 className="font-serif text-lg sm:text-3xl md:text-5xl font-normal leading-tight text-[#37472a] mb-1 sm:mb-3">
+            <h1 className="font-serif text-base sm:text-3xl md:text-5xl font-normal leading-tight text-[#37472a] mb-1 sm:mb-3 text-center sm:text-left">
               {language === "hi" ? (
                 <>
                   प्राकृतिक सुंदरता
-                  <br />
+                  <br className="hidden sm:inline" />{" "}
                   <span className="italic font-normal text-[#7A6327]">हर एक बारीकी में।</span>
                 </>
               ) : (
                 <>
                   NATURAL BEAUTY
-                  <br />
+                  <br className="hidden sm:inline" />{" "}
                   <span className="italic font-normal text-[#7A6327]">in every detail.</span>
                 </>
               )}
@@ -481,7 +481,7 @@ export default function HomePage() {
             </p>
 
             {/* 3 Compact Rounded Action Cards (WhatsApp, Instagram, Call Us) */}
-            <div className="flex items-center gap-1.5 sm:gap-2.5 mt-2 sm:mt-0">
+            <div className="flex items-center justify-center sm:justify-start gap-1.5 sm:gap-2.5 mt-1 sm:mt-0">
               {/* WhatsApp Button */}
               <a
                 href={`https://api.whatsapp.com/send?phone=${brandConfig.whatsappNumber}&text=${encodeURIComponent(
@@ -528,7 +528,7 @@ export default function HomePage() {
 
         {/* Curved Wave Divider (Exact SVG from Maash Henna with Gold Border & Cream Fill) */}
         <div className="absolute bottom-0 left-0 w-full leading-none z-10 pointer-events-none">
-          <svg viewBox="0 0 1440 100" preserveAspectRatio="none" className="w-full h-14 md:h-24 block">
+          <svg viewBox="0 0 1440 100" preserveAspectRatio="none" className="w-full h-8 sm:h-14 md:h-24 block">
             <path d="M0,50 Q360,100 720,50 T1440,50 L1440,100 L0,100 Z" fill="none" stroke="#b39b5b" strokeWidth="3" />
             <path d="M0,52 Q360,102 720,52 T1440,52 L1440,100 L0,100 Z" fill="#f4f2e6" />
           </svg>
