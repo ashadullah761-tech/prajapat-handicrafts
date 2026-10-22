@@ -224,27 +224,6 @@ export default function HomePage() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Remove Netlify Drawer / "Powered by Netlify" badge
-  useEffect(() => {
-    const hideNetlify = () => {
-      document.querySelectorAll("netlify-drawer, iframe[src*='netlify'], div#netlify-drawer").forEach((el) => {
-        el.remove();
-      });
-      document.querySelectorAll("div, a, button").forEach((el) => {
-        if (
-          el.textContent?.trim().toLowerCase().includes("powered by netlify") ||
-          el.getAttribute("aria-label")?.toLowerCase().includes("netlify")
-        ) {
-          (el as HTMLElement).style.setProperty("display", "none", "important");
-          (el as HTMLElement).style.setProperty("visibility", "hidden", "important");
-        }
-      });
-    };
-    hideNetlify();
-    const interval = setInterval(hideNetlify, 800);
-    return () => clearInterval(interval);
-  }, []);
-
   const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
     const element = document.getElementById(id);
@@ -256,14 +235,6 @@ export default function HomePage() {
     setMobileMenuOpen(false);
   };
 
-  const handleOrderWhatsApp = (product: (typeof featuredProducts)[0]) => {
-    const text = encodeURIComponent(
-      `Hi ${brandConfig.name},\nI would like to order "${product.name}".\nPlease share the price, availability, and delivery details.`
-    );
-    window.open(`https://api.whatsapp.com/send?phone=${brandConfig.whatsappNumber}&text=${text}`, "_blank");
-    showToast(`Opening WhatsApp order for ${product.name}`, "info");
-  };
-
   return (
     <div className="bg-[#f4f2e6] text-[#37472a] font-sans min-h-screen selection:bg-[#37472a] selection:text-[#f4f2e6]">
       {/* ========================================================
@@ -273,7 +244,7 @@ export default function HomePage() {
         id="hero"
         className="relative w-full min-h-[96svh] sm:min-h-screen flex flex-col bg-cover bg-[center_top] sm:bg-center md:bg-[center_right] bg-no-repeat overflow-hidden"
         style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0) 14%, rgba(0, 0, 0, 0) 84%, rgba(20, 26, 15, 0.12) 100%), url('/hero-banner.jpg')`,
+          backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0) 14%, rgba(0, 0, 0, 0) 84%, rgba(20, 26, 15, 0.12) 100%), url('/hero-banner.webp')`,
           backgroundSize: "cover",
           backgroundPosition: "center top",
           backgroundRepeat: "no-repeat",

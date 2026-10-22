@@ -17,14 +17,14 @@ import { BackToTop } from "@/components/common/BackToTop";
 const cinzel = Cinzel({
   subsets: ["latin"],
   variable: "--font-cinzel",
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "700"],
   display: "swap",
 });
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "700"],
   style: ["normal", "italic"],
   display: "swap",
 });
@@ -32,7 +32,7 @@ const playfair = Playfair_Display({
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-montserrat",
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "600"],
   display: "swap",
 });
 
@@ -149,6 +149,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cinzel.variable} ${playfair.variable} ${montserrat.variable}`}>
       <head>
+        <link rel="preload" as="image" href="/hero-banner.webp" type="image/webp" />
+        <link rel="preconnect" href="https://images.unsplash.com" />
+        <link rel="dns-prefetch" href="https://images.unsplash.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -175,7 +178,7 @@ export default function RootLayout({
         <div id="google_translate_element" style={{ display: "none" }} />
         <Script
           id="google-translate-init"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               function googleTranslateElementInit() {
@@ -191,7 +194,7 @@ export default function RootLayout({
         />
         <Script
           id="google-translate-script"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
         />
       </body>

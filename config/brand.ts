@@ -57,7 +57,7 @@ export const brandConfig: BrandConfig = {
   hindiName: "गेहलोत एक्सपोर्ट",
   firmName: "Gehlot Export",
   ownerName: "Prakash Gehlot",
-  managerName: "Rishika Gehlot",
+  managerName: "Lishika Gehlot",
   managerPhone: "+918209142595",
   displayManagerPhone: "+91 82091 42595",
   tagline: "Handmade with Heart. Crafted by Tradition.",
