@@ -5,8 +5,8 @@ import { brandConfig } from "@/config/brand";
 import { ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Kalakriti Handicrafts",
-  description: "Privacy policy and data protection practices of Kalakriti Handicrafts.",
+  title: `Privacy Policy | ${brandConfig.name}`,
+  description: `Privacy policy and data protection practices of ${brandConfig.name}.`,
 };
 
 export default function PrivacyPolicyPage() {

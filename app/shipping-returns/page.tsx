@@ -4,7 +4,7 @@ import { brandConfig } from "@/config/brand";
 import { Truck, RotateCcw, ShieldCheck, Package } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Shipping & Returns Policy | Kalakriti Handicrafts",
+  title: `Shipping & Returns Policy | ${brandConfig.name}`,
   description: "Learn about our 5-layer shockproof packaging, damage-free guarantee, shipping timelines, and 7-day hassle-free returns.",
 };
 
@@ -44,7 +44,7 @@ export default function ShippingReturnsPage() {
           <section className="space-y-2">
             <h2 className="font-serif text-lg font-bold text-charcoal-900">1. Shipping Timelines</h2>
             <p>
-              All orders are hand-inspected at our Jaipur heritage studio within 24 to 48 hours of booking. Standard transit times are:
+              All orders are hand-inspected at our {brandConfig.city} workshop within 24 to 48 hours of booking. Standard transit times are:
             </p>
             <ul className="list-disc pl-5 space-y-1">
               <li><strong>Metro Cities (Delhi, Mumbai, Bengaluru, Kolkata, Hyderabad, Chennai):</strong> 3 to 4 business days.</li>
@@ -59,7 +59,7 @@ export default function ShippingReturnsPage() {
               Because pottery, blue ceramics, and bell metal items are fragile, we take packaging very seriously. However, in the rare event that an item arrives broken or chipped in transit, you are completely protected:
             </p>
             <p className="p-4 rounded-2xl bg-forest-50 border border-forest-200 text-forest-900 font-medium">
-              Simply photograph or take a quick unboxing video of the damaged item and WhatsApp it to us at <strong>+91 98765 43210</strong> within 48 hours of delivery. We will immediately dispatch a fresh replacement free of charge or initiate a 100% full refund.
+              Simply photograph or take a quick unboxing video of the damaged item and WhatsApp it to us at <strong>{brandConfig.displayWhatsapp}</strong> within 48 hours of delivery. We will immediately dispatch a fresh replacement free of charge or initiate a 100% full refund.
             </p>
           </section>
 

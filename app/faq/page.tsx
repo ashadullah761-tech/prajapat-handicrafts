@@ -4,7 +4,7 @@ import { FAQAccordion } from "@/components/home/FAQAccordion";
 import { faqs } from "@/data/faqs";
 
 export const metadata: Metadata = {
-  title: "Frequently Asked Questions | Kalakriti Handicrafts",
+  title: "Frequently Asked Questions | Gehlot Export",
   description:
     "Comprehensive FAQs on authentic Indian handicrafts, 5-layer shockproof packaging, damage-free guarantee, shipping timelines, Cash on Delivery, and bulk custom orders.",
 };

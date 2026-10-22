@@ -3,8 +3,8 @@ import { Metadata } from "next";
 import { brandConfig } from "@/config/brand";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions | Kalakriti Handicrafts",
-  description: "Terms and conditions of purchase, authenticity, and service at Kalakriti Handicrafts.",
+  title: `Terms & Conditions | ${brandConfig.name}`,
+  description: `Terms and conditions of purchase, authenticity, and service at ${brandConfig.name}.`,
 };
 
 export default function TermsPage() {
@@ -39,14 +39,14 @@ export default function TermsPage() {
           <section className="space-y-2">
             <h2 className="font-serif text-lg font-bold text-charcoal-900">3. Orders & Cancellation</h2>
             <p>
-              Orders can be cancelled free of charge within 12 hours of placement by sending a message on WhatsApp (+91 98765 43210) or emailing care@kalakritihandicrafts.com. Once an order enters our multi-layer shockproof packing process, cancellations are no longer possible, but the order remains eligible for our 7-day return policy upon receipt.
+              Orders can be cancelled free of charge within 12 hours of placement by sending a message on WhatsApp ({brandConfig.displayWhatsapp}) or emailing {brandConfig.email}. Once an order enters our multi-layer shockproof packing process, cancellations are no longer possible, but the order remains eligible for our 7-day return policy upon receipt.
             </p>
           </section>
 
           <section className="space-y-2">
             <h2 className="font-serif text-lg font-bold text-charcoal-900">4. Jurisdiction</h2>
             <p>
-              Any disputes arising from transactions on this platform shall be subject to the exclusive jurisdiction of the competent courts of Jaipur, Rajasthan, India.
+              Any disputes arising from transactions on this platform shall be subject to the exclusive jurisdiction of the competent courts of {brandConfig.city}, Rajasthan, India.
             </p>
           </section>
         </div>

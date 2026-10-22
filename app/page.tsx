@@ -150,8 +150,8 @@ const faqData = {
       a: "We specialize in authentic Jaipur Blue Pottery (quartz, fuller's earth & cobalt glaze), Saharanpur Hand-Carved Sheesham Wood, Bastar Lost-Wax Brass Casting (Dhokra), Earthen Terracotta, and Sanganeri/Bagru Natural Dye Hand Block-Printed Handlooms.",
     },
     {
-      q: "Where is Prajapat Handicrafts based?",
-      a: "Our master artisan studio and gallery is located in the historic Hawa Mahal Heritage Corridor, Badi Chaupar, Jaipur, Rajasthan. We ship across all states in India and globally upon request.",
+      q: "Where is Gehlot Export based?",
+      a: "Our firm and workshop is located at 2 chh 54, Kamla Nehru Nagar, Pali, Rajasthan (Pincode: 306401). We ship across all states in India and export globally upon request.",
     },
     {
       q: "Can I place an order directly on WhatsApp?",
@@ -178,8 +178,8 @@ const faqData = {
       a: "Yes. Our master artisans can handcraft bespoke dimensions, deities, jharokha frames, or family crests. Share your sketch or reference photo with our team on WhatsApp to evaluate feasibility and lead time.",
     },
     {
-      q: "Can I visit your Jaipur artisan studio and see the craft work live?",
-      a: "Yes, visitors are warmly welcome to experience pottery wheel turning and hand block printing at our Jaipur heritage workshop by prior appointment. Message us on WhatsApp 24 hours prior to your visit.",
+      q: "Can I visit your Pali workshop and see the craft work live?",
+      a: "Yes, visitors are warmly welcome to experience handcrafted artistry at our Pali, Rajasthan workshop by prior appointment. Message us on WhatsApp 24 hours prior to your visit.",
     },
     {
       q: "Can you provide personalized gift packaging with customized greeting cards?",
@@ -258,7 +258,7 @@ export default function HomePage() {
 
   const handleOrderWhatsApp = (product: (typeof featuredProducts)[0]) => {
     const text = encodeURIComponent(
-      `Hi Prajapat Handicrafts,\nI would like to order "${product.name}".\nPlease share the price, availability, and delivery details.`
+      `Hi ${brandConfig.name},\nI would like to order "${product.name}".\nPlease share the price, availability, and delivery details.`
     );
     window.open(`https://api.whatsapp.com/send?phone=${brandConfig.whatsappNumber}&text=${text}`, "_blank");
     showToast(`Opening WhatsApp order for ${product.name}`, "info");
@@ -286,7 +286,7 @@ export default function HomePage() {
             <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#f4f2e6] border border-[#b39b5b]/50 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform overflow-hidden p-0.5">
               <img
                 src="/logo.png"
-                alt="Prajapat Handicrafts Logo"
+                alt={`${brandConfig.name} Logo`}
                 className="w-full h-full object-contain"
                 width={56}
                 height={56}
@@ -294,10 +294,10 @@ export default function HomePage() {
             </div>
             <div className="text-left">
               <span className="block font-serif text-xl md:text-2xl font-bold tracking-wider text-[#f4f2e6] drop-shadow-md">
-                PRAJAPAT
+                {brandConfig.name.toUpperCase()}
               </span>
               <span className="block text-[10px] md:text-xs font-semibold tracking-[0.25em] text-[#e0cf9b] uppercase">
-                HANDICRAFTS • JAIPUR
+                HANDICRAFTS & EXPORT • {brandConfig.city.toUpperCase()}
               </span>
             </div>
           </Link>
@@ -392,8 +392,8 @@ export default function HomePage() {
           }`}
         >
           <div className="text-center mb-4">
-            <span className="font-serif text-2xl font-bold text-[#37472a]">PRAJAPAT</span>
-            <span className="block text-[10px] tracking-widest text-[#7A6327] font-semibold">HANDICRAFTS JAIPUR</span>
+            <span className="font-serif text-2xl font-bold text-[#37472a]">{brandConfig.name.toUpperCase()}</span>
+            <span className="block text-[10px] tracking-widest text-[#7A6327] font-semibold">HANDICRAFTS & EXPORT {brandConfig.city.toUpperCase()}</span>
           </div>
 
           <a
@@ -476,8 +476,8 @@ export default function HomePage() {
             {/* Subtitle - Hidden on small mobile to keep background image completely visible */}
             <p className="hidden sm:block text-xs sm:text-[13px] md:text-sm text-[#37472a]/90 font-medium leading-relaxed mb-5 max-w-[390px]">
               {language === "hi"
-                ? "शुद्ध हस्तनिर्मित टेराकोटा, जयपुर ब्लू पॉटरी से लेकर नक्काशीदार काष्ठशिल्प व ढोकरा पीतल तक, प्रजापत हैंडीक्राफ्ट्स हर घर में भारतीय विरासत और अनूठी कला लेकर आता है।"
-                : "From pure hand-turned terracotta and royal Jaipur blue pottery to master wood carvings and lost-wax brass, Prajapat Handicrafts brings authentic heritage, natural materials, and timeless artistry into every home."}
+                ? `शुद्ध हस्तनिर्मित टेराकोटा, काष्ठशिल्प व ढोकरा पीतल तक, ${brandConfig.hindiName} हर घर में भारतीय विरासत और अनूठी कला लेकर आता है।`
+                : `From pure hand-turned terracotta and master wood carvings to lost-wax brass, ${brandConfig.name} brings authentic heritage, natural materials, and timeless artistry into every home.`}
             </p>
 
             {/* 3 Compact Rounded Action Cards (WhatsApp, Instagram, Call Us) */}
@@ -485,7 +485,7 @@ export default function HomePage() {
               {/* WhatsApp Button */}
               <a
                 href={`https://api.whatsapp.com/send?phone=${brandConfig.whatsappNumber}&text=${encodeURIComponent(
-                  "Namaste Prajapat Handicrafts! I would like to inquire about your handcrafted collections. Please share more details."
+                  `Namaste ${brandConfig.name}! I would like to inquire about your handcrafted collections. Please share more details.`
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -550,36 +550,36 @@ export default function HomePage() {
             <div className="w-20 h-20 rounded-full border-2 border-[#b39b5b] flex items-center justify-center bg-[#fdfcf7] shadow-md mb-3 overflow-hidden p-1">
               <img
                 src="/logo.png"
-                alt="Prajapat Handicrafts Logo"
+                alt={`${brandConfig.name} Logo`}
                 className="w-full h-full object-contain"
                 width={80}
                 height={80}
               />
             </div>
             <h3 className="font-serif text-2xl md:text-3xl font-bold tracking-wider text-[#37472a]">
-              PRAJAPAT HANDICRAFTS
+              {brandConfig.name.toUpperCase()}
             </h3>
             <span className="text-[11px] font-semibold tracking-[0.3em] text-[#7A6327] uppercase">
-              JAIPUR • RAJASTHAN
+              {brandConfig.city.toUpperCase()} • RAJASTHAN
             </span>
           </div>
 
           {/* About Description Paragraphs */}
           <div className="max-w-[820px] mx-auto text-[#6e7663] text-sm md:text-base leading-relaxed space-y-3 mb-14">
             <p>
-              Prajapat Handicrafts is a heritage Indian artisan guild rooted in Jaipur, Rajasthan, offering authentic
-              handcrafted home decor, blue pottery, wooden carvings, and sacred brass sculptures.
+              {brandConfig.name} is a premier Indian handicraft guild and export firm rooted in {brandConfig.city}, Rajasthan, offering authentic
+              handcrafted home decor, wooden carvings, and sacred brass sculptures.
             </p>
             <p>
-              We craft enduring cultural heirlooms with carefully selected natural materials while keeping India's
+              Under the leadership of {brandConfig.ownerName}, we craft enduring cultural heirlooms with carefully selected natural materials while keeping India&apos;s
               centuries-old artisan lineages alive and thriving.
             </p>
             <p>
-              From royal Jaipur blue pottery and hand-carved sheesham wood to Bastar brass and handloom textiles, our
+              From hand-carved sheesham wood and cane furnishings to Bastar brass and handloom textiles, our
               master artisans bring rare handmade charm to your sanctuary.
             </p>
             <p className="font-medium text-[#37472a]">
-              With passion, heritage, and fair-trade ethics at heart, Prajapat Handicrafts is your trusted destination
+              With passion, heritage, and fair-trade ethics at heart, {brandConfig.name} is your trusted destination
               for authentic Indian handicraft experiences.
             </p>
           </div>
@@ -726,7 +726,7 @@ export default function HomePage() {
             </h4>
             <p className="text-[#6e7663] text-sm md:text-base max-w-[800px] mx-auto leading-relaxed">
               Browse our gallery featuring premium handcrafted treasures, master wood carvers, pottery wheel spinning,
-              brass melting, and fine block-printing. Discover the timeless craftsmanship that makes Prajapat Handicrafts
+              brass melting, and fine block-printing. Discover the timeless craftsmanship that makes {brandConfig.name}
               cherished across India and worldwide.
             </p>
           </div>
@@ -848,7 +848,7 @@ export default function HomePage() {
             {language === "hi" ? "हमारी कहानी" : "OUR STORY"}
           </h2>
           <p className="text-sm md:text-base text-[#f4f2e6]/95 leading-relaxed max-w-[820px] mx-auto mb-4">
-            Rooted in the ancient craft corridors of Jaipur, Rajasthan, Prajapat Handicrafts began with a multigenerational
+            Rooted in {brandConfig.city}, Rajasthan, {brandConfig.name} began with a multigenerational
             dedication to molding clay, carving seasoned rosewood, and casting lost-wax brass into living works of art.
             With over four decades of traditional mastery, our collective (
             <a
@@ -857,12 +857,12 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="text-[#b39b5b] font-bold hover:underline"
             >
-              @prajapat_handicrafts
+              @GEHLOT_88882026
             </a>
             ) directly sustains over 450 rural artisan households.
           </p>
           <p className="text-sm md:text-base text-[#f4f2e6]/90 leading-relaxed max-w-[820px] mx-auto">
-            Crafted with pure, ethically sourced natural materials, Prajapat Handicrafts delivers{" "}
+            Crafted with pure, ethically sourced natural materials, {brandConfig.name} delivers{" "}
             <strong className="text-white">authentic heirlooms, blue pottery, brass statues, and handloom textiles</strong>{" "}
             designed to infuse your home with soulful Indian tradition.
           </p>
@@ -914,17 +914,17 @@ export default function HomePage() {
                 <div className="w-20 h-20 rounded-full border-2 border-[#b39b5b] flex items-center justify-center bg-[#f4f2e6] shadow-lg mx-auto mb-3 group-hover:scale-105 transition-transform overflow-hidden p-1">
                   <img
                     src="/logo.png"
-                    alt="Prajapat Handicrafts Logo"
+                    alt={`${brandConfig.name} Logo`}
                     className="w-full h-full object-contain"
                     width={80}
                     height={80}
                   />
                 </div>
                 <h3 className="font-serif text-2xl md:text-3xl font-bold tracking-wider text-[#f4f2e6]">
-                  PRAJAPAT HANDICRAFTS
+                  {brandConfig.name.toUpperCase()}
                 </h3>
                 <span className="text-[11px] font-semibold tracking-[0.3em] text-[#b39b5b] uppercase">
-                  HANDMADE WITH HEART • JAIPUR
+                  HANDMADE WITH HEART • {brandConfig.city.toUpperCase()}
                 </span>
               </a>
             </div>
@@ -986,7 +986,7 @@ export default function HomePage() {
               {/* WhatsApp */}
               <a
                 href={`https://api.whatsapp.com/send?phone=${brandConfig.whatsappNumber}&text=${encodeURIComponent(
-                  "Namaste Prajapat Handicrafts! I would like to inquire about your handcrafted collections."
+                  `Namaste ${brandConfig.name}! I would like to inquire about your handcrafted collections.`
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -1013,14 +1013,19 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-2 sm:gap-4 text-xs md:text-sm text-[#f4f2e6]/90 mb-8">
               <a href={`tel:${brandConfig.phone}`} className="hover:text-white transition-colors flex items-center gap-1.5">
                 <Phone className="w-3.5 h-3.5 text-[#b39b5b]" />
-                <span>{brandConfig.displayPhone}</span>
+                <span>{brandConfig.displayPhone} ({brandConfig.ownerName})</span>
+              </a>
+              <span className="hidden sm:inline text-[#f4f2e6]/40">•</span>
+              <a href={`tel:${brandConfig.managerPhone}`} className="hover:text-white transition-colors flex items-center gap-1.5">
+                <Phone className="w-3.5 h-3.5 text-[#b39b5b]" />
+                <span>{brandConfig.displayManagerPhone} ({brandConfig.managerName} - Manager)</span>
               </a>
               <span className="hidden sm:inline text-[#f4f2e6]/40">•</span>
               <a href={`mailto:${brandConfig.email}`} className="hover:text-white transition-colors flex items-center gap-1.5">
                 <span>{brandConfig.email}</span>
               </a>
               <span className="hidden sm:inline text-[#f4f2e6]/40">•</span>
-              <span className="text-[#f4f2e6]/80">{brandConfig.address}</span>
+              <span className="text-[#f4f2e6]/80">{brandConfig.address} - {brandConfig.postalCode}</span>
             </div>
 
             {/* Thin Divider Line */}
@@ -1028,7 +1033,7 @@ export default function HomePage() {
 
             {/* Copyright */}
             <div className="text-xs text-[#f4f2e6]/70">
-              © 2026 Prajapat Handicrafts. All Rights Reserved. Handmade with Heart.
+              © 2026 {brandConfig.name}. All Rights Reserved. Handmade with Heart.
             </div>
           </div>
         </div>

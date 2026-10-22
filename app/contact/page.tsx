@@ -3,9 +3,9 @@ import { Metadata } from "next";
 import { ContactSection } from "@/components/home/ContactSection";
 
 export const metadata: Metadata = {
-  title: "Contact Us & Studio Location | Kalakriti Handicrafts",
+  title: "Contact Us & Workshop Location | Gehlot Export",
   description:
-    "Get in touch with Kalakriti Handicrafts in Jaipur, Rajasthan. Direct WhatsApp support, phone assistance, custom order inquiries, and studio visit appointments.",
+    "Get in touch with Gehlot Export in Pali, Rajasthan. Direct WhatsApp support, phone assistance, custom order inquiries, and workshop visit appointments.",
 };
 
 export default function ContactPage() {

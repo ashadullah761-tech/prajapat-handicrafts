@@ -37,7 +37,7 @@ export default function CheckoutPage() {
     phone: "",
     email: "",
     address: "",
-    city: "Jaipur",
+    city: "",
     state: "Rajasthan",
     pincode: "",
     giftNote: "",
@@ -84,7 +84,7 @@ export default function CheckoutPage() {
         note: formData.giftNote,
       });
 
-      const orderId = `KLK-${Math.floor(100000 + Math.random() * 900000)}`;
+      const orderId = `GHL-${Math.floor(100000 + Math.random() * 900000)}`;
       setOrderComplete({
         orderId,
         total,
@@ -105,7 +105,7 @@ export default function CheckoutPage() {
       setIsProcessing(true);
       setTimeout(() => {
         setIsProcessing(false);
-        const orderId = `KLK-${Math.floor(100000 + Math.random() * 900000)}`;
+        const orderId = `GHL-${Math.floor(100000 + Math.random() * 900000)}`;
         setOrderComplete({
           orderId,
           total,
@@ -219,7 +219,7 @@ export default function CheckoutPage() {
                     <input
                       type="tel"
                       required
-                      placeholder="+91 98765 43210"
+                      placeholder="+91 97992 07503"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="w-full px-3.5 py-2.5 rounded-xl bg-sand-50 border border-sand-300 focus:outline-none focus:ring-2 focus:ring-terracotta"
@@ -292,7 +292,7 @@ export default function CheckoutPage() {
                       type="text"
                       required
                       maxLength={6}
-                      placeholder="302002"
+                      placeholder="306401"
                       value={formData.pincode}
                       onChange={(e) =>
                         setFormData({ ...formData, pincode: e.target.value.replace(/\D/g, "") })

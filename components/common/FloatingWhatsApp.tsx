@@ -33,8 +33,14 @@ export const FloatingWhatsApp: React.FC = () => {
           <div className="bg-forest-900 text-white p-4 flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="relative">
-                <div className="w-10 h-10 rounded-full bg-saffron text-forest-900 font-bold flex items-center justify-center font-serif">
-                  क
+                <div className="w-10 h-10 rounded-full bg-white p-1 flex items-center justify-center shadow overflow-hidden">
+                  <img
+                    src="/logo.png"
+                    alt={brandConfig.name}
+                    className="w-full h-full object-contain"
+                    width={40}
+                    height={40}
+                  />
                 </div>
                 <span className="absolute bottom-0 right-0 w-3 h-3 bg-emerald-500 rounded-full border-2 border-forest-900" />
               </div>
@@ -57,7 +63,7 @@ export const FloatingWhatsApp: React.FC = () => {
             <div className="bg-white p-3 rounded-2xl rounded-tl-sm shadow-sm border border-sand-200 text-charcoal-800 space-y-1">
               <p className="font-semibold text-terracotta flex items-center gap-1">
                 <Sparkles className="w-3.5 h-3.5" />
-                {language === "hi" ? "नमस्ते! कलाकृति में स्वागत है।" : "Namaste! Welcome to Kalakriti."}
+                {language === "hi" ? `नमस्ते! ${brandConfig.hindiName} में स्वागत है।` : `Namaste! Welcome to ${brandConfig.name}.`}
               </p>
               <p className="text-charcoal-600 leading-relaxed">
                 {language === "hi"

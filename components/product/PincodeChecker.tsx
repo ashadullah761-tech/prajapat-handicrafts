@@ -67,7 +67,7 @@ export const PincodeChecker: React.FC = () => {
           <input
             type="text"
             maxLength={6}
-            placeholder="Enter 6-digit Pincode (e.g. 302002)"
+            placeholder="Enter 6-digit Pincode (e.g. 306401)"
             value={pincode}
             onChange={(e) => {
               setPincode(e.target.value.replace(/\D/g, ""));

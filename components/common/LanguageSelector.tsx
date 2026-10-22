@@ -207,7 +207,7 @@ export const LanguageSelector: React.FC<LanguageSelectorProps> = ({
           {/* Footer note */}
           <div className="p-2.5 px-4 bg-[#f4f2e6] border-t border-[#37472a]/15 text-[11px] text-[#37472a]/70 flex items-center justify-between">
             <span>🌍 130+ World Languages Supported</span>
-            <span className="text-[10px] text-[#7A6327] font-semibold">Prajapat Global</span>
+            <span className="text-[10px] text-[#7A6327] font-semibold">Gehlot Export Global</span>
           </div>
         </div>
       )}

@@ -3,8 +3,8 @@ import { Metadata } from "next";
 import { brandConfig } from "@/config/brand";
 
 export const metadata: Metadata = {
-  title: "Refund & Cancellation Policy | Kalakriti Handicrafts",
-  description: "Information on order refunds, store credits, and processing timelines at Kalakriti Handicrafts.",
+  title: `Refund & Cancellation Policy | ${brandConfig.name}`,
+  description: `Information on order refunds, store credits, and processing timelines at ${brandConfig.name}.`,
 };
 
 export default function RefundPolicyPage() {
@@ -38,7 +38,7 @@ export default function RefundPolicyPage() {
           <section className="space-y-2">
             <h2 className="font-serif text-lg font-bold text-charcoal-900">2. Refund Methods & Timelines</h2>
             <p>
-              Once a returned package reaches our Jaipur studio and completes basic physical inspection:
+              Once a returned package reaches our {brandConfig.city} workshop and completes basic physical inspection:
             </p>
             <ul className="list-disc pl-5 space-y-1">
               <li><strong>Prepaid Orders (UPI / Cards / Net Banking):</strong> Refund is credited back to the original source account within 4 to 7 working days.</li>

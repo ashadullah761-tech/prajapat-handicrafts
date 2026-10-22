@@ -1,6 +1,11 @@
 export interface BrandConfig {
   name: string;
   hindiName: string;
+  firmName: string;
+  ownerName: string;
+  managerName: string;
+  managerPhone: string;
+  displayManagerPhone: string;
   tagline: string;
   hindiTagline: string;
   description: string;
@@ -48,23 +53,28 @@ export interface BrandConfig {
 }
 
 export const brandConfig: BrandConfig = {
-  name: "Prajapat Handicrafts",
-  hindiName: "प्रजापत हैंडीक्राफ्ट्स",
+  name: "Gehlot Export",
+  hindiName: "गेहलोत एक्सपोर्ट",
+  firmName: "Gehlot Export",
+  ownerName: "Prakash Gehlot",
+  managerName: "Rishika Gehlot",
+  managerPhone: "+918209142595",
+  displayManagerPhone: "+91 82091 42595",
   tagline: "Handmade with Heart. Crafted by Tradition.",
   hindiTagline: "हाथों से निर्मित, परंपरा से पोषित।",
   description: "Authentic, fair-trade Indian handicrafts hand-carved, thrown and woven by master artisans in Rajasthan and across India. Bring home the soul of timeless craftsmanship.",
-  location: "Jaipur, Rajasthan, India",
-  city: "Jaipur",
+  location: "Pali, Rajasthan, India",
+  city: "Pali",
   state: "Rajasthan",
   country: "India",
-  phone: "+919876543210",
-  displayPhone: "+91 98765 43210",
-  whatsappNumber: "919876543210", // Customize this with your real WhatsApp number
-  displayWhatsapp: "+91 98765 43210",
-  email: "care@prajapathandicrafts.com",
-  address: "Studio 14, Hawa Mahal Heritage Corridor, Badi Chaupar, Jaipur, Rajasthan 302002",
-  postalCode: "302002",
-  googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14232.894291079367!2d75.8236873!3d26.9239363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db14b1ba55555%3A0xb3e74b5c7774e144!2sHawa%20Mahal!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
+  phone: "+919799207503",
+  displayPhone: "+91 97992 07503",
+  whatsappNumber: "919799207503",
+  displayWhatsapp: "+91 97992 07503",
+  email: "gehlotexport4444@gmail.com",
+  address: "2 chh 54, Kamla Nehru Nagar, Pali, Rajasthan",
+  postalCode: "306401",
+  googleMapsEmbedUrl: "https://maps.google.com/maps?q=Kamla+Nehru+Nagar,+Pali,+Rajasthan+306401&t=&z=15&ie=UTF8&iwloc=&output=embed",
   currency: {
     symbol: "₹",
     code: "INR",
@@ -78,11 +88,11 @@ export const brandConfig: BrandConfig = {
     estimatedDeliveryDays: "3 - 6 Business Days",
   },
   social: {
-    instagram: "https://instagram.com/prajapathandicrafts",
-    facebook: "https://facebook.com/prajapathandicrafts",
-    pinterest: "https://pinterest.com/prajapathandicrafts",
-    youtube: "https://youtube.com/@prajapathandicrafts",
-    twitter: "https://x.com/prajapatcrafts",
+    instagram: "https://www.instagram.com/gehlot_88882026/",
+    facebook: "https://facebook.com/gehlotexport",
+    pinterest: "https://pinterest.com/gehlotexport",
+    youtube: "https://youtube.com/@gehlotexport",
+    twitter: "https://x.com/gehlotexport",
   },
   announcements: [
     {

@@ -130,7 +130,7 @@ export const Header: React.FC = () => {
             <div className="w-11 h-11 rounded-full bg-[#f4f2e6] border border-[#b39b5b]/50 flex items-center justify-center shadow-md group-hover:scale-105 transition-transform overflow-hidden p-0.5">
               <img
                 src="/logo.png"
-                alt="Prajapat Handicrafts Logo"
+                alt={`${brandConfig.name} Logo`}
                 className="w-full h-full object-contain"
                 width={44}
                 height={44}
@@ -138,10 +138,10 @@ export const Header: React.FC = () => {
             </div>
             <div className="flex flex-col">
               <span className="font-serif text-lg sm:text-xl font-bold tracking-wider text-[#37472a] group-hover:text-[#7A6327] transition-colors leading-none">
-                PRAJAPAT
+                {brandConfig.name.toUpperCase()}
               </span>
               <span className="text-[10px] font-sans tracking-[0.2em] uppercase text-[#7A6327] font-semibold mt-1">
-                HANDICRAFTS • JAIPUR
+                HANDICRAFTS & EXPORT • {brandConfig.city.toUpperCase()}
               </span>
             </div>
           </Link>
@@ -382,7 +382,7 @@ export const Header: React.FC = () => {
             {/* Direct WhatsApp Contact Button */}
             <a
               href={`https://api.whatsapp.com/send?phone=${brandConfig.whatsappNumber}&text=${encodeURIComponent(
-                "Namaste Prajapat Handicrafts! I would like to inquire about your handcrafted collections."
+                `Namaste ${brandConfig.name}! I would like to inquire about your handcrafted collections.`
               )}`}
               target="_blank"
               rel="noopener noreferrer"

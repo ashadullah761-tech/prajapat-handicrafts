@@ -54,7 +54,7 @@ export const InstagramGrid: React.FC = () => {
               Follow Our Daily Journey
             </span>
             <h3 className="font-serif text-xl sm:text-2xl font-bold text-charcoal-900">
-              @kalakritihandicrafts
+              @GEHLOT_88882026
             </h3>
           </div>
 

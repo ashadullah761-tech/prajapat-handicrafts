@@ -36,7 +36,7 @@ export default function AboutPage() {
           </h1>
 
           <p className="text-base sm:text-lg text-charcoal-600 leading-relaxed font-light max-w-3xl mx-auto">
-            Born along the historic terracotta corridors of Jaipur, Kalakriti was founded with a singular conviction: that true luxury is not mass-produced in a sterile factory, but slowly coaxed into life by human hands holding generational memory.
+            Rooted in {brandConfig.city}, Rajasthan under the leadership of {brandConfig.ownerName}, {brandConfig.name} was founded with a singular conviction: that true luxury is not mass-produced in a sterile factory, but slowly coaxed into life by human hands holding generational memory.
           </p>
         </div>
 
@@ -143,10 +143,10 @@ export default function AboutPage() {
         <div className="p-8 sm:p-12 rounded-3xl bg-forest-900 text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-float">
           <div className="space-y-3 max-w-xl text-center md:text-left">
             <span className="text-xs font-bold text-saffron-300 uppercase tracking-widest">
-              Jaipur Flagship Studio
+              {brandConfig.city} Workshop & Office
             </span>
             <h3 className="font-serif text-2xl sm:text-3xl font-bold">
-              Visit Us in the Heart of the Pink City
+              Visit Us in {brandConfig.city}, Rajasthan
             </h3>
             <p className="text-xs sm:text-sm text-ivory-200 font-light leading-relaxed">
               We warmly invite you to witness live wheel-throwing, try your hand at block printing, and share a fresh glass of spiced masala chai with our master craftsmen.

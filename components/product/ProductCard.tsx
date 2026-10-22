@@ -16,7 +16,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const { language } = useLanguage();
 
   const whatsappUrl = `https://api.whatsapp.com/send?phone=${brandConfig.whatsappNumber}&text=${encodeURIComponent(
-    `Hi Prajapat Handicrafts, I would like to order "${product.name}" (₹${product.price.toLocaleString("en-IN")}). Please confirm availability.`
+    `Hi ${brandConfig.name}, I would like to order "${product.name}" (₹${product.price.toLocaleString("en-IN")}). Please confirm availability.`
   )}`;
 
   return (

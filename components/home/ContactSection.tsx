@@ -61,7 +61,7 @@ export const ContactSection: React.FC = () => {
               </div>
               <h2 className="font-serif text-3xl sm:text-5xl font-bold text-charcoal-900 tracking-tight">
                 {language === "hi"
-                  ? "जयपुर के हमारे स्टूडियो में आपका स्वागत है"
+                  ? `${brandConfig.city} के हमारे स्टूडियो में आपका स्वागत है`
                   : "We Would Love to Hear From You"}
               </h2>
               <p className="text-sm text-charcoal-600 leading-relaxed max-w-lg">
@@ -77,9 +77,11 @@ export const ContactSection: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="font-serif text-sm font-bold text-charcoal-900">
-                    Heritage Studio & Workshop
+                    Firm & Workshop Address
                   </h4>
-                  <p className="text-xs text-charcoal-600 mt-0.5">{brandConfig.address}</p>
+                  <p className="text-xs text-charcoal-600 mt-0.5">
+                    {brandConfig.address} - {brandConfig.postalCode}
+                  </p>
                 </div>
               </div>
 
@@ -92,7 +94,7 @@ export const ContactSection: React.FC = () => {
                     Studio Visiting Hours
                   </h4>
                   <p className="text-xs text-charcoal-600 mt-0.5">
-                    Monday to Saturday: 10:30 AM – 7:30 PM IST (Wheel pottery demos at 3 PM)
+                    Monday to Saturday: 10:00 AM – 7:30 PM IST (Visits by prior appointment)
                   </p>
                 </div>
               </div>
@@ -107,7 +109,13 @@ export const ContactSection: React.FC = () => {
                     href={`tel:${brandConfig.phone}`}
                     className="text-xs text-terracotta font-mono font-bold hover:underline block"
                   >
-                    {brandConfig.displayPhone}
+                    {brandConfig.displayPhone} ({brandConfig.ownerName})
+                  </a>
+                  <a
+                    href={`tel:${brandConfig.managerPhone}`}
+                    className="text-xs text-charcoal-600 font-mono hover:text-terracotta block pt-0.5"
+                  >
+                    {brandConfig.displayManagerPhone} ({brandConfig.managerName} - Manager)
                   </a>
                 </div>
 
@@ -122,6 +130,9 @@ export const ContactSection: React.FC = () => {
                   >
                     {brandConfig.email}
                   </a>
+                  <p className="text-[11px] text-charcoal-500 pt-0.5">
+                    Pincode: {brandConfig.postalCode} • {brandConfig.city}
+                  </p>
                 </div>
               </div>
             </div>
@@ -137,21 +148,21 @@ export const ContactSection: React.FC = () => {
 
               <a
                 href={`https://api.whatsapp.com/send?phone=${brandConfig.whatsappNumber}&text=${encodeURIComponent(
-                  "Namaste Kalakriti Team! I am contacting you through the website."
+                  `Namaste ${brandConfig.name} Team! I am contacting you through the website.`
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-5 py-2.5 rounded-full bg-white text-emerald-800 hover:bg-ivory-100 font-bold text-xs shadow transition-colors flex items-center gap-2 flex-shrink-0"
               >
                 <MessageCircle className="w-4 h-4 text-emerald-600 fill-emerald-600" />
-                <span>Open WhatsApp</span>
+                <span>Open WhatsApp ({brandConfig.displayWhatsapp})</span>
               </a>
             </div>
 
             {/* Embedded Google Map Placeholder */}
             <div className="rounded-3xl overflow-hidden border border-sand-200 h-48 bg-sand-200 relative shadow-sm">
               <iframe
-                title="Kalakriti Heritage Studio Jaipur"
+                title={`${brandConfig.name} Workshop ${brandConfig.city}`}
                 src={brandConfig.googleMapsEmbedUrl}
                 width="100%"
                 height="100%"
@@ -216,7 +227,7 @@ export const ContactSection: React.FC = () => {
                     <input
                       type="tel"
                       required
-                      placeholder="+91 98765 43210"
+                      placeholder="+91 97992 07503"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl bg-sand-50 border border-sand-300 focus:outline-none focus:ring-2 focus:ring-terracotta"

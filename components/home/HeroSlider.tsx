@@ -122,7 +122,7 @@ export const HeroSlider: React.FC = () => {
           {/* WhatsApp CTA */}
           <a
             href={`https://api.whatsapp.com/send?phone=${brandConfig.whatsappNumber}&text=${encodeURIComponent(
-              "Namaste! I am browsing the Kalakriti website and would love to see your top festive craft collections."
+              `Namaste! I am browsing the ${brandConfig.name} website and would love to see your top festive craft collections.`
             )}`}
             target="_blank"
             rel="noopener noreferrer"

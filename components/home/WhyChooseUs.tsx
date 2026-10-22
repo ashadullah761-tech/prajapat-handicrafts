@@ -78,7 +78,7 @@ export const WhyChooseUs: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
           <div className="inline-flex items-center gap-1.5 text-xs font-bold text-terracotta tracking-wider uppercase">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>{language === "hi" ? "हमारा संकल्प" : "The Kalakriti Standard"}</span>
+            <span>{language === "hi" ? "हमारा संकल्प" : "The Gehlot Export Standard"}</span>
           </div>
           <h2 className="font-serif text-2xl sm:text-4xl font-bold text-charcoal-900 tracking-tight">
             {t("whyChooseTitle")}

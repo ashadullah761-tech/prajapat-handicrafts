@@ -31,7 +31,7 @@ export const Footer: React.FC = () => {
     e.preventDefault();
     if (email.trim() && email.includes("@")) {
       setIsSubscribed(true);
-      showToast("Welcome to Kalakriti! Use code 'HANDMADE10' for 10% off.", "success");
+      showToast(`Welcome to ${brandConfig.name}! Use code 'HANDMADE10' for 10% off.`, "success");
       setEmail("");
     }
   };
@@ -80,8 +80,14 @@ export const Footer: React.FC = () => {
           {/* Brand Col (2 spans) */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-terracotta text-white flex items-center justify-center font-serif text-lg font-bold shadow-md">
-                क
+              <div className="w-11 h-11 rounded-xl bg-white p-1 flex items-center justify-center shadow-md overflow-hidden">
+                <img
+                  src="/logo.png"
+                  alt={`${brandConfig.name} Logo`}
+                  className="w-full h-full object-contain"
+                  width={44}
+                  height={44}
+                />
               </div>
               <div>
                 <h3 className="font-serif text-2xl font-bold text-white tracking-wide">
@@ -101,13 +107,18 @@ export const Footer: React.FC = () => {
             <div className="pt-2 space-y-2 text-xs text-charcoal-300">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-terracotta-400 flex-shrink-0 mt-0.5" />
-                <span>{brandConfig.address}</span>
+                <span>{brandConfig.address} - {brandConfig.postalCode}</span>
               </div>
-              <div className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-terracotta-400 flex-shrink-0" />
-                <a href={`tel:${brandConfig.phone}`} className="hover:text-white transition-colors">
-                  {brandConfig.displayPhone} (10 AM - 7:30 PM IST)
-                </a>
+              <div className="flex items-start gap-2.5">
+                <Phone className="w-4 h-4 text-terracotta-400 flex-shrink-0 mt-0.5" />
+                <div className="space-y-0.5">
+                  <a href={`tel:${brandConfig.phone}`} className="hover:text-white transition-colors block">
+                    {brandConfig.displayPhone} ({brandConfig.ownerName})
+                  </a>
+                  <a href={`tel:${brandConfig.managerPhone}`} className="hover:text-white transition-colors block text-charcoal-400">
+                    {brandConfig.displayManagerPhone} (Manager: {brandConfig.managerName})
+                  </a>
+                </div>
               </div>
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-terracotta-400 flex-shrink-0" />
@@ -322,7 +333,7 @@ export const Footer: React.FC = () => {
           </div>
 
           <div className="text-center md:text-right">
-            © {new Date().getFullYear()} {brandConfig.name}. Crafted with ❤️ in Jaipur, India.
+            © {new Date().getFullYear()} {brandConfig.name}. Crafted with ❤️ in {brandConfig.city}, India.
           </div>
         </div>
       </div>

@@ -36,10 +36,10 @@ export const faqs: FAQItem[] = [
   {
     id: "faq-4",
     category: "General",
-    question: "Where are you located? Can we visit your studio in Jaipur?",
-    hindiQuestion: "आपका स्टूडियो कहाँ स्थित है? क्या हम जयपुर में आ सकते हैं?",
-    answer: "Our flagship craft studio and experience gallery is located at Studio 14, Hawa Mahal Heritage Corridor, Badi Chaupar, Jaipur, Rajasthan 302002. Guests are welcome Monday to Saturday from 10:30 AM to 7:30 PM to witness live wheel pottery and block printing demonstrations.",
-    hindiAnswer: "हमारा मुख्य स्टूडियो हवा महल हेरिटेज कॉरिडोर, बड़ी चौपड़, जयपुर में स्थित है। आप सोमवार से शनिवार सुबह 10:30 से शाम 7:30 बजे तक पधार सकते हैं।",
+    question: "Where are you located? Can we visit your workshop in Pali?",
+    hindiQuestion: "आपका वर्कशॉप कहाँ स्थित है? क्या हम पाली में आ सकते हैं?",
+    answer: "Our workshop and export office is located at 2 chh 54, Kamla Nehru Nagar, Pali, Rajasthan 306401. Guests and buyers are welcome Monday to Saturday by prior appointment.",
+    hindiAnswer: "हमारा वर्कशॉप और कार्यालय 2 छ 54, कमला नेहरू नगर, पाली, राजस्थान 306401 में स्थित है। आप पूर्व सूचना देकर पधार सकते हैं।",
   },
 
   // Pricing & Payment
@@ -90,8 +90,8 @@ export const faqs: FAQItem[] = [
     category: "Ordering",
     question: "Can I place an order over a direct phone call?",
     hindiQuestion: "क्या मैं सीधे फोन कॉल पर ऑर्डर दे सकता हूँ?",
-    answer: "Yes, our customer care desk is active from 9:30 AM to 8:00 PM IST at +91 98765 43210. Our team can guide you through item selection and arrange direct phone assisted booking.",
-    hindiAnswer: "हाँ, आप हमारे हेल्पलाइन नंबर +91 98765 43210 पर कॉल करके भी अपना ऑर्डर बुक करवा सकते हैं।",
+    answer: "Yes, our customer care desk is active from 9:30 AM to 8:00 PM IST at +91 97992 07503. Our team can guide you through item selection and arrange direct phone assisted booking.",
+    hindiAnswer: "हाँ, आप हमारे हेल्पलाइन नंबर +91 97992 07503 पर कॉल करके भी अपना ऑर्डर बुक करवा सकते हैं।",
   },
   {
     id: "faq-11",
@@ -156,7 +156,7 @@ export const faqs: FAQItem[] = [
     category: "Shipping & Returns",
     question: "Do you ship internationally outside India?",
     hindiQuestion: "क्या आप भारत के बाहर अंतरराष्ट्रीय डिलीवरी करते हैं?",
-    answer: "Yes, we ship via DHL Express and FedEx to over 60 countries including USA, UK, UAE, Canada, Australia, and Singapore. Please contact our WhatsApp international desk (+91 98765 43210) for custom shipping quotes and export clearance assistance.",
+    answer: "Yes, we ship via DHL Express and FedEx to over 60 countries including USA, UK, UAE, Canada, Australia, and Singapore. Please contact our WhatsApp international desk (+91 97992 07503) for custom shipping quotes and export clearance assistance.",
     hindiAnswer: "हाँ, हम अमेरिका, ब्रिटेन, यूएई, कनाडा आदि 60+ देशों में डीएचएल और फेडेक्स के जरिए अंतरराष्ट्रीय शिपिंग उपलब्ध कराते हैं।",
   },
 
@@ -182,7 +182,7 @@ export const faqs: FAQItem[] = [
     category: "Custom Orders",
     question: "How do I request a bulk quote or sample?",
     hindiQuestion: "थोक ऑर्डर कोटेशन या सैंपल कैसे प्राप्त करें?",
-    answer: "You can submit an inquiry via our 'Custom & Bulk Orders' form on the contact page or reach out directly to corporate@kalakritihandicrafts.com with your quantities and target timeline. We provide physical sample prototypes within 5 business days.",
+    answer: "You can submit an inquiry via our 'Custom & Bulk Orders' form on the contact page or reach out directly to gehlotexport4444@gmail.com with your quantities and target timeline. We provide physical sample prototypes within 5 business days.",
     hindiAnswer: "आप हमारी वेबसाइट के संपर्क पेज पर थोक पूछताछ फॉर्म भर सकते हैं या हमें व्हाट्सएप कर सकते हैं। हम 5 दिनों में सैंपल उपलब्ध कराते हैं।",
   },
   {
