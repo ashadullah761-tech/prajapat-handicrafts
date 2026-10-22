@@ -163,8 +163,8 @@ const translations: Record<Language, Record<string, string>> = {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [language, setLanguageState] = useState<Language>("hi");
-  const [currentLangCode, setCurrentLangCode] = useState<string>("hi");
+  const [language, setLanguageState] = useState<Language>("en");
+  const [currentLangCode, setCurrentLangCode] = useState<string>("en");
 
   useEffect(() => {
     try {
@@ -177,13 +177,9 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
           setLanguageState("en");
         }
       } else {
-        // Check for Google Translate cookie if present
-        const match = document.cookie.match(/googtrans=\/en\/([a-zA-Z-]+)/);
-        if (match && match[1]) {
-          setCurrentLangCode(match[1]);
-          if (match[1] === "hi") setLanguageState("hi");
-          else setLanguageState("en");
-        }
+        // Default to English for all visitors
+        setCurrentLangCode("en");
+        setLanguageState("en");
       }
     } catch {
       // localStorage may not be accessible
@@ -242,8 +238,8 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
 
   const currentLangObj =
     WORLD_LANGUAGES.find((l) => l.code.toLowerCase() === currentLangCode.toLowerCase()) ||
-    WORLD_LANGUAGES.find((l) => l.code === "hi") ||
-    { code: "hi", name: "Hindi", nativeName: "हिन्दी" };
+    WORLD_LANGUAGES.find((l) => l.code === "en") ||
+    { code: "en", name: "English", nativeName: "English" };
 
   return (
     <LanguageContext.Provider

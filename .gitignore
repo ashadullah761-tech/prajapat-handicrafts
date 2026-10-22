@@ -39,3 +39,6 @@ yarn-error.log*
 .user_uploaded/
 .vscode/
 .idea/
+
+.vercel
+.env*
