@@ -86,7 +86,7 @@ export default function ProductDetailPage() {
     msg += `• *Price:* ₹${(product.price * quantity).toLocaleString("en-IN")}\n`;
     msg += `• *Link:* https://kalakritihandicrafts.com/product/${product.slug}\n\n`;
     msg += `Please let me know if this is ready to dispatch. Thank you!`;
-    return `https://api.whatsapp.com/send?phone=${brandConfig.whatsappNumber}&text=${encodeURIComponent(
+    return `https://wa.me/${brandConfig.whatsappNumber}?text=${encodeURIComponent(
       msg
     )}`;
   };

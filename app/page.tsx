@@ -484,7 +484,7 @@ export default function HomePage() {
             <div className="flex items-center justify-center sm:justify-start gap-1.5 sm:gap-2.5 mt-1 sm:mt-0">
               {/* WhatsApp Button */}
               <a
-                href={`https://api.whatsapp.com/send?phone=${brandConfig.whatsappNumber}&text=${encodeURIComponent(
+                href={`https://wa.me/${brandConfig.whatsappNumber}?text=${encodeURIComponent(
                   `Namaste ${brandConfig.name}! I would like to inquire about your handcrafted collections. Please share more details.`
                 )}`}
                 target="_blank"
@@ -684,10 +684,16 @@ export default function HomePage() {
                     {language === "hi" ? product.hindiDesc : product.desc}
                   </p>
 
-                  {/* Product Bottom (Order Now Button - Rate removed as requested) */}
+                  {/* Product Bottom (Order Now Button - Direct WhatsApp Link) */}
                   <div className="pt-3 border-t border-gray-100 mt-auto">
-                    <button
-                      onClick={() => handleOrderWhatsApp(product)}
+                    <a
+                      href={`https://wa.me/${brandConfig.whatsappNumber}?text=${encodeURIComponent(
+                        language === "hi"
+                          ? `नमस्ते! मुझे ${brandConfig.name} से "${product.hindiName || product.name}" ऑर्डर करना है। कृपया कीमत और डिलीवरी की जानकारी साझा करें।`
+                          : `Hello! I would like to order "${product.name}" from ${brandConfig.name}. Please share price, availability and delivery details.`
+                      )}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="w-full bg-[#37472a] hover:bg-[#25301d] text-white px-4 py-2.5 rounded-full text-xs md:text-sm font-semibold flex items-center justify-center gap-2 transition-transform hover:-translate-y-0.5 shadow-md cursor-pointer"
                       title={language === "hi" ? "व्हाट्सएप पर ऑर्डर करें" : "Order on WhatsApp"}
                     >
@@ -695,7 +701,7 @@ export default function HomePage() {
                       <div className="w-5 h-5 rounded-full bg-white text-[#37472a] flex items-center justify-center">
                         <ArrowRight className="w-3 h-3 text-[#37472a]" />
                       </div>
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -985,7 +991,7 @@ export default function HomePage() {
 
               {/* WhatsApp */}
               <a
-                href={`https://api.whatsapp.com/send?phone=${brandConfig.whatsappNumber}&text=${encodeURIComponent(
+                href={`https://wa.me/${brandConfig.whatsappNumber}?text=${encodeURIComponent(
                   `Namaste ${brandConfig.name}! I would like to inquire about your handcrafted collections.`
                 )}`}
                 target="_blank"

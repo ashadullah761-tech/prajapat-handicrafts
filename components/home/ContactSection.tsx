@@ -147,7 +147,7 @@ export const ContactSection: React.FC = () => {
               </div>
 
               <a
-                href={`https://api.whatsapp.com/send?phone=${brandConfig.whatsappNumber}&text=${encodeURIComponent(
+                href={`https://wa.me/${brandConfig.whatsappNumber}?text=${encodeURIComponent(
                   `Namaste ${brandConfig.name} Team! I am contacting you through the website.`
                 )}`}
                 target="_blank"

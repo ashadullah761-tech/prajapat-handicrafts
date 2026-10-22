@@ -71,7 +71,7 @@ export const FeaturedCollectionBanner: React.FC = () => {
               </Link>
 
               <a
-                href={`https://api.whatsapp.com/send?phone=${brandConfig.whatsappNumber}&text=${encodeURIComponent(
+                href={`https://wa.me/${brandConfig.whatsappNumber}?text=${encodeURIComponent(
                   "Namaste! I would like to inquire about your festive gift hampers and corporate customization options."
                 )}`}
                 target="_blank"

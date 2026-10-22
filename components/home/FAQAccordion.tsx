@@ -144,7 +144,7 @@ export const FAQAccordion: React.FC = () => {
           </div>
 
           <a
-            href={`https://api.whatsapp.com/send?phone=${brandConfig.whatsappNumber}&text=${encodeURIComponent(
+            href={`https://wa.me/${brandConfig.whatsappNumber}?text=${encodeURIComponent(
               `Namaste! I had a quick question regarding an item on ${brandConfig.name}.`
             )}`}
             target="_blank"

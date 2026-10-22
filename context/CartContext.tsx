@@ -230,7 +230,7 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     message += `Please confirm availability and share payment/dispatch details. Thank you!`;
 
     const encodedMessage = encodeURIComponent(message);
-    return `https://api.whatsapp.com/send?phone=${brandConfig.whatsappNumber}&text=${encodedMessage}`;
+    return `https://wa.me/${brandConfig.whatsappNumber}?text=${encodedMessage}`;
   };
 
   return (

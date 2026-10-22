@@ -17,7 +17,7 @@ export const FloatingWhatsApp: React.FC = () => {
 
   const handleSend = () => {
     const textToSend = messageText.trim() || defaultGreeting;
-    const url = `https://api.whatsapp.com/send?phone=${brandConfig.whatsappNumber}&text=${encodeURIComponent(
+    const url = `https://wa.me/${brandConfig.whatsappNumber}?text=${encodeURIComponent(
       textToSend
     )}`;
     window.open(url, "_blank");

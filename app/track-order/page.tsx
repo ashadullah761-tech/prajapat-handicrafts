@@ -193,7 +193,7 @@ function TrackOrderContent() {
               </div>
 
               <a
-                href={`https://api.whatsapp.com/send?phone=${brandConfig.whatsappNumber}&text=${encodeURIComponent(
+                href={`https://wa.me/${brandConfig.whatsappNumber}?text=${encodeURIComponent(
                   `Namaste! I would like to check status or update delivery address for Order #${orderId}`
                 )}`}
                 target="_blank"

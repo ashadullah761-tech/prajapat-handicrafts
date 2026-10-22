@@ -381,7 +381,7 @@ export const Header: React.FC = () => {
 
             {/* Direct WhatsApp Contact Button */}
             <a
-              href={`https://api.whatsapp.com/send?phone=${brandConfig.whatsappNumber}&text=${encodeURIComponent(
+              href={`https://wa.me/${brandConfig.whatsappNumber}?text=${encodeURIComponent(
                 `Namaste ${brandConfig.name}! I would like to inquire about your handcrafted collections.`
               )}`}
               target="_blank"
@@ -432,7 +432,7 @@ export const Header: React.FC = () => {
             />
 
             <a
-              href={`https://api.whatsapp.com/send?phone=${brandConfig.whatsappNumber}`}
+              href={`https://wa.me/${brandConfig.whatsappNumber}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 w-full py-2.5 bg-emerald-600 text-white rounded-xl text-sm font-medium hover:bg-emerald-700 transition-colors"

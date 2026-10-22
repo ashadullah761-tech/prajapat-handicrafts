@@ -38,7 +38,7 @@ export const AnnouncementBar: React.FC = () => {
           </a>
           <span className="text-forest-700">|</span>
           <a
-            href={`https://api.whatsapp.com/send?phone=${brandConfig.whatsappNumber}&text=${encodeURIComponent(
+            href={`https://wa.me/${brandConfig.whatsappNumber}?text=${encodeURIComponent(
               "Namaste! I would like to inquire about your handcrafted collections."
             )}`}
             target="_blank"
