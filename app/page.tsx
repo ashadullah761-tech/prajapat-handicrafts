@@ -23,7 +23,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 
-// 6 Best Handicraft & Furniture Products (User Provided Photos)
+// Masterpiece Handicraft & Furniture Products (Original + User Provided Photos)
 const featuredProducts = [
   {
     id: "handcrafted-oak-recliner-armchair",
@@ -96,6 +96,126 @@ const featuredProducts = [
     priceDisplay: "₹34,000",
     slug: "japandi-minimalist-solid-teak-dining-set",
     tag: "Bespoke Dining",
+  },
+  {
+    id: "antique-brass-turtle-key-holder",
+    name: "ANTIQUE BRASS FINISH TORTOISE WALL KEY HOLDER (5 HOOKS)",
+    hindiName: "प्राचीन पीतल कछुआ वॉल की-होल्डर (5 हुक)",
+    image: "/products/antique-brass-turtle-key-holder.jpg",
+    desc: "Auspicious Vastu Kurma design with openwork honeycomb shell & 5 curved hooks.",
+    hindiDesc: "वास्तु शुभ कछुआ डिजाइन व 5 मजबूत हुक के साथ प्राचीन कांस्य फिनिश मेटल की-होल्डर।",
+    price: 1250,
+    priceDisplay: "₹1,250",
+    slug: "antique-brass-turtle-key-holder",
+    tag: "Metal Art & Vastu",
+  },
+  {
+    id: "vintage-key-shaped-wooden-key-holder",
+    name: "VINTAGE KEY-SHAPED HANDCRAFTED WOODEN WALL KEY HOLDER",
+    hindiName: "विंटेज चाबी-आकार हस्तनिर्मित लकड़ी का वॉल की-होल्डर",
+    image: "/products/vintage-key-shaped-wooden-key-holder.jpg",
+    desc: "Dual-tone solid natural hardwood in classic oversized skeleton key shape with 5 bronze hooks.",
+    hindiDesc: "दोहरे प्राकृतिक काष्ठ टोन में तराशा गया क्लासिक विंटेज चाबी डिजाइन वॉल की-होल्डर।",
+    price: 1150,
+    priceDisplay: "₹1,150",
+    slug: "vintage-key-shaped-wooden-key-holder",
+    tag: "Wooden Craft",
+  },
+  {
+    id: "rustic-wood-wall-coat-key-rack",
+    name: "RUSTIC SOLID WOOD ENTRYWAY COAT & KEY RACK (5 HOOKS)",
+    hindiName: "देहाती सॉलिड वुड ENTRYWAY कोट एवं की-रैक (5 हुक)",
+    image: "/products/rustic-wood-wall-coat-key-rack.jpg",
+    desc: "Solid kiln-dried walnut plank with 5 heavy-duty double-curved matte black ball-tipped hooks.",
+    hindiDesc: "प्रीमियम प्राकृतिक शीशम/पाइन काष्ठ और 5 मजबूत कास्ट आयरन ब्लैक हुक वाला कोट व की-रैक।",
+    price: 1390,
+    priceDisplay: "₹1,390",
+    slug: "rustic-wood-wall-coat-key-rack",
+    tag: "Rustic Woodcraft",
+  },
+  {
+    id: "wrought-iron-botanical-candle-stand",
+    name: "ARTISANAL WROUGHT IRON BOTANICAL VINE 4-CANDLE STAND",
+    hindiName: "हस्तनिर्मित गढ़ा-लोहा वानस्पतिक 4-दीपक कैंडल स्टैंड",
+    image: "/products/wrought-iron-botanical-candle-stand.jpg",
+    desc: "Hand-forged sweeping iron vines with antique gold brushed leaves & 4 cutout tea light cups.",
+    hindiDesc: "सुनहरी नक्काशीदार पत्तियों और 4 टी-लाइट कपों के साथ सुरुचिपूर्ण ब्लैक आयरन कैंडल होल्डर।",
+    price: 1850,
+    priceDisplay: "₹1,850",
+    slug: "wrought-iron-botanical-candle-stand",
+    tag: "Candle Stand",
+  },
+  {
+    id: "industrial-3-tier-wooden-shoe-cabinet",
+    name: "INDUSTRIAL 3-TIER TILT-OUT WOODEN SHOE STORAGE CABINET",
+    hindiName: "इंडस्ट्रियल 3-टियर टिल्ट-आउट लकड़ी का शू कैबिनेट",
+    image: "/products/industrial-3-tier-wooden-shoe-cabinet.jpg",
+    desc: "Space-saving 3-tier tilt-out flip organizer in rich teakwood grain with heavy matte black steel frame.",
+    hindiDesc: "3-टियर टिल्ट-आउट दराजों और मजबूत ब्लैक स्टील फ्रेम वाला मॉडर्न लकड़ी का शू रैक कैबिनेट।",
+    price: 12800,
+    priceDisplay: "₹12,800",
+    slug: "industrial-3-tier-wooden-shoe-cabinet",
+    tag: "Shoe Cabinet",
+  },
+  {
+    id: "industrial-wooden-shoe-rack-bench",
+    name: "INDUSTRIAL SOLID WOOD ENTRYWAY SHOE RACK BENCH (2-TIER)",
+    hindiName: "इंडस्ट्रियल सॉलिड वुड एंट्रीवे शू रैक बेंच (2-टियर शेल्व्स)",
+    image: "/products/industrial-wooden-shoe-rack-bench.jpg",
+    desc: "Natural solid hardwood contoured bench seat with 2 open slatted lower shoe shelves.",
+    hindiDesc: "बैठने के लिए मजबूत प्राकृतिक लकड़ी की सीट और 2 खुली शू शेल्व्स वाली एंट्रीवे बेंच।",
+    price: 7850,
+    priceDisplay: "₹7,850",
+    slug: "industrial-wooden-shoe-rack-bench",
+    tag: "Shoe Bench",
+  },
+  {
+    id: "victorian-scrollwork-floral-candle-sconce",
+    name: "HANDCRAFTED SCROLLWORK FLORAL BLACK IRON WALL SCONCE",
+    hindiName: "हस्तनिर्मित स्क्रॉलवर्क फ्लोरल ब्लैक आयरन वॉल स्कोनस कैंडल होल्डर",
+    image: "/products/victorian-scrollwork-floral-candle-sconce.jpg",
+    desc: "Hand-forged curved iron scrollwork with floral petal blossom and hurricane glass votive cup.",
+    hindiDesc: "आकर्षक फ्लोरल मेटल फूल, स्क्रॉल नक्काशी और ग्लास वोटीव कप वाला ब्लैक आयरन वॉल कैंडल होल्डर।",
+    price: 890,
+    priceDisplay: "₹890",
+    slug: "victorian-scrollwork-floral-candle-sconce",
+    tag: "Wall Sconce",
+  },
+  {
+    id: "botanical-branch-3-candle-wall-sconce",
+    name: "ARTISANAL BOTANICAL LEAF BRANCH 3-CANDLE WALL SCONCE",
+    hindiName: "हस्तनिर्मित वानस्पतिक पत्ती शाखा 3-दीपक वॉल स्कोनस",
+    image: "/products/botanical-branch-3-candle-wall-sconce.jpg",
+    desc: "Organic climbing tree bough iron sculpture with 3 multi-tier elevated glass candle cups.",
+    hindiDesc: "सुंदर पत्तियों वाली शाखा डिजाइन और 3 ग्लास कपों के साथ आकर्षक ब्लैक आयरन वॉल कैंडल स्टैंड।",
+    price: 1450,
+    priceDisplay: "₹1,450",
+    slug: "botanical-branch-3-candle-wall-sconce",
+    tag: "Branch Sconce",
+  },
+  {
+    id: "oval-gold-leaf-candle-wall-sconce",
+    name: "VINTAGE OVAL FRAME ANTIQUE GOLD LEAF WALL SCONCE",
+    hindiName: "विंटेज ओवल फ्रेम एंटीक गोल्ड लीफ वॉल स्कोनस कैंडल होल्डर",
+    image: "/products/oval-gold-leaf-candle-wall-sconce.jpg",
+    desc: "Modern oval iron frame with hand-painted antique gold foil leaves & glass tea light holder.",
+    hindiDesc: "ओवल फ्रेम, हाथ से रंगे एंटीक गोल्ड पत्तों और ग्लास कप वाला शानदार वॉल कैंडल होल्डर।",
+    price: 1180,
+    priceDisplay: "₹1,180",
+    slug: "oval-gold-leaf-candle-wall-sconce",
+    tag: "Gold Leaf Sconce",
+  },
+  {
+    id: "geometric-3-ring-vine-candle-sconce",
+    name: "MODERN GEOMETRIC 3-RING BOTANICAL VINE 3-CANDLE WALL SCONCE",
+    hindiName: "मॉडर्न जियोमेट्रिक 3-रिंग वानस्पतिक बेल 3-कैंडल वॉल स्कोनस",
+    image: "/products/geometric-3-ring-vine-candle-sconce.jpg",
+    desc: "Three interlinked circular iron rings with leafy vines and 3 glass hurricane candle cups.",
+    hindiDesc: "3 गोलाकार छल्लों और खूबसूरत लोहे की पत्तियों वाला आधुनिक 3-दीपक वॉल स्कोनस।",
+    price: 1590,
+    priceDisplay: "₹1,590",
+    slug: "geometric-3-ring-vine-candle-sconce",
+    tag: "Geometric Sconce",
   },
 ];
 
@@ -634,23 +754,27 @@ export default function HomePage() {
                 className="bg-white rounded-[20px] p-4 shadow-sm hover:shadow-xl transition-all duration-300 border border-[#37472a]/5 flex flex-col group"
               >
                 {/* Product Image */}
-                <div className="rounded-[15px] overflow-hidden bg-[#f4f2e6] mb-4 h-[260px] relative">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
-                  />
-                  <span className="absolute top-3 left-3 bg-[#fdfcf7]/90 backdrop-blur-sm text-[#7A6327] text-[10px] font-bold px-3 py-1 rounded-full border border-[#b39b5b]/30 uppercase tracking-wider">
-                    {product.tag}
-                  </span>
-                </div>
+                <Link href={`/product/${product.slug}`} className="block">
+                  <div className="rounded-[15px] overflow-hidden bg-[#f4f2e6] mb-4 h-[260px] relative">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                    <span className="absolute top-3 left-3 bg-[#fdfcf7]/90 backdrop-blur-sm text-[#7A6327] text-[10px] font-bold px-3 py-1 rounded-full border border-[#b39b5b]/30 uppercase tracking-wider">
+                      {product.tag}
+                    </span>
+                  </div>
+                </Link>
 
                 {/* Product Info */}
                 <div className="flex flex-col flex-1 px-1">
-                  <h4 className="font-sans font-bold text-base md:text-lg text-[#37472a] mb-1.5 uppercase leading-snug">
-                    {language === "hi" ? product.hindiName : product.name}
-                  </h4>
+                  <Link href={`/product/${product.slug}`} className="hover:text-[#7A6327] transition-colors">
+                    <h4 className="font-sans font-bold text-base md:text-lg text-[#37472a] mb-1.5 uppercase leading-snug">
+                      {language === "hi" ? product.hindiName : product.name}
+                    </h4>
+                  </Link>
                   <p className="text-xs text-[#888] leading-relaxed mb-6 flex-1">
                     {language === "hi" ? product.hindiDesc : product.desc}
                   </p>
@@ -677,16 +801,6 @@ export default function HomePage() {
                 </div>
               </div>
             ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link
-              href="/shop"
-              className="inline-flex items-center gap-2 border-2 border-[#37472a] text-[#37472a] hover:bg-[#37472a] hover:text-white px-8 py-3 rounded-full text-xs font-bold tracking-widest uppercase transition-all shadow-sm"
-            >
-              <span>{language === "hi" ? "सभी 24+ हस्तशिल्प उत्पाद देखें" : "Explore All 24+ Handicraft Masterpieces"}</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
           </div>
         </section>
 
