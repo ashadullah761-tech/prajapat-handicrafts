@@ -19,16 +19,23 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     `Hi ${brandConfig.name}, I would like to order "${product.name}" (₹${product.price.toLocaleString("en-IN")}). Please confirm availability.`
   )}`;
 
+  const isContain = [
+    "antique-brass-turtle-key-holder",
+    "vintage-key-shaped-wooden-key-holder",
+    "rustic-wood-wall-coat-key-rack",
+    "wrought-iron-botanical-candle-stand",
+  ].includes(product.id) || (product.images[0]?.url && (product.images[0].url.includes("key-holder") || product.images[0].url.includes("coat-key-rack") || product.images[0].url.includes("candle-stand")));
+
   return (
     <div className="group relative bg-[#fdfcf7] rounded-3xl overflow-hidden border border-[#37472a]/10 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
       {/* Top Media Area */}
-      <div className="relative aspect-[4/5] overflow-hidden bg-[#f4f2e6]">
-        <Link href={`/product/${product.slug}`} className="block w-full h-full">
+      <div className={`relative aspect-[4/5] overflow-hidden ${isContain ? "bg-white p-3 flex items-center justify-center" : "bg-[#f4f2e6]"}`}>
+        <Link href={`/product/${product.slug}`} className={`block w-full h-full ${isContain ? "flex items-center justify-center" : ""}`}>
           <img
             src={product.images[0]?.url || "https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=800&q=80"}
             alt={product.images[0]?.alt || product.name}
             loading="lazy"
-            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+            className={`w-full h-full object-center group-hover:scale-105 transition-transform duration-700 ease-out ${isContain ? "object-contain" : "object-cover"}`}
           />
         </Link>
 

@@ -108,6 +108,7 @@ const featuredProducts = [
     priceDisplay: "₹1,250",
     slug: "antique-brass-turtle-key-holder",
     tag: "Metal Art & Vastu",
+    fit: "contain",
   },
   {
     id: "vintage-key-shaped-wooden-key-holder",
@@ -120,6 +121,7 @@ const featuredProducts = [
     priceDisplay: "₹1,150",
     slug: "vintage-key-shaped-wooden-key-holder",
     tag: "Wooden Craft",
+    fit: "contain",
   },
   {
     id: "rustic-wood-wall-coat-key-rack",
@@ -132,6 +134,7 @@ const featuredProducts = [
     priceDisplay: "₹1,390",
     slug: "rustic-wood-wall-coat-key-rack",
     tag: "Rustic Woodcraft",
+    fit: "contain",
   },
   {
     id: "wrought-iron-botanical-candle-stand",
@@ -144,6 +147,7 @@ const featuredProducts = [
     priceDisplay: "₹1,850",
     slug: "wrought-iron-botanical-candle-stand",
     tag: "Candle Stand",
+    fit: "contain",
   },
   {
     id: "industrial-3-tier-wooden-shoe-cabinet",
@@ -216,6 +220,58 @@ const featuredProducts = [
     priceDisplay: "₹1,590",
     slug: "geometric-3-ring-vine-candle-sconce",
     tag: "Geometric Sconce",
+  },
+  {
+    id: "silver-ribbon-bow-candle-stands",
+    name: "MODERN BRUSHED SILVER RIBBON BOW CANDLE STANDS (PAIR)",
+    hindiName: "मॉडर्न ब्रश्ड सिल्वर रिबन बो कैंडल स्टैंड्स (जोड़ी)",
+    image: "/products/silver-ribbon-bow-candle-stands.jpg",
+    desc: "Sculptural brushed silver candlestick holders with flowing ribbon bow silhouettes for taper candles.",
+    hindiDesc: "सुंदर बहते रिबन बो डिजाइन और ब्रश्ड सिल्वर फिनिश वाले टेपर कैंडल स्टैंड्स का सेट।",
+    price: 1650,
+    priceDisplay: "₹1,650",
+    slug: "silver-ribbon-bow-candle-stands",
+    tag: "Silver Craft",
+    fit: "contain",
+  },
+  {
+    id: "wrought-iron-s-scroll-pillar-candle-stands",
+    name: "ARTISANAL WROUGHT IRON S-SCROLL PILLAR CANDLE STANDS (PAIR)",
+    hindiName: "हस्तनिर्मित गढ़ा-लोहा एस-स्क्रॉल पिलर कैंडल स्टैंड्स (जोड़ी)",
+    image: "/products/wrought-iron-s-scroll-pillar-candle-stands.jpg",
+    desc: "Hand-forged curving wrought iron spiral stands with dual elevated pedestals for pillar candles.",
+    hindiDesc: "हाथ से गढ़े गए घुमावदार लोहे के सर्पिल डिजाइन वाले खूबसूरत पिलर कैंडल स्टैंड्स।",
+    price: 1950,
+    priceDisplay: "₹1,950",
+    slug: "wrought-iron-s-scroll-pillar-candle-stands",
+    tag: "Iron Craft",
+    fit: "contain",
+  },
+  {
+    id: "minimalist-silver-scroll-wall-candle-sconce",
+    name: "MINIMALIST SILVER SCROLL TAPER CANDLE WALL SCONCES (PAIR)",
+    hindiName: "मिनिमलिस्ट सिल्वर स्क्रॉल टेपर कैंडल वॉल स्कोनस (जोड़ी)",
+    image: "/products/minimalist-silver-scroll-wall-candle-sconce.jpg",
+    desc: "Slender wall-mounted brushed chrome iron sconces with graceful spiral bottoms for taper candles.",
+    hindiDesc: "आधुनिक दीवारों के लिए खूबसूरत सर्पिल घुमावदार सिल्वर टेपर कैंडल वॉल स्कोनस।",
+    price: 1480,
+    priceDisplay: "₹1,480",
+    slug: "minimalist-silver-scroll-wall-candle-sconce",
+    tag: "Wall Sconce",
+    fit: "contain",
+  },
+  {
+    id: "geometric-triple-ring-silver-pillar-candle-holders",
+    name: "GEOMETRIC TRIPLE-RING SILVER PILLAR CANDLE HOLDERS (SET OF 2)",
+    hindiName: "जियोमेट्रिक ट्रिपल-रिंग सिल्वर पिलर कैंडल होल्डर्स (2 का सेट)",
+    image: "/products/geometric-triple-ring-silver-pillar-candle-holders.jpg",
+    desc: "Contemporary vertical three-ring stacked nickel stands with wide pedestals for ambient pillar candles.",
+    hindiDesc: "3 गोलाकार रिंगों वाले समकालीन आधुनिक ब्रश्ड निकल पिलर कैंडल होल्डर्स।",
+    price: 1790,
+    priceDisplay: "₹1,790",
+    slug: "geometric-triple-ring-silver-pillar-candle-holders",
+    tag: "Candle Stand",
+    fit: "contain",
   },
 ];
 
@@ -755,11 +811,19 @@ export default function HomePage() {
               >
                 {/* Product Image */}
                 <Link href={`/product/${product.slug}`} className="block">
-                  <div className="rounded-[15px] overflow-hidden bg-[#f4f2e6] mb-4 h-[260px] relative">
+                  <div
+                    className={`rounded-[15px] overflow-hidden mb-4 h-[260px] relative flex items-center justify-center ${
+                      product.fit === "contain"
+                        ? "bg-white border border-[#37472a]/10 p-3"
+                        : "bg-[#f4f2e6]"
+                    }`}
+                  >
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      className={`w-full h-full transition-transform duration-500 group-hover:scale-105 ${
+                        product.fit === "contain" ? "object-contain" : "object-cover"
+                      }`}
                       loading="lazy"
                     />
                     <span className="absolute top-3 left-3 bg-[#fdfcf7]/90 backdrop-blur-sm text-[#7A6327] text-[10px] font-bold px-3 py-1 rounded-full border border-[#b39b5b]/30 uppercase tracking-wider">

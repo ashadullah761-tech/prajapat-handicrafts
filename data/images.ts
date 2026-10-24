@@ -413,6 +413,38 @@ export const handicraftImages: Record<string, HandicraftImage> = {
     category: "Brass & Metal Art",
     aspectRatio: "4:5",
   },
+  silverRibbonBowCandleStands: {
+    id: "img-silver-ribbon-bow-candle-stands",
+    url: "/products/silver-ribbon-bow-candle-stands.jpg",
+    alt: "Modern brushed silver ribbon bow candle stands set of 2 with taper candles",
+    title: "Modern Brushed Silver Ribbon Bow Candle Stands (Pair)",
+    category: "Brass & Metal Art",
+    aspectRatio: "4:5",
+  },
+  wroughtIronScrollPillarStands: {
+    id: "img-wrought-iron-scroll-pillar-stands",
+    url: "/products/wrought-iron-s-scroll-pillar-candle-stands.jpg",
+    alt: "Artisanal wrought iron s-scroll pillar candle stands pair with glowing candles",
+    title: "Artisanal Wrought Iron S-Scroll Pillar Candle Stands (Pair)",
+    category: "Brass & Metal Art",
+    aspectRatio: "1:1",
+  },
+  minimalistSilverScrollSconce: {
+    id: "img-minimalist-silver-scroll-sconce",
+    url: "/products/minimalist-silver-scroll-wall-candle-sconce.jpg",
+    alt: "Minimalist silver scroll taper candle wall sconces pair with lit taper candles",
+    title: "Minimalist Silver Scroll Taper Candle Wall Sconces (Pair)",
+    category: "Brass & Metal Art",
+    aspectRatio: "4:5",
+  },
+  geometricTripleRingPillarHolders: {
+    id: "img-geometric-triple-ring-pillar-holders",
+    url: "/products/geometric-triple-ring-silver-pillar-candle-holders.jpg",
+    alt: "Geometric triple-ring silver pillar candle holders set of 2 on wooden table",
+    title: "Geometric Triple-Ring Silver Pillar Candle Holders (Set of 2)",
+    category: "Brass & Metal Art",
+    aspectRatio: "1:1",
+  },
 };
 
 // Helper getter

@@ -150,11 +150,11 @@ export default function ProductDetailPage() {
           {/* Left: Product Gallery */}
           <div className="space-y-4">
             {/* Main Featured Image with Zoom View */}
-            <div className="relative aspect-[4/5] rounded-3xl overflow-hidden bg-sand-100 border border-sand-200">
+            <div className="relative aspect-[4/5] rounded-3xl overflow-hidden bg-white border border-sand-200 flex items-center justify-center p-4">
               <img
                 src={product.images[selectedImage]?.url || product.images[0]?.url}
                 alt={product.images[selectedImage]?.alt || product.name}
-                className="w-full h-full object-cover object-center transition-all duration-300"
+                className="w-full h-full object-contain object-center transition-all duration-300"
               />
 
               {/* Badges on main image */}
