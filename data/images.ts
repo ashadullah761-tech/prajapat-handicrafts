@@ -445,6 +445,38 @@ export const handicraftImages: Record<string, HandicraftImage> = {
     category: "Brass & Metal Art",
     aspectRatio: "1:1",
   },
+  brushedSilverTorchFluteSconces: {
+    id: "img-brushed-silver-torch-flute-sconces",
+    url: "/products/brushed-silver-torch-flute-wall-sconces.jpg",
+    alt: "Modern brushed silver torch flute wall sconces pair with lit ivory pillar candles on cream wall",
+    title: "Modern Brushed Silver Torch Flute Wall Sconces (Pair)",
+    category: "Brass & Metal Art",
+    aspectRatio: "4:5",
+  },
+  artisanalBlackIronFloralScrollSconce: {
+    id: "img-artisanal-black-iron-floral-scroll-sconce",
+    url: "/products/artisanal-black-iron-floral-scroll-wall-sconce.jpg",
+    alt: "Artisanal black iron floral scroll wall sconce with clear hurricane glass cylinder and lit candle",
+    title: "Artisanal Black Iron Floral Scroll Wall Sconce With Glass Cup",
+    category: "Brass & Metal Art",
+    aspectRatio: "4:5",
+  },
+  minimalistBlackIronTeardropSconce: {
+    id: "img-minimalist-black-iron-teardrop-sconce",
+    url: "/products/minimalist-black-iron-teardrop-wall-sconce.jpg",
+    alt: "Minimalist black iron teardrop arch wall candle sconce with lit white pillar candle",
+    title: "Minimalist Black Iron Teardrop Arch Wall Candle Sconce",
+    category: "Brass & Metal Art",
+    aspectRatio: "4:5",
+  },
+  botanicalLeafVineBranchSconce: {
+    id: "img-botanical-leaf-vine-branch-sconce",
+    url: "/products/botanical-leaf-vine-branch-wall-sconce.jpg",
+    alt: "Botanical leaf vine branch black iron wall candle sconce with detailed veined leaves",
+    title: "Botanical Leaf Vine Branch Black Iron Wall Candle Sconce",
+    category: "Brass & Metal Art",
+    aspectRatio: "4:5",
+  },
 };
 
 // Helper getter
