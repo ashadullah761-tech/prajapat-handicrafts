@@ -16,7 +16,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const { language } = useLanguage();
 
   const whatsappUrl = `https://wa.me/${brandConfig.whatsappNumber}?text=${encodeURIComponent(
-    `Hi ${brandConfig.name}, I would like to order "${product.name}" (₹${product.price.toLocaleString("en-IN")}). Please confirm availability.`
+    `Hi ${brandConfig.name}, I would like to enquire about "${product.name}". Please share details and availability.`
   )}`;
 
   const isContain = [
@@ -43,25 +43,6 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           />
         </Link>
 
-        {/* Top Badges */}
-        <div className="absolute top-3 left-3 flex flex-col gap-1.5 pointer-events-none">
-          {product.isBestSeller && (
-            <span className="px-2.5 py-0.5 rounded-full bg-[#7A6327] text-white text-[10px] font-bold shadow-sm">
-              {language === "hi" ? "लोकप्रिय" : "BESTSELLER"}
-            </span>
-          )}
-          {product.isNewArrival && (
-            <span className="px-2.5 py-0.5 rounded-full bg-[#37472a] text-white text-[10px] font-bold shadow-sm">
-              {language === "hi" ? "नया शिल्प" : "NEW ARRIVAL"}
-            </span>
-          )}
-          {product.discountPercent > 0 && (
-            <span className="px-2.5 py-0.5 rounded-full bg-[#b5532e] text-white text-[10px] font-bold shadow-sm">
-              {product.discountPercent}% OFF
-            </span>
-          )}
-        </div>
-
         {/* Quick WhatsApp Order on Hover (Desktop) */}
         <div className="absolute inset-x-3 bottom-3 hidden sm:flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
           <a
@@ -71,7 +52,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             className="flex-1 flex items-center justify-center gap-1.5 py-2.5 px-3 bg-[#37472a] hover:bg-[#25301d] text-white rounded-full text-xs font-semibold shadow-md transition-all cursor-pointer"
           >
             <MessageCircle className="w-3.5 h-3.5 text-[#25D366]" />
-            <span>{language === "hi" ? "व्हाट्सएप पर ऑर्डर करें" : "Order on WhatsApp"}</span>
+            <span>{language === "hi" ? "व्हाट्सएप पर जानकारी लें" : "Enquire on WhatsApp"}</span>
           </a>
         </div>
       </div>
@@ -102,34 +83,25 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           </p>
         </div>
 
-        {/* Price & Order Button */}
+        {/* Order / Enquiry Action */}
         <div className="pt-3 mt-3 border-t border-[#37472a]/10 flex items-center justify-between gap-2">
-          <div className="flex flex-col">
-            <div className="flex items-baseline gap-2">
-              <span className="font-sans text-base sm:text-lg font-bold text-[#37472a]">
-                ₹{product.price.toLocaleString("en-IN")}
-              </span>
-              {product.originalPrice > product.price && (
-                <span className="text-xs text-[#999] line-through">
-                  ₹{product.originalPrice.toLocaleString("en-IN")}
-                </span>
-              )}
-            </div>
-            <span className="text-[10px] text-[#7A6327] font-medium">
-              {language === "hi" ? "सुरक्षित ऑल-इंडिया डिलीवरी" : "Pan-India Safe Delivery"}
-            </span>
-          </div>
+          <Link
+            href={`/product/${product.slug}`}
+            className="text-xs font-semibold text-[#7A6327] hover:text-[#37472a] transition-colors"
+          >
+            {language === "hi" ? "विवरण देखें →" : "View Details →"}
+          </Link>
 
-          {/* WhatsApp Order Button */}
+          {/* WhatsApp Enquiry Button */}
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#37472a] hover:bg-[#25301d] text-white text-xs font-semibold shadow-sm transition-transform hover:-translate-y-0.5 cursor-pointer"
-            aria-label="Order on WhatsApp"
+            aria-label="Enquire on WhatsApp"
           >
             <MessageCircle className="w-3.5 h-3.5 text-[#25D366]" />
-            <span className="hidden xs:inline">{language === "hi" ? "ऑर्डर" : "Order"}</span>
+            <span>{language === "hi" ? "पूछताछ करें" : "Enquire Now"}</span>
           </a>
         </div>
       </div>
