@@ -357,14 +357,6 @@ export const handicraftImages: Record<string, HandicraftImage> = {
     category: "Wooden Carvings",
     aspectRatio: "3:2",
   },
-  wroughtIronCandleStand: {
-    id: "img-botanical-candle-stand",
-    url: "/products/wrought-iron-botanical-candle-stand.jpg",
-    alt: "Artisanal wrought iron botanical vine 4-cup candelabra tea light candle stand",
-    title: "Artisanal Wrought Iron Botanical Vine 4-Candle Stand",
-    category: "Brass & Metal Art",
-    aspectRatio: "1:1",
-  },
   industrialShoeCabinet: {
     id: "img-shoe-cabinet",
     url: "/products/industrial-3-tier-wooden-shoe-cabinet.jpg",
