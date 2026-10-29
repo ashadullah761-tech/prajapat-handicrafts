@@ -24,10 +24,6 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     "vintage-key-shaped-wooden-key-holder",
     "rustic-wood-wall-coat-key-rack",
     "wrought-iron-botanical-candle-stand",
-    "brushed-silver-torch-flute-wall-sconces",
-    "artisanal-black-iron-floral-scroll-wall-sconce",
-    "minimalist-black-iron-teardrop-wall-sconce",
-    "botanical-leaf-vine-branch-wall-sconce",
   ].includes(product.id) || (product.images[0]?.url && (product.images[0].url.includes("key-holder") || product.images[0].url.includes("coat-key-rack") || product.images[0].url.includes("candle-stand") || product.images[0].url.includes("wall-sconce")));
 
   return (
