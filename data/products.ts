@@ -2724,57 +2724,6 @@ export const products: Product[] = [
     tags: ["Gold Sconce", "Glass Votive Holder", "Wall Candle Decor", "Luxury Sconce", "Gold Wall Art"],
   },
 
-  // 30. Wrought Iron Botanical Candle Stand
-  {
-    id: "wrought-iron-botanical-candle-stand",
-    slug: "wrought-iron-botanical-candle-stand",
-    name: "ARTISANAL WROUGHT IRON BOTANICAL PILLAR CANDLE FLOOR STAND",
-    hindiName: "हस्तनिर्मित गढ़ा-लोहा वानस्पतिक पिलर कैंडल फ्लोर स्टैंड",
-    categoryId: "brass-metal-art",
-    categoryName: "Brass & Metal Art",
-    price: 3490,
-    originalPrice: 4799,
-    discountPercent: 27,
-    rating: 4.97,
-    reviewCount: 62,
-    inStock: true,
-    stockCount: 8,
-    isBestSeller: true,
-    isFeatured: true,
-    isNewArrival: true,
-    images: [
-      {
-        url: "/products/wrought-iron-botanical-candle-stand.jpg",
-        alt: "Artisanal wrought iron botanical tall floor candle stand with leaf vine motifs and wide pillar candle plate",
-      },
-    ],
-    shortDescription: "Tall hand-forged wrought iron floor candle stand with climbing botanical leaf vines and wide pillar candle plate.",
-    hindiShortDescription: "ऊंचा हस्तनिर्मित गढ़ा-लोहा फ्लोर कैंडल स्टैंड जिस पर चढ़ती पत्तियों की बेल और चौड़ी पिलर कैंडल प्लेट है।",
-    fullDescription: "Command attention and bring warmth to any corner with this Artisanal Wrought Iron Botanical Pillar Candle Floor Stand. Standing tall and bold, the stem winds upward through hand-forged climbing botanical leaves and vines, culminating in a wide, lipped drip plate perfectly sized for large pillar candles. The heavy circular ring base provides rock-solid stability on any flooring surface. An ideal statement piece for living rooms, foyers, prayer corners, and event venues.",
-    hindiFullDescription: "यह ऊंचा और भव्य रिहर्सल आयरन बोटैनिकल फ्लोर स्टैंड आपके घर के किसी भी कोने को एक शाही और प्राकृतिक माहौल देता है। इसकी चढ़ती पत्तियों और बेलों की बनावट के साथ चौड़ी पिलर कैंडल प्लेट और मजबूत गोल आधार इसे एक मास्टरपीस बनाते हैं।",
-    highlights: [
-      "Dramatic Tall Floor-Standing Wrought Iron Candle Stand",
-      "Hand-Forged Climbing Botanical Leaf Vine Stem Detail",
-      "Wide Lip-Edged Drip Plate Holds Pillar Candles Up to 4 Inches",
-      "Heavy Circular Ring Base for Absolute Floor Stability",
-      "Matte Black Thermal-Baked Rust-Resistant Powder Coat",
-    ],
-    artisan: {
-      name: "Jodhpur & Nagaur Blacksmith Guild",
-      village: "Jodhpur Artisan Hub",
-      craft: "Hand-Forged Architectural Ironwork",
-    },
-    specifications: {
-      material: "Heavy-Gauge Hand-Hammered Solid Wrought Iron",
-      dimensions: "Height: 95 cm (37.4 inches) | Base Diameter: 22 cm | Plate Diameter: 14 cm",
-      weight: "3.2 kg",
-      origin: "Jodhpur, Rajasthan",
-      finish: "Thermal Baked Matte Black Powder Coat",
-      care: "Dust with dry bristle brush. Wipe clean with dry soft cotton cloth.",
-    },
-    tags: ["Floor Candle Stand", "Pillar Candle Holder", "Wrought Iron Decor", "Botanical Iron Art", "Living Room Decor"],
-  },
-
   // 24. Ananda Jaipur Blue Pottery Tea Tasting Gift Box
   {
     id: "prod-24",

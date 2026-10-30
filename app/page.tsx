@@ -36,7 +36,6 @@ const featuredProducts = [
     priceDisplay: "₹2,450",
     slug: "wall-mounted-wooden-wine-glass-rack",
     tag: "Wooden Craft",
-    fit: "contain",
   },
   {
     id: "ge-85-wooden-dressing-table-with-mirror",
@@ -49,7 +48,6 @@ const featuredProducts = [
     priceDisplay: "₹14,500",
     slug: "ge-85-wooden-dressing-table-with-mirror",
     tag: "Dressing Table",
-    fit: "contain",
   },
   {
     id: "ge-112-z-shape-console-table-mirror",
@@ -62,7 +60,6 @@ const featuredProducts = [
     priceDisplay: "₹16,500",
     slug: "ge-112-z-shape-console-table-mirror",
     tag: "Console & Mirror",
-    fit: "contain",
   },
   {
     id: "ge-109-solid-wood-dining-chair",
@@ -75,7 +72,6 @@ const featuredProducts = [
     priceDisplay: "₹6,800",
     slug: "ge-109-solid-wood-dining-chair",
     tag: "Dining Chair",
-    fit: "contain",
   },
   {
     id: "ge-wf-08-wooden-glass-top-coffee-table",
@@ -100,7 +96,6 @@ const featuredProducts = [
     priceDisplay: "₹2,850",
     slug: "ge-wf-07-wooden-book-stand-pen-holder",
     tag: "Book Stand",
-    fit: "contain",
   },
   {
     id: "ge-86-geometric-wooden-wall-shelves-set",
@@ -113,7 +108,6 @@ const featuredProducts = [
     priceDisplay: "₹3,850",
     slug: "ge-86-geometric-wooden-wall-shelves-set",
     tag: "Wall Shelves",
-    fit: "contain",
   },
   {
     id: "ge-103-standing-mirror-with-storage-shelves",
@@ -126,7 +120,6 @@ const featuredProducts = [
     priceDisplay: "₹12,800",
     slug: "ge-103-standing-mirror-with-storage-shelves",
     tag: "Standing Mirror",
-    fit: "contain",
   },
   {
     id: "ge-105-sculptural-arch-console-table-with-round-mirror",
@@ -139,7 +132,6 @@ const featuredProducts = [
     priceDisplay: "₹18,900",
     slug: "ge-105-sculptural-arch-console-table-with-round-mirror",
     tag: "Console & Mirror",
-    fit: "contain",
   },
   {
     id: "ge-113-geometric-wooden-sofa",
@@ -152,7 +144,6 @@ const featuredProducts = [
     priceDisplay: "₹28,500",
     slug: "ge-113-geometric-wooden-sofa",
     tag: "Wooden Sofa",
-    fit: "contain",
   },
   {
     id: "contemporary-6-seater-dining-set",
@@ -201,7 +192,6 @@ const featuredProducts = [
     priceDisplay: "₹1,250",
     slug: "antique-brass-turtle-key-holder",
     tag: "Metal Art & Vastu",
-    fit: "contain",
   },
   {
     id: "vintage-key-shaped-wooden-key-holder",
@@ -214,7 +204,6 @@ const featuredProducts = [
     priceDisplay: "₹1,150",
     slug: "vintage-key-shaped-wooden-key-holder",
     tag: "Wooden Craft",
-    fit: "contain",
   },
   {
     id: "rustic-wood-wall-coat-key-rack",
@@ -227,7 +216,6 @@ const featuredProducts = [
     priceDisplay: "₹1,390",
     slug: "rustic-wood-wall-coat-key-rack",
     tag: "Rustic Woodcraft",
-    fit: "contain",
   },
   {
     id: "industrial-3-tier-wooden-shoe-cabinet",
@@ -300,7 +288,6 @@ const featuredProducts = [
     priceDisplay: "₹1,650",
     slug: "silver-ribbon-bow-candle-stands",
     tag: "Silver Craft",
-    fit: "contain",
   },
   {
     id: "wrought-iron-s-scroll-pillar-candle-stands",
@@ -313,7 +300,6 @@ const featuredProducts = [
     priceDisplay: "₹1,950",
     slug: "wrought-iron-s-scroll-pillar-candle-stands",
     tag: "Iron Craft",
-    fit: "contain",
   },
   {
     id: "minimalist-silver-scroll-wall-candle-sconce",
@@ -326,7 +312,6 @@ const featuredProducts = [
     priceDisplay: "₹1,480",
     slug: "minimalist-silver-scroll-wall-candle-sconce",
     tag: "Wall Sconce",
-    fit: "contain",
   },
   {
     id: "geometric-triple-ring-silver-pillar-candle-holders",
@@ -339,7 +324,6 @@ const featuredProducts = [
     priceDisplay: "₹1,790",
     slug: "geometric-triple-ring-silver-pillar-candle-holders",
     tag: "Candle Stand",
-    fit: "contain",
   },
   {
     id: "artisanal-black-iron-floral-scroll-wall-sconce",
@@ -352,7 +336,6 @@ const featuredProducts = [
     priceDisplay: "₹1,190",
     slug: "artisanal-black-iron-floral-scroll-wall-sconce",
     tag: "Floral Sconce",
-    fit: "contain",
   },
   {
     id: "botanical-leaf-vine-branch-wall-sconce",
@@ -365,7 +348,6 @@ const featuredProducts = [
     priceDisplay: "₹1,280",
     slug: "botanical-leaf-vine-branch-wall-sconce",
     tag: "Botanical Sconce",
-    fit: "contain",
   },
   {
     id: "brushed-silver-torch-flute-wall-sconces",
@@ -378,7 +360,6 @@ const featuredProducts = [
     priceDisplay: "₹1,580",
     slug: "brushed-silver-torch-flute-wall-sconces",
     tag: "Torch Sconce",
-    fit: "contain",
   },
   {
     id: "minimalist-black-iron-teardrop-wall-sconce",
@@ -391,7 +372,6 @@ const featuredProducts = [
     priceDisplay: "₹990",
     slug: "minimalist-black-iron-teardrop-wall-sconce",
     tag: "Minimalist Sconce",
-    fit: "contain",
   },
   {
     id: "oval-gold-leaf-candle-wall-sconce",
@@ -404,19 +384,6 @@ const featuredProducts = [
     priceDisplay: "₹1,390",
     slug: "oval-gold-leaf-candle-wall-sconce",
     tag: "Gold Sconce",
-    fit: "contain",
-  },
-  {
-    id: "wrought-iron-botanical-candle-stand",
-    name: "ARTISANAL WROUGHT IRON BOTANICAL PILLAR CANDLE FLOOR STAND",
-    hindiName: "हस्तनिर्मित गढ़ा-लोहा वानस्पतिक पिलर कैंडल फ्लोर स्टैंड",
-    image: "/products/wrought-iron-botanical-candle-stand.jpg",
-    desc: "Tall hand-forged wrought iron floor candle stand with climbing botanical leaf vines and wide pillar candle plate.",
-    hindiDesc: "ऊंचा हस्तनिर्मित गढ़ा-लोहा फ्लोर कैंडल स्टैंड जिस पर चढ़ती पत्तियों की बेल और चौड़ी पिलर कैंडल प्लेट है।",
-    price: 3490,
-    priceDisplay: "₹3,490",
-    slug: "wrought-iron-botanical-candle-stand",
-    tag: "Floor Stand",
   },
 ];
 
@@ -956,19 +923,11 @@ export default function HomePage() {
               >
                 {/* Product Image */}
                 <Link href={`/product/${product.slug}`} className="block">
-                  <div
-                    className={`rounded-[15px] overflow-hidden mb-4 h-[260px] relative flex items-center justify-center ${
-                      product.fit === "contain"
-                        ? "bg-white border border-[#37472a]/10 p-3"
-                        : "bg-[#f4f2e6]"
-                    }`}
-                  >
+                  <div className="rounded-[15px] overflow-hidden mb-4 h-[280px] sm:h-[300px] relative flex items-center justify-center bg-[#f4f2e6]">
                     <img
                       src={product.image}
                       alt={product.name}
-                      className={`w-full h-full transition-transform duration-500 group-hover:scale-105 ${
-                        product.fit === "contain" ? "object-contain" : "object-cover"
-                      }`}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
                     />
                     <span className="absolute top-3 left-3 bg-[#fdfcf7]/90 backdrop-blur-sm text-[#7A6327] text-[10px] font-bold px-3 py-1 rounded-full border border-[#b39b5b]/30 uppercase tracking-wider">

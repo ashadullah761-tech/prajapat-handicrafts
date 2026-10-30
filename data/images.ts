@@ -469,14 +469,6 @@ export const handicraftImages: Record<string, HandicraftImage> = {
     category: "Brass & Metal Art",
     aspectRatio: "4:5",
   },
-  wroughtIronBotanicalCandleStand: {
-    id: "img-wrought-iron-botanical-candle-stand",
-    url: "/products/wrought-iron-botanical-candle-stand.jpg",
-    alt: "Artisanal wrought iron botanical tall floor candle stand with leaf vine motifs and wide pillar candle plate",
-    title: "Artisanal Wrought Iron Botanical Pillar Candle Floor Stand",
-    category: "Brass & Metal Art",
-    aspectRatio: "1:1",
-  },
   wallMountedWoodenWineGlassRack: {
     id: "img-wall-wine-glass-rack",
     url: "/products/wall-mounted-wooden-wine-glass-rack.jpg",
