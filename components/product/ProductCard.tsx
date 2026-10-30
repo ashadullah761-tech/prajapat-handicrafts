@@ -19,7 +19,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     `Hi ${brandConfig.name}, I would like to enquire about "${product.name}". Please share details and availability.`
   )}`;
 
-  const isContain = false;
+  const isContain = [
+    "antique-brass-turtle-key-holder",
+    "vintage-key-shaped-wooden-key-holder",
+    "rustic-wood-wall-coat-key-rack",
+  ].includes(product.id) || (product.images[0]?.url && (product.images[0].url.includes("key-holder") || product.images[0].url.includes("coat-key-rack") || product.images[0].url.includes("candle-stand") || product.images[0].url.includes("wall-sconce")));
 
   return (
     <div className="group relative bg-[#fdfcf7] rounded-3xl overflow-hidden border border-[#37472a]/10 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">

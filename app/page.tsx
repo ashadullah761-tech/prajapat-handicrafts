@@ -36,6 +36,7 @@ const featuredProducts = [
     priceDisplay: "₹2,450",
     slug: "wall-mounted-wooden-wine-glass-rack",
     tag: "Wooden Craft",
+    fit: "contain",
   },
   {
     id: "ge-85-wooden-dressing-table-with-mirror",
@@ -48,6 +49,7 @@ const featuredProducts = [
     priceDisplay: "₹14,500",
     slug: "ge-85-wooden-dressing-table-with-mirror",
     tag: "Dressing Table",
+    fit: "contain",
   },
   {
     id: "ge-112-z-shape-console-table-mirror",
@@ -60,6 +62,7 @@ const featuredProducts = [
     priceDisplay: "₹16,500",
     slug: "ge-112-z-shape-console-table-mirror",
     tag: "Console & Mirror",
+    fit: "contain",
   },
   {
     id: "ge-109-solid-wood-dining-chair",
@@ -72,6 +75,7 @@ const featuredProducts = [
     priceDisplay: "₹6,800",
     slug: "ge-109-solid-wood-dining-chair",
     tag: "Dining Chair",
+    fit: "contain",
   },
   {
     id: "ge-wf-08-wooden-glass-top-coffee-table",
@@ -96,6 +100,7 @@ const featuredProducts = [
     priceDisplay: "₹2,850",
     slug: "ge-wf-07-wooden-book-stand-pen-holder",
     tag: "Book Stand",
+    fit: "contain",
   },
   {
     id: "ge-86-geometric-wooden-wall-shelves-set",
@@ -108,6 +113,7 @@ const featuredProducts = [
     priceDisplay: "₹3,850",
     slug: "ge-86-geometric-wooden-wall-shelves-set",
     tag: "Wall Shelves",
+    fit: "contain",
   },
   {
     id: "ge-103-standing-mirror-with-storage-shelves",
@@ -120,6 +126,7 @@ const featuredProducts = [
     priceDisplay: "₹12,800",
     slug: "ge-103-standing-mirror-with-storage-shelves",
     tag: "Standing Mirror",
+    fit: "contain",
   },
   {
     id: "ge-105-sculptural-arch-console-table-with-round-mirror",
@@ -132,6 +139,7 @@ const featuredProducts = [
     priceDisplay: "₹18,900",
     slug: "ge-105-sculptural-arch-console-table-with-round-mirror",
     tag: "Console & Mirror",
+    fit: "contain",
   },
   {
     id: "ge-113-geometric-wooden-sofa",
@@ -144,6 +152,7 @@ const featuredProducts = [
     priceDisplay: "₹28,500",
     slug: "ge-113-geometric-wooden-sofa",
     tag: "Wooden Sofa",
+    fit: "contain",
   },
   {
     id: "contemporary-6-seater-dining-set",
@@ -192,6 +201,7 @@ const featuredProducts = [
     priceDisplay: "₹1,250",
     slug: "antique-brass-turtle-key-holder",
     tag: "Metal Art & Vastu",
+    fit: "contain",
   },
   {
     id: "vintage-key-shaped-wooden-key-holder",
@@ -204,6 +214,7 @@ const featuredProducts = [
     priceDisplay: "₹1,150",
     slug: "vintage-key-shaped-wooden-key-holder",
     tag: "Wooden Craft",
+    fit: "contain",
   },
   {
     id: "rustic-wood-wall-coat-key-rack",
@@ -216,6 +227,7 @@ const featuredProducts = [
     priceDisplay: "₹1,390",
     slug: "rustic-wood-wall-coat-key-rack",
     tag: "Rustic Woodcraft",
+    fit: "contain",
   },
   {
     id: "industrial-3-tier-wooden-shoe-cabinet",
@@ -779,23 +791,29 @@ export default function HomePage() {
               >
                 {/* Product Image */}
                 <Link href={`/product/${product.slug}`} className="block">
-                  <div className="rounded-[15px] overflow-hidden mb-4 h-[280px] sm:h-[300px] relative flex items-center justify-center bg-[#f4f2e6]">
+                  <div
+                    className={`rounded-[15px] overflow-hidden mb-4 h-[260px] relative flex items-center justify-center ${
+                      product.fit === "contain"
+                        ? "bg-white border border-[#37472a]/10 p-3"
+                        : "bg-[#f4f2e6]"
+                    }`}
+                  >
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      className={`w-full h-full transition-transform duration-500 group-hover:scale-105 ${
+                        product.fit === "contain" ? "object-contain" : "object-cover"
+                      }`}
                       loading="lazy"
                     />
+                    <span className="absolute top-3 left-3 bg-[#fdfcf7]/90 backdrop-blur-sm text-[#7A6327] text-[10px] font-bold px-3 py-1 rounded-full border border-[#b39b5b]/30 uppercase tracking-wider">
+                      {product.tag}
+                    </span>
                   </div>
                 </Link>
 
                 {/* Product Info */}
                 <div className="flex flex-col flex-1 px-1">
-                  <div className="mb-2">
-                    <span className="inline-block bg-[#f4f2e6] text-[#7A6327] text-[10px] font-bold px-2.5 py-0.5 rounded-full border border-[#b39b5b]/30 uppercase tracking-wider">
-                      {product.tag}
-                    </span>
-                  </div>
                   <Link href={`/product/${product.slug}`} className="hover:text-[#7A6327] transition-colors">
                     <h4 className="font-sans font-bold text-base md:text-lg text-[#37472a] mb-1.5 uppercase leading-snug">
                       {language === "hi" ? product.hindiName : product.name}
