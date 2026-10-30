@@ -930,14 +930,16 @@ export default function HomePage() {
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
                     />
-                    <span className="absolute top-3 left-3 bg-[#fdfcf7]/90 backdrop-blur-sm text-[#7A6327] text-[10px] font-bold px-3 py-1 rounded-full border border-[#b39b5b]/30 uppercase tracking-wider">
-                      {product.tag}
-                    </span>
                   </div>
                 </Link>
 
                 {/* Product Info */}
                 <div className="flex flex-col flex-1 px-1">
+                  <div className="mb-2">
+                    <span className="inline-block bg-[#f4f2e6] text-[#7A6327] text-[10px] font-bold px-2.5 py-0.5 rounded-full border border-[#b39b5b]/30 uppercase tracking-wider">
+                      {product.tag}
+                    </span>
+                  </div>
                   <Link href={`/product/${product.slug}`} className="hover:text-[#7A6327] transition-colors">
                     <h4 className="font-sans font-bold text-base md:text-lg text-[#37472a] mb-1.5 uppercase leading-snug">
                       {language === "hi" ? product.hindiName : product.name}
