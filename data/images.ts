@@ -445,6 +445,22 @@ export const handicraftImages: Record<string, HandicraftImage> = {
     category: "Wooden Carvings & Crafts",
     aspectRatio: "16:9",
   },
+  ge109SolidWoodDiningChair: {
+    id: "img-ge-109-dining-chair",
+    url: "/products/ge-109-solid-wood-dining-chair.jpg",
+    alt: "Modern solid wood dining chair with cushioned seat and diagonal backrest GE-109",
+    title: "Solid Wood Dining Chair (GE-109)",
+    category: "Wooden Carvings & Crafts",
+    aspectRatio: "4:5",
+  },
+  ge113SolidWoodLatticeSofa: {
+    id: "img-ge-113-lattice-sofa",
+    url: "/products/ge-113-solid-wood-lattice-sofa.jpg",
+    alt: "Solid wood lattice 3-seater sofa with cushioned seat GE-113",
+    title: "Solid Wood Lattice Sofa (GE-113)",
+    category: "Wooden Carvings & Crafts",
+    aspectRatio: "1:1",
+  },
 };
 
 // Helper getter

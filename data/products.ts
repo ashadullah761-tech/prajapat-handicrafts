@@ -2126,6 +2126,57 @@ export const products: Product[] = [
     tags: ["Book Stand", "Reading Stand", "Desk Organizer", "Walnut Wood", "Pen Holder", "Study Desk"],
   },
 
+  // GE-113: Solid Wood Geometric Lattice Sofa
+  {
+    id: "ge-113-solid-wood-lattice-sofa",
+    slug: "ge-113-solid-wood-lattice-sofa",
+    name: "SOLID WOOD GEOMETRIC LATTICE 3-SEATER SOFA (GE 113)",
+    hindiName: "सॉलिड वुड जियोमेट्रिक जाली 3-सीटर सोफा (GE 113)",
+    categoryId: "wooden-carvings",
+    categoryName: "Wooden Carvings & Furniture",
+    price: 38500,
+    originalPrice: 49000,
+    discountPercent: 21,
+    rating: 4.98,
+    reviewCount: 72,
+    inStock: true,
+    stockCount: 4,
+    isBestSeller: true,
+    isFeatured: true,
+    isNewArrival: true,
+    images: [
+      {
+        url: "/products/ge-113-solid-wood-lattice-sofa.jpg",
+        alt: "Solid wood geometric lattice 3-seater sofa with grey upholstered cushions GE 113",
+      },
+    ],
+    shortDescription: "Premium solid teak wood 3-seater sofa with geometric cross-lattice armrests and plush grey upholstered cushions.",
+    hindiShortDescription: "प्रीमियम सॉलिड टीक वुड 3-सीटर सोफा, जियोमेट्रिक क्रॉस-जाली आर्मरेस्ट और मुलायम ग्रे कुशन के साथ।",
+    fullDescription: "Bring timeless sophistication and robust craftsmanship into your living room with the GE 113 Solid Wood Geometric Lattice 3-Seater Sofa. Masterfully constructed from premium kiln-dried solid teak hardwood, the standout feature is the architectural geometric cross-lattice pattern on both armrest panels, adding visual depth and artisanal character. The deep-seated frame is fitted with high-resilience foam cushions wrapped in premium grey linen-blend upholstery fabric for cloud-like comfort that lasts years.",
+    hindiFullDescription: "GE 113 सॉलिड वुड लैटिस सोफा अपने खूबसूरत जियोमेट्रिक क्रॉस-जाली डिजाइन के कारण किसी भी लिविंग रूम का आकर्षण का केंद्र बन जाता है। मजबूत सागवान की लकड़ी और मुलायम ग्रे फैब्रिक कुशन इसे बेहद आरामदायक और टिकाऊ बनाते हैं।",
+    highlights: [
+      "Premium Kiln-Dried Solid Teak Wood Frame for Lifetime Durability",
+      "Architectural Geometric Cross-Lattice Armrest Panels",
+      "High-Resilience Foam Cushions with Grey Linen-Blend Upholstery",
+      "Spacious 3-Seater Design Seats Adults Comfortably",
+      "Sled-Style Solid Wood Base for Maximum Floor Stability",
+    ],
+    artisan: {
+      name: "Gehlot Architectural Carpentry Guild",
+      village: "Pali Crafts Cluster, Rajasthan",
+      craft: "Luxury Solid Wood Sofa Making",
+    },
+    specifications: {
+      material: "Solid Seasoned Teak Hardwood & High-Resilience Foam with Linen-Blend Fabric",
+      dimensions: "210 x 75 x 78 cm (82.7 x 29.5 x 30.7 inches) | Seat Height: 42 cm",
+      weight: "52 kg",
+      origin: "Pali, Rajasthan",
+      finish: "Natural Teak Satin Polish with Grey Linen Cushions",
+      care: "Wipe wood frame with dry cloth. Cushion covers are removable and dry-cleanable.",
+    },
+    tags: ["Sofa", "3-Seater Sofa", "Wooden Sofa", "Living Room Furniture", "Lattice Design", "Teak Wood"],
+  },
+
   // 24. Ananda Jaipur Blue Pottery Tea Tasting Gift Box
   {
     id: "prod-24",
