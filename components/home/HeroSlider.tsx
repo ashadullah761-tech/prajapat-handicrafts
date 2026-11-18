@@ -26,7 +26,7 @@ interface HeroSlide {
 
 const slides: HeroSlide[] = [
   {
-    image: "https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1920&q=85",
+    image: "/hero-banner.jpg",
     badge: "Authentic Indian Craftsmanship",
     hindiBadge: "प्रामाणिक भारतीय शिल्पकला",
     headline: "Bring Home the Soul of Indian Craft",

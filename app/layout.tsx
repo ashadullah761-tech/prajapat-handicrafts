@@ -124,7 +124,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Store",
     "name": brandConfig.name,
-    "image": "https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1200&q=80",
+    "image": "https://gehlotexport.com/hero-banner.jpg",
     "telephone": brandConfig.phone,
     "email": brandConfig.email,
     "address": {

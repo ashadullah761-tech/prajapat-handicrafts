@@ -45,10 +45,10 @@ export const handicraftImages: Record<string, HandicraftImage> = {
   },
   potteryCeramicPlanter: {
     id: "pot-2",
-    url: "https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1000&q=80",
-    alt: "Wheel thrown ceramic urn with warm ochre and terracotta minerals",
-    title: "Kumbhar Wheel-Thrown Ceramic Planter",
-    category: "Pottery & Terracotta",
+    url: "/hero-banner.jpg",
+    alt: "Handcrafted wooden and traditional handicrafts display",
+    title: "Handcrafted Wooden Handicrafts Living Collection",
+    category: "Wooden Carvings",
     aspectRatio: "4:5",
   },
   potteryBlueJaipur: {
@@ -465,5 +465,5 @@ export const handicraftImages: Record<string, HandicraftImage> = {
 
 // Helper getter
 export const getImage = (key: keyof typeof handicraftImages): string => {
-  return handicraftImages[key]?.url || "https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1000&q=80";
+  return handicraftImages[key]?.url || "/hero-banner.jpg";
 };

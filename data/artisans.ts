@@ -28,7 +28,7 @@ export const artisans: Artisan[] = [
     state: "Rajasthan",
     experienceYears: 42,
     photo: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=800&q=80",
-    workshopPhoto: "https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1200&q=80",
+    workshopPhoto: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=1200&q=80",
     quote: "Unlike clay pottery, Blue Pottery uses quartz stone powder and gum. It never cracks or chips, carrying the turquoise sky of Rajasthan forever.",
     hindiQuote: "ब्लू पॉटरी केवल मिट्टी नहीं, बल्कि क्वार्ट्ज और पत्थरों का अमृत है। यह सदियों तक अपनी चमक नहीं खोती।",
     bio: "Ramswaroop-ji started working alongside his grandfather when he was 12. Over four decades, he has trained more than 85 younger potters in his village, preserving the low-temperature wood-fired glazing process that gives Jaipur Blue Pottery its luminous cobalt hues.",

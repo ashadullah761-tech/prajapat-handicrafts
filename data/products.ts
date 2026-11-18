@@ -696,8 +696,8 @@ export const products: Product[] = [
         alt: "Artisan hand painting blue pottery plate edge with squirrel hair brush",
       },
       {
-        url: "https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1000&q=80",
-        alt: "Blue pottery plate styled on a warm textured wall with brass lamp",
+        url: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=1000&q=80",
+        alt: "Artisan hand painting blue pottery plate edge with squirrel hair brush",
       },
     ],
     shortDescription: "GI-tagged Jaipur blue pottery plate handmade from crushed quartz stone powder, Fuller's earth, and natural gum, hand-painted in traditional cobalt and turquoise floral arabesques.",
@@ -1296,8 +1296,8 @@ export const products: Product[] = [
         alt: "Rustic terracotta fluted earthen vase styled with dried pampas grass",
       },
       {
-        url: "https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1000&q=80",
-        alt: "Artisan wheel-throwing wet red terracotta clay vessel on spinning wheel",
+        url: "https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=1000&q=80",
+        alt: "Artisan handcrafting natural red terracotta clay vessel",
       },
     ],
     shortDescription: "Wheel-thrown earthenware amphora vase shaped from all-natural red riverbed clay and sun-fired, adorned with hand-carved fluted ridges and raw matte texture.",

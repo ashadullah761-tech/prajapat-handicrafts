@@ -33,7 +33,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       <div className={`relative aspect-[4/5] overflow-hidden ${isContain ? "bg-white p-3 flex items-center justify-center" : "bg-[#f4f2e6]"}`}>
         <Link href={`/product/${product.slug}`} className={`block w-full h-full ${isContain ? "flex items-center justify-center" : ""}`}>
           <img
-            src={product.images[0]?.url || "https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=800&q=80"}
+            src={product.images[0]?.url || "/hero-banner.jpg"}
             alt={product.images[0]?.alt || product.name}
             loading="lazy"
             className={`w-full h-full object-center group-hover:scale-105 transition-transform duration-700 ease-out ${isContain ? "object-contain" : "object-cover"}`}

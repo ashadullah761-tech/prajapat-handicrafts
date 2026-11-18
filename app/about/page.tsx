@@ -43,8 +43,8 @@ export default function AboutPage() {
         {/* Big Staggered Heritage Banner */}
         <div className="relative rounded-3xl overflow-hidden shadow-float border border-sand-200 aspect-[16/9] sm:aspect-[21/9]">
           <img
-            src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1920&q=85"
-            alt="Traditional potter in Rajasthan shaping earthenware"
+            src="/hero-banner.jpg"
+            alt="Traditional craft and furniture heritage in Rajasthan"
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950/80 via-transparent to-transparent" />
