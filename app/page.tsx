@@ -420,10 +420,10 @@ export default function HomePage() {
         }}
       >
         {/* Navigation Overlay (Header) */}
-        <header className="relative z-20 flex justify-between items-center px-6 md:px-12 py-5 w-full">
+        <header className="relative z-20 flex justify-between items-center px-3 sm:px-6 md:px-12 py-3.5 sm:py-5 w-full max-w-full">
           {/* Logo */}
-          <Link href="#hero" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#f4f2e6] border border-[#b39b5b]/50 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform overflow-hidden p-0.5">
+          <Link href="#hero" className="flex items-center gap-2 sm:gap-3 group min-w-0">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-[#f4f2e6] border border-[#b39b5b]/50 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform overflow-hidden p-0.5 shrink-0">
               <img
                 src="/logo.png"
                 alt={`${brandConfig.name} Logo`}
@@ -432,11 +432,11 @@ export default function HomePage() {
                 height={56}
               />
             </div>
-            <div className="text-left">
-              <span className="block font-serif text-xl md:text-2xl font-bold tracking-wider text-[#f4f2e6] drop-shadow-md">
+            <div className="text-left min-w-0">
+              <span className="block font-serif text-base xs:text-lg sm:text-xl md:text-2xl font-bold tracking-wide sm:tracking-wider text-[#f4f2e6] drop-shadow-md truncate">
                 {brandConfig.name.toUpperCase()}
               </span>
-              <span className="block text-[10px] md:text-xs font-semibold tracking-[0.25em] text-[#e0cf9b] uppercase">
+              <span className="hidden xs:block text-[9px] sm:text-[10px] md:text-xs font-semibold tracking-[0.15em] sm:tracking-[0.25em] text-[#e0cf9b] uppercase truncate">
                 HANDICRAFTS & EXPORT • {brandConfig.city.toUpperCase()}
               </span>
             </div>
@@ -841,8 +841,8 @@ export default function HomePage() {
                     <a
                       href={`https://wa.me/${brandConfig.whatsappNumber}?text=${encodeURIComponent(
                         language === "hi"
-                          ? `नमस्ते! मुझे ${brandConfig.name} से "${product.hindiName || product.name}" ऑर्डर करना है। कृपया कीमत और डिलीवरी की जानकारी साझा करें।`
-                          : `Hello! I would like to order "${product.name}" from ${brandConfig.name}. Please share price, availability and delivery details.`
+                          ? `नमस्ते! मुझे ${brandConfig.name} से "${product.hindiName || product.name}" ऑर्डर करना है।\nलिंक: https://gehlotexport.com/product/${product.slug}\nकृपया उपलब्धता और डिलीवरी की जानकारी साझा करें।`
+                          : `Hello! I would like to order "${product.name}" from ${brandConfig.name}.\nLink: https://gehlotexport.com/product/${product.slug}\nPlease share price, availability and delivery details.`
                       )}`}
                       target="_blank"
                       rel="noopener noreferrer"

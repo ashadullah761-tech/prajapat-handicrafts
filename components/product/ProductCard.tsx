@@ -16,7 +16,9 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const { language } = useLanguage();
 
   const whatsappUrl = `https://wa.me/${brandConfig.whatsappNumber}?text=${encodeURIComponent(
-    `Hi ${brandConfig.name}, I would like to enquire about "${product.name}". Please share details and availability.`
+    language === "hi"
+      ? `नमस्ते ${brandConfig.name}! मुझे "${product.hindiName || product.name}" के बारे में जानकारी चाहिए।\nलिंक: https://gehlotexport.com/product/${product.slug}`
+      : `Hi ${brandConfig.name}, I would like to enquire about "${product.name}".\nLink: https://gehlotexport.com/product/${product.slug}\nPlease share availability and details.`
   )}`;
 
   const isContain = [

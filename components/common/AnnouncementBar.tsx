@@ -25,8 +25,8 @@ export const AnnouncementBar: React.FC = () => {
   const announcement = brandConfig.announcements[currentSlide];
 
   return (
-    <div className="bg-forest-900 text-ivory-100 text-xs py-2 px-4 border-b border-forest-800 transition-colors">
-      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+    <div className="bg-forest-900 text-ivory-100 text-xs py-2 px-3 sm:px-4 border-b border-forest-800 transition-colors w-full max-w-full overflow-hidden">
+      <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
         {/* Left: Quick Contact */}
         <div className="hidden md:flex items-center gap-4 text-ivory-300">
           <a

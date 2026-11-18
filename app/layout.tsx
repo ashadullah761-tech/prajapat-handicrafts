@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { Cinzel, Playfair_Display, Montserrat } from "next/font/google";
 import "./globals.css";
@@ -13,6 +13,12 @@ import { Footer } from "@/components/common/Footer";
 import { CartDrawer } from "@/components/common/CartDrawer";
 import { FloatingWhatsApp } from "@/components/common/FloatingWhatsApp";
 import { BackToTop } from "@/components/common/BackToTop";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 const cinzel = Cinzel({
   subsets: ["latin"],
@@ -37,7 +43,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://kalakritihandicrafts.com"),
+  metadataBase: new URL("https://gehlotexport.com"),
   title: {
     default: `${brandConfig.name} | Authentic Indian Handicrafts & Home Decor`,
     template: `%s | ${brandConfig.name}`,
@@ -67,16 +73,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://kalakritihandicrafts.com",
+    url: "https://gehlotexport.com",
     siteName: brandConfig.name,
     title: `${brandConfig.name} — Handmade with Heart. Crafted by Tradition.`,
     description: brandConfig.description,
     images: [
       {
-        url: "https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1200&q=80",
+        url: "https://gehlotexport.com/hero-banner.jpg",
         width: 1200,
         height: 630,
-        alt: `Authentic Indian Handicrafts at ${brandConfig.name} ${brandConfig.city}`,
+        alt: `Authentic Indian Handicrafts & Furniture at ${brandConfig.name} ${brandConfig.city}`,
       },
     ],
   },
@@ -84,7 +90,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${brandConfig.name} — Authentic Indian Handicrafts`,
     description: brandConfig.description,
-    images: ["https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1200&q=80"],
+    images: ["https://gehlotexport.com/hero-banner.jpg"],
     creator: "@GEHLOT_88882026",
   },
   robots: {
@@ -134,7 +140,7 @@ export default function RootLayout({
       "latitude": 25.7781,
       "longitude": 73.3235,
     },
-    "url": "https://kalakritihandicrafts.com",
+    "url": "https://gehlotexport.com",
     "priceRange": "₹₹",
     "openingHoursSpecification": [
       {

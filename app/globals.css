@@ -17,6 +17,8 @@
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 20px;
+    overflow-x: hidden;
+    max-width: 100vw;
   }
 
   body {
@@ -24,6 +26,8 @@
     color: var(--dark-green);
     font-family: var(--font-montserrat), 'Montserrat', sans-serif;
     overflow-x: hidden;
+    max-width: 100vw;
+    position: relative;
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

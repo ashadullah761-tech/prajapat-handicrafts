@@ -100,7 +100,7 @@ export const LanguageSelector: React.FC<LanguageSelectorProps> = ({
 
       {/* Dropdown Menu */}
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-[310px] sm:w-[360px] md:w-[400px] max-h-[85vh] sm:max-h-[500px] bg-[#fbf9f1] border border-[#37472a]/20 rounded-2xl shadow-2xl z-50 overflow-hidden flex flex-col animate-slide-up text-[#37472a]">
+        <div className="absolute right-0 mt-2 w-[calc(100vw-24px)] max-w-[320px] sm:max-w-[360px] md:max-w-[400px] max-h-[85vh] sm:max-h-[500px] bg-[#fbf9f1] border border-[#37472a]/20 rounded-2xl shadow-2xl z-50 overflow-hidden flex flex-col animate-slide-up text-[#37472a]">
           {/* Header & Search */}
           <div className="p-3 sm:p-4 border-b border-[#37472a]/15 bg-[#f4f2e6]">
             <div className="flex items-center justify-between mb-2">
